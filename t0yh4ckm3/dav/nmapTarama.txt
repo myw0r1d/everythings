@@ -1,0 +1,16 @@
+# Nmap 7.94SVN scan initiated Wed Nov  8 22:52:16 2023 as: nmap -sCV -n -vv --open -Pn -oN nmapTarama.txt -p- 10.10.162.129
+Nmap scan report for 10.10.162.129
+Host is up, received user-set (0.088s latency).
+Scanned at 2023-11-08 22:52:17 +03 for 69s
+Not shown: 55322 closed tcp ports (conn-refused), 10212 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-title: Apache2 Ubuntu Default Page: It works
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  8 22:53:26 2023 -- 1 IP address (1 host up) scanned in 69.60 seconds

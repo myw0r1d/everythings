@@ -1,0 +1,50 @@
+# Nmap 7.94SVN scan initiated Tue Mar 19 20:27:25 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 10.10.177.57
+Nmap scan report for 10.10.177.57
+Host is up, received user-set (0.12s latency).
+Scanned at 2024-03-19 20:27:25 +03 for 546s
+Not shown: 65515 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE       REASON  VERSION
+53/tcp    open  domain        syn-ack Simple DNS Plus
+88/tcp    open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2024-03-19 17:35:02Z)
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp   open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: vulnnet-rst.local0., Site: Default-First-Site-Name)
+445/tcp   open  microsoft-ds? syn-ack
+464/tcp   open  kpasswd5?     syn-ack
+593/tcp   open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp   open  tcpwrapped    syn-ack
+3268/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: vulnnet-rst.local0., Site: Default-First-Site-Name)
+3269/tcp  open  tcpwrapped    syn-ack
+5985/tcp  open  http          syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+9389/tcp  open  mc-nmf        syn-ack .NET Message Framing
+49665/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49670/tcp open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+49685/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49696/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49707/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: Host: WIN-2BO8M1OE1M1; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-time: 
+|   date: 2024-03-19T17:35:56
+|_  start_date: N/A
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+|_clock-skew: 3s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 33196/tcp): CLEAN (Timeout)
+|   Check 2 (port 33243/tcp): CLEAN (Timeout)
+|   Check 3 (port 9558/udp): CLEAN (Timeout)
+|   Check 4 (port 34776/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Mar 19 20:36:31 2024 -- 1 IP address (1 host up) scanned in 546.41 seconds

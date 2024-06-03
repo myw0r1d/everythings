@@ -1,0 +1,4 @@
+ public $dbhost = 'localhost';
+   public $dbuser = 'glpiuser';
+   public $dbpassword = 'glpi-password';
+   public $dbdefault = 'glpi';

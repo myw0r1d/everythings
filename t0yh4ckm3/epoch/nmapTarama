@@ -1,0 +1,92 @@
+# Nmap 7.94SVN scan initiated Fri Mar 22 02:15:22 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 10.10.97.254
+Nmap scan report for 10.10.97.254
+Host is up, received user-set (0.097s latency).
+Scanned at 2024-03-22 02:15:22 +03 for 143s
+Not shown: 54409 closed tcp ports (conn-refused), 11124 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 7b:a0:8f:60:e1:dc:e6:7f:6a:0f:51:bc:f9:01:15:67 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8SgVYVISjPrS/qne3Y0ZLL3r6OEZWwj/nmw/X+ECVl0AIkq1SAI0FOoB5GcqOXnacXpDJfBWXGGlq11BvQ5zNnVr18SMaqjy3xUV5sk7r/EQnIDulhp3OoHkBeY+pAsGlWmdzCqeW5WUF6zvN5oHWJ1sGkGd9a7dvt9AHWrXqbBvy8X1n3REBI/4u6OxTLLkeeKRFSP8TPyhOILgy7IVbrMRyu/nFAfmp8gJF97+1NJhjdYe1ca7LeVSi5tZObPxmYwfBuCDD9zOw+d01K0fhnMERDeqILDGgPxLVFDzisMed+j3gFrUI1Dm6CXEaB+dMHRphU4cRJMMHRX2BL9F0GkSGmNXoBg1dQcDbK2l1ESl+Fc8u39nuzmd7eOng6856U4vNgb1uQUk8nPDVzYowQTFLnWQD+5/jRGnM2gIxAqLgjmXhuKM12BxgrZUkpWGSytW/Yzlz4qSxWGAdtXlsBzF5iY2o2AnZW3aHqtNlnAEWWxfPkivsbJKNw/t3kWM=
+|   256 8e:28:19:ab:b0:ae:d9:d0:1b:db:72:4b:d3:32:39:8b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCs0w42z4sQPYBIS9JsTSYE5A3RJmnYpWq5QwyCQUhDGJH1TpxZT/7/RU0Pi+KC5FceVkbdiS2OsTXrXlPYFF5U=
+|   256 ee:06:de:e0:dc:9f:dc:80:79:43:c4:93:42:73:5b:f9 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFSEAJk/lBCIkspmoTg/UeohxV/TWHROceW1r5T+cDRV
+80/tcp open  http    syn-ack
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Date: Thu, 21 Mar 2024 23:16:06 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 1184
+|     Connection: close
+|     <!DOCTYPE html>
+|     <head>
+|     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+|     integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+|     <style>
+|     body,
+|     html {
+|     height: 100%;
+|     </style>
+|     </head>
+|     <body>
+|     <div class="container h-100">
+|     <div class="row mt-5">
+|     <div class="col-12 mb-4">
+|     class="text-center">Epoch to UTC convertor 
+|     </h3>
+|     </div>
+|     <form class="col-6 mx-auto" action="/">
+|     <div class=" input-group">
+|     <input name="epoch" value="" type="text" class="form-control" placeholder="Epoch"
+|   HTTPOptions, RTSPRequest: 
+|     HTTP/1.1 405 Method Not Allowed
+|     Date: Thu, 21 Mar 2024 23:16:07 GMT
+|     Content-Type: text/plain; charset=utf-8
+|     Content-Length: 18
+|     Allow: GET, HEAD
+|     Connection: close
+|_    Method Not Allowed
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/22%Time=65FCBFB7%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,529,"HTTP/1\.1\x20200\x20OK\r\nDate:\x20Thu,\x2021\x20Mar\x20
+SF:2024\x2023:16:06\x20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8
+SF:\r\nContent-Length:\x201184\r\nConnection:\x20close\r\n\r\n<!DOCTYPE\x2
+SF:0html>\n\n<head>\n\x20\x20\x20\x20<link\x20rel=\"stylesheet\"\x20href=\
+SF:"https://stackpath\.bootstrapcdn\.com/bootstrap/4\.5\.2/css/bootstrap\.
+SF:min\.css\"\n\x20\x20\x20\x20\x20\x20\x20\x20integrity=\"sha384-JcKb8q3i
+SF:qJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP\+VmmDGMN5t9UJ0Z\"\x20crossori
+SF:gin=\"anonymous\">\n\x20\x20\x20\x20<style>\n\x20\x20\x20\x20\x20\x20\x
+SF:20\x20body,\n\x20\x20\x20\x20\x20\x20\x20\x20html\x20{\n\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20height:\x20100%;\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20}\n\x20\x20\x20\x20</style>\n</head>\n\n<body>\n\x20\x20\x2
+SF:0\x20<div\x20class=\"container\x20h-100\">\n\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20<div\x20class=\"row\x20mt-5\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<div\x20class=\"col-12\x20mb-4\">\n\x20\x20\x20\x20\x20\x
+SF:20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<h3\x20class=\"text-center\">
+SF:Epoch\x20to\x20UTC\x20convertor\x20\xe2\x8f\xb3</h3>\n\x20\x20\x20\x20\
+SF:x20\x20\x20\x20\x20\x20\x20\x20</div>\n\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20\x20\x20\x20<form\x20class=\"col-6\x20mx-auto\"\x20action=\"/\">\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20<div\x20
+SF:class=\"\x20input-group\">\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x2
+SF:0\x20\x20\x20\x20\x20\x20\x20\x20\x20<input\x20name=\"epoch\"\x20value=
+SF:\"\"\x20type=\"text\"\x20class=\"form-control\"\x20placeholder=\"Epoch\
+SF:"\n\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20\x20
+SF:\x20")%r(HTTPOptions,BC,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r
+SF:\nDate:\x20Thu,\x2021\x20Mar\x202024\x2023:16:07\x20GMT\r\nContent-Type
+SF::\x20text/plain;\x20charset=utf-8\r\nContent-Length:\x2018\r\nAllow:\x2
+SF:0GET,\x20HEAD\r\nConnection:\x20close\r\n\r\nMethod\x20Not\x20Allowed")
+SF:%r(RTSPRequest,BC,"HTTP/1\.1\x20405\x20Method\x20Not\x20Allowed\r\nDate
+SF::\x20Thu,\x2021\x20Mar\x202024\x2023:16:07\x20GMT\r\nContent-Type:\x20t
+SF:ext/plain;\x20charset=utf-8\r\nContent-Length:\x2018\r\nAllow:\x20GET,\
+SF:x20HEAD\r\nConnection:\x20close\r\n\r\nMethod\x20Not\x20Allowed");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar 22 02:17:45 2024 -- 1 IP address (1 host up) scanned in 143.33 seconds

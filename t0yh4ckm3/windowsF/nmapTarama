@@ -1,0 +1,52 @@
+# Nmap 7.94SVN scan initiated Fri Nov 17 19:11:36 2023 as: nmap -sCV -Pn -vv --open -oN nmapTarama -p- 10.10.72.154
+Nmap scan report for 10.10.72.154
+Host is up, received user-set (0.090s latency).
+Scanned at 2023-11-17 19:11:37 +03 for 194s
+Not shown: 65534 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE       REASON  VERSION
+3389/tcp open  ms-wbt-server syn-ack Microsoft Terminal Services
+| ssl-cert: Subject: commonName=EC2AMAZ-I8UHO76
+| Issuer: commonName=EC2AMAZ-I8UHO76
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-11-16T16:04:54
+| Not valid after:  2024-05-17T16:04:54
+| MD5:   cc45:0d1b:b922:643d:60af:0749:3dc2:482b
+| SHA-1: bd15:b379:e057:7fa3:e518:37f0:7869:7d87:6902:14d7
+| -----BEGIN CERTIFICATE-----
+| MIIC4jCCAcqgAwIBAgIQVSEE7C7s3qNIg1L868ZLCjANBgkqhkiG9w0BAQsFADAa
+| MRgwFgYDVQQDEw9FQzJBTUFaLUk4VUhPNzYwHhcNMjMxMTE2MTYwNDU0WhcNMjQw
+| NTE3MTYwNDU0WjAaMRgwFgYDVQQDEw9FQzJBTUFaLUk4VUhPNzYwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQCbv6SQikd8/pQ60zLNVcRJmh20ftRJBMEN
+| pukTjdKPSfQh10WeCbg752X50qvQ93b6Zx70Yj431xAZSsjYPDN26EtvBK2ysQMC
+| XhsnttD79V4mEJt9cqYVSy8ZnNaSAGUmkxsWFIWcrq+BBDoPvf4VrR3O4jAg9bWC
+| 39ZPUuxMFUDsDLxQFELGSJDsqbwZ5PFS8F8QCxPidJvGjhueDIulxzERW0/s5OZk
+| LvBVtpLwOjaDCzmjZd3URr6bslXfXEwHTsYYiR+SVeVPKDm+xSk7V8G82X60tDG8
+| /SR9m3gfgxBT9qq8VjlzMy27xSV1gOZsUoRoSArBQVyjj+iuFi2DAgMBAAGjJDAi
+| MBMGA1UdJQQMMAoGCCsGAQUFBwMBMAsGA1UdDwQEAwIEMDANBgkqhkiG9w0BAQsF
+| AAOCAQEARRLgpQj8BbKuVWyq/aXcgsxFoadMkUW/Kh/SVNLuFVT2ALEdHenaGp6S
+| 3JOIpC3aZ4AXVDT3e36zAv3Zc7pPA4LwuUcQezkkYTLb0Xpod5wFdtiIG1X3Jkj0
+| rL15xKz478NO1qqI7vaLQh69vO8eTLtuZ1BTUj/J7ktHTUCqr1Bmmvh8+zuVyywn
+| eh/jrxiM3AZoCpWNf9rEwpEPbVUyqrO6Oe/NH+jL0GRhJ6IcHrgBIGnNmtTcD5xa
+| ieqTqkuysxDLCWmORvrUpRsOcZhvyEoZvsMBxsupfsXQ0Gf9ZK9C3CrJl/1OPpvN
+| fcVBJs1fhoQgIqNgaiDanTPZVfoK3Q==
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-11-17T16:14:50+00:00; -1s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: EC2AMAZ-I8UHO76
+|   NetBIOS_Domain_Name: EC2AMAZ-I8UHO76
+|   NetBIOS_Computer_Name: EC2AMAZ-I8UHO76
+|   DNS_Domain_Name: EC2AMAZ-I8UHO76
+|   DNS_Computer_Name: EC2AMAZ-I8UHO76
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-11-17T16:14:46+00:00
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 0s, deviation: 0s, median: -1s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 17 19:14:51 2023 -- 1 IP address (1 host up) scanned in 194.83 seconds

@@ -1,0 +1,10 @@
+dev notes from valleyDev:
+-add wedding photo examples
+-redo the editing on #4
+-remove /dev1243224123123
+-check for SIEM alerts
+
+ http  login    if (username === "siemDev" && password === "california") {
+
+ssh   Form item: "uname" = "valleyDev"    Form item: "psw" = "ph0t0s1234"
+ssh   valley     liberty123

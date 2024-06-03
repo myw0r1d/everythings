@@ -1,0 +1,93 @@
+# Nmap 7.94SVN scan initiated Fri Dec 29 15:50:27 2023 as: nmap -sCV -p22,80,1337 -Pn -n -vv --open -oN nmapTarama 10.10.107.38
+Nmap scan report for 10.10.107.38
+Host is up, received user-set (0.088s latency).
+Scanned at 2023-12-29 15:50:27 +03 for 163s
+
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 b7:1b:a8:f8:8c:8a:4a:53:55:c0:2e:89:01:f2:56:69 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDP5+l/iCTR0Sqa4q0dIntXiVyRE5hsnPV5UfG4D+sQKeM4XoG7mzycPzJxn9WkONCwgmLWyFD1wHOnexqtxEOoyCrHhP2xGz+5sOsJ7RbpA0KL/CAUKs2aCtonKUwg5FEhOjUy945M0e/DmstbOYx8od6603eb4TytHfxQHPPiWBBRCmg6e+5UjcHLSOqDEzXkDOmmLieiE008fEVrNAmF2J+I4XPJI7Usaf3IzpnaFm3Ca9YvNAr4t8gpDST2uNuRWA9NCMspBFEj/5YQfjOnYx2cSSZHUP3lK8tiwc/RWSk7OBTXYOBncyV4lw8OiyJ1fOhr/2gXTXE/tWQvu1zKWYYafMKRdsH6nuE5nZ0CK3pLHe/nUgIsVPl7sJ3QlqJF7Wd5OmY3e4Py7movqFm/HmW+zjwsXGHnzENC47N+RxV0XTYCxbKzTAZDo5gLMxmsbXWnQmU5GMk0e9sh7HHybmWWkKKYJiOp+3yM9vTPXPiNXBeJmvWa01hoAAi+3OU=
+|   256 4e:27:43:b6:f4:54:f9:18:d0:38:da:cd:76:9b:85:48 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFL/P1VyyCYVY2aUZcXTLmHkiXGo4/KdJptRP7Wioy78Sb/W/bKDAq3Yl6a6RQW7KlGSbZ84who5gWwVMTSTt2U=
+|   256 14:82:ca:bb:04:e5:01:83:9c:d6:54:e9:d1:fa:c4:82 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHmTKDYCCJVK6wx0kZdjLd1YZeLryW/qXfKAfzqN/UHv
+80/tcp   open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-title: Ollie :: login
+|_Requested resource was http://10.10.107.38/index.php?page=login
+| http-robots.txt: 2 disallowed entries 
+|_/ /immaolllieeboyyy
+|_http-favicon: Unknown favicon MD5: 851615F43921F017A297184922B4FBFD
+1337/tcp open  waste?  syn-ack
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, GenericLines: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, 
+|     It's been a while. What are you here for?
+|   DNSVersionBindReqTCP: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, 
+|     version
+|     bind
+|     It's been a while. What are you here for?
+|   GetRequest: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, Get / http/1.0
+|     It's been a while. What are you here for?
+|   HTTPOptions: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, Options / http/1.0
+|     It's been a while. What are you here for?
+|   Help: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, Help
+|     It's been a while. What are you here for?
+|   NULL, RPCCheck: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name?
+|   RTSPRequest: 
+|     Hey stranger, I'm Ollie, protector of panels, lover of deer antlers.
+|     What is your name? What's up, Options / rtsp/1.0
+|_    It's been a while. What are you here for?
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port1337-TCP:V=7.94SVN%I=7%D=12/29%Time=658EC099%P=x86_64-pc-linux-gnu%
+SF:r(NULL,59,"Hey\x20stranger,\x20I'm\x20Ollie,\x20protector\x20of\x20pane
+SF:ls,\x20lover\x20of\x20deer\x20antlers\.\n\nWhat\x20is\x20your\x20name\?
+SF:\x20")%r(GenericLines,93,"Hey\x20stranger,\x20I'm\x20Ollie,\x20protecto
+SF:r\x20of\x20panels,\x20lover\x20of\x20deer\x20antlers\.\n\nWhat\x20is\x2
+SF:0your\x20name\?\x20What's\x20up,\x20\r\n\r!\x20It's\x20been\x20a\x20whi
+SF:le\.\x20What\x20are\x20you\x20here\x20for\?\x20")%r(GetRequest,A1,"Hey\
+SF:x20stranger,\x20I'm\x20Ollie,\x20protector\x20of\x20panels,\x20lover\x2
+SF:0of\x20deer\x20antlers\.\n\nWhat\x20is\x20your\x20name\?\x20What's\x20u
+SF:p,\x20Get\x20/\x20http/1\.0\r\n\r!\x20It's\x20been\x20a\x20while\.\x20W
+SF:hat\x20are\x20you\x20here\x20for\?\x20")%r(HTTPOptions,A5,"Hey\x20stran
+SF:ger,\x20I'm\x20Ollie,\x20protector\x20of\x20panels,\x20lover\x20of\x20d
+SF:eer\x20antlers\.\n\nWhat\x20is\x20your\x20name\?\x20What's\x20up,\x20Op
+SF:tions\x20/\x20http/1\.0\r\n\r!\x20It's\x20been\x20a\x20while\.\x20What\
+SF:x20are\x20you\x20here\x20for\?\x20")%r(RTSPRequest,A5,"Hey\x20stranger,
+SF:\x20I'm\x20Ollie,\x20protector\x20of\x20panels,\x20lover\x20of\x20deer\
+SF:x20antlers\.\n\nWhat\x20is\x20your\x20name\?\x20What's\x20up,\x20Option
+SF:s\x20/\x20rtsp/1\.0\r\n\r!\x20It's\x20been\x20a\x20while\.\x20What\x20a
+SF:re\x20you\x20here\x20for\?\x20")%r(RPCCheck,59,"Hey\x20stranger,\x20I'm
+SF:\x20Ollie,\x20protector\x20of\x20panels,\x20lover\x20of\x20deer\x20antl
+SF:ers\.\n\nWhat\x20is\x20your\x20name\?\x20")%r(DNSVersionBindReqTCP,B0,"
+SF:Hey\x20stranger,\x20I'm\x20Ollie,\x20protector\x20of\x20panels,\x20love
+SF:r\x20of\x20deer\x20antlers\.\n\nWhat\x20is\x20your\x20name\?\x20What's\
+SF:x20up,\x20\0\x1e\0\x06\x01\0\0\x01\0\0\0\0\0\0\x07version\x04bind\0\0\x
+SF:10\0\x03!\x20It's\x20been\x20a\x20while\.\x20What\x20are\x20you\x20here
+SF:\x20for\?\x20")%r(DNSStatusRequestTCP,9E,"Hey\x20stranger,\x20I'm\x20Ol
+SF:lie,\x20protector\x20of\x20panels,\x20lover\x20of\x20deer\x20antlers\.\
+SF:n\nWhat\x20is\x20your\x20name\?\x20What's\x20up,\x20\0\x0c\0\0\x10\0\0\
+SF:0\0\0\0\0\0\0!\x20It's\x20been\x20a\x20while\.\x20What\x20are\x20you\x2
+SF:0here\x20for\?\x20")%r(Help,95,"Hey\x20stranger,\x20I'm\x20Ollie,\x20pr
+SF:otector\x20of\x20panels,\x20lover\x20of\x20deer\x20antlers\.\n\nWhat\x2
+SF:0is\x20your\x20name\?\x20What's\x20up,\x20Help\r!\x20It's\x20been\x20a\
+SF:x20while\.\x20What\x20are\x20you\x20here\x20for\?\x20");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 29 15:53:10 2023 -- 1 IP address (1 host up) scanned in 163.26 seconds

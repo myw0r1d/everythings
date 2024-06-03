@@ -1,0 +1,28 @@
+# Nmap 7.94SVN scan initiated Mon May  6 17:05:07 2024 as: nmap -A -Pn -vv -p- --open -oN nmapTarama 172.20.4.57
+Nmap scan report for comicstore.hv (172.20.4.57)
+Host is up, received user-set (0.066s latency).
+Scanned at 2024-05-06 17:05:08 +03 for 32s
+Not shown: 65455 closed tcp ports (conn-refused), 77 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 9.2p1 Debian 2+deb12u2 (protocol 2.0)
+| ssh-hostkey: 
+|   256 f1:d3:3d:0e:44:58:c2:6e:7c:32:e2:9f:aa:d4:32:40 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHuf6GowEr09BOuG+qr3fX4Qgha7YtSdIfzNfUmcbIRTriGkHyUHeNFHxDe+qOvI7XxKuYvCQ28Hu22IkxN0T2Q=
+|   256 10:6f:37:a1:79:c5:15:08:9c:23:44:ea:24:10:84:27 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIH+5Q8pWHIjGaSy7ghBMGnF2+1eYxI5aeFsS2IFd3vIq
+80/tcp   open  http    syn-ack Apache httpd 2.4.57 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-robots.txt: 1 disallowed entry 
+|_/wp-admin/
+|_http-favicon: Unknown favicon MD5: 000BF649CC8F6BF27CFB04D1BCDCD3C7
+|_http-generator: WordPress 6.5.2
+|_http-title: Comic Store
+|_http-server-header: Apache/2.4.57 (Debian)
+3306/tcp open  mysql   syn-ack MariaDB (unauthorized)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon May  6 17:05:40 2024 -- 1 IP address (1 host up) scanned in 33.12 seconds

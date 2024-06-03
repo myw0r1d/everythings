@@ -1,0 +1,3 @@
+nslookup   givemetheflag.com  10.10.20.59  
+
+dig   @10.10.20.59   givemetheflag.com

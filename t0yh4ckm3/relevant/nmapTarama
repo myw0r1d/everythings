@@ -1,0 +1,94 @@
+# Nmap 7.94SVN scan initiated Sun Dec  3 00:58:59 2023 as: nmap -sCV -p- -Pn -vv --open -oN nmapTarama 10.10.165.141
+Increasing send delay for 10.10.165.141 from 0 to 5 due to 16 out of 52 dropped probes since last increase.
+Increasing send delay for 10.10.165.141 from 5 to 10 due to 11 out of 11 dropped probes since last increase.
+Increasing send delay for 10.10.165.141 from 10 to 20 due to 11 out of 11 dropped probes since last increase.
+Nmap scan report for 10.10.165.141
+Host is up, received user-set (0.11s latency).
+Scanned at 2023-12-03 00:59:00 +03 for 3032s
+Not shown: 65527 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE       REASON  VERSION
+80/tcp    open  http          syn-ack Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-title: IIS Windows Server
+135/tcp   open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp   open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds  syn-ack Windows Server 2016 Standard Evaluation 14393 microsoft-ds
+3389/tcp  open  ms-wbt-server syn-ack Microsoft Terminal Services
+| rdp-ntlm-info: 
+|   Target_Name: RELEVANT
+|   NetBIOS_Domain_Name: RELEVANT
+|   NetBIOS_Computer_Name: RELEVANT
+|   DNS_Domain_Name: Relevant
+|   DNS_Computer_Name: Relevant
+|   Product_Version: 10.0.14393
+|_  System_Time: 2023-12-02T22:48:45+00:00
+| ssl-cert: Subject: commonName=Relevant
+| Issuer: commonName=Relevant
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-12-01T21:55:40
+| Not valid after:  2024-06-01T21:55:40
+| MD5:   51bc:d595:32dc:9f48:583d:62fe:5efd:b1fe
+| SHA-1: ba54:b03e:b08c:280f:d224:cb8d:2ff1:12d0:c6cf:97a7
+| -----BEGIN CERTIFICATE-----
+| MIIC1DCCAbygAwIBAgIQPqMDT3gKMJBEhCG/Tc2u4jANBgkqhkiG9w0BAQsFADAT
+| MREwDwYDVQQDEwhSZWxldmFudDAeFw0yMzEyMDEyMTU1NDBaFw0yNDA2MDEyMTU1
+| NDBaMBMxETAPBgNVBAMTCFJlbGV2YW50MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8A
+| MIIBCgKCAQEAx0ZVhtWCNv4m7mBOzV8BluLlgEyCR3xNUq7aqYUf8osibLFYyzLS
+| /WJKVKVbSv0Cu9nszVMCTku75fTsZcy5sK88Y0D+IqunrMfDRejlg47I5xkghVsr
+| wzVbUSsnT3Ye0JFWVfUQ/tqW9YQAYHUgLrswtdIjNQ1Dv5DkjxBjVSdoxx6w+dID
+| mmxGLhmhpeIgHa+fq7nC59L2FXJmCQuWY9aP4Cel55sYvRvPjz+TGfNrSnWEolYb
+| U6ruZWYenkjDdUo7Hdt11IGqD32wa3oC5jF9l6UpTcREbX2+/8L8GurbBZsxhxxP
+| Gfg78YdX7Kcpps7ChUVDabO7C2gzCTmjIQIDAQABoyQwIjATBgNVHSUEDDAKBggr
+| BgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBALKfR1pfHiI8
+| oqO97zX/sdLzbldAT+cYfJlYvIkLuSkOAxe1Hcgc0xEa5xjvMCjYkGX4uX6o8j48
+| 1yWfp4Rm7XehmRyP39VasED13rXqYKMJ+4Phuj83Z3E2S4BrjoAGMbWRT+uGGUyH
+| HLpvdr0eqZUigJ4Q5zat791iXVlDkTP3DrnJSyE8XsToB9jgQ8PXhzRbPw928l3i
+| 0DiKG8ZEF4r00iMic0MM2FmDOKOebM/LphsO6imzGCN6C9psWbC4R1V5mt5zPaNA
+| aWB9A64f0/fk4DJ3b3xtFVy1pfzztpScCP9P/y/4ELwkSBE2/YFPqwoy66+Rp+4h
+| hEa9UijLrJY=
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-12-02T22:49:32+00:00; 0s from scanner time.
+49663/tcp open  http          syn-ack Microsoft IIS httpd 10.0
+|_http-server-header: Microsoft-IIS/10.0
+| http-methods: 
+|_  Supported Methods: HEAD OPTIONS
+49667/tcp open  msrpc         syn-ack Microsoft Windows RPC
+49669/tcp open  msrpc         syn-ack Microsoft Windows RPC
+Service Info: OSs: Windows, Windows Server 2008 R2 - 2012; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb-os-discovery: 
+|   OS: Windows Server 2016 Standard Evaluation 14393 (Windows Server 2016 Standard Evaluation 6.3)
+|   Computer name: Relevant
+|   NetBIOS computer name: RELEVANT\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2023-12-02T14:48:48-08:00
+| smb2-time: 
+|   date: 2023-12-02T22:48:50
+|_  start_date: 2023-12-02T21:56:30
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: 1h36m00s, deviation: 3h34m41s, median: 0s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 53947/tcp): CLEAN (Timeout)
+|   Check 2 (port 60587/tcp): CLEAN (Timeout)
+|   Check 3 (port 57433/udp): CLEAN (Timeout)
+|   Check 4 (port 46533/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec  3 01:49:32 2023 -- 1 IP address (1 host up) scanned in 3032.82 seconds

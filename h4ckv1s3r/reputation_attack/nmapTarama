@@ -1,0 +1,36 @@
+# Nmap 7.94SVN scan initiated Fri May  3 00:24:13 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 172.20.3.175
+Nmap scan report for 172.20.3.175
+Host is up, received user-set (0.065s latency).
+Scanned at 2024-05-03 00:24:14 +03 for 33s
+Not shown: 63705 closed tcp ports (conn-refused), 1828 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+80/tcp   open  http    syn-ack Apache httpd 2.4.56 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.56 (Debian)
+| http-git: 
+|   172.20.3.175:80/.git/
+|     Git repository found!
+|     .git/COMMIT_EDITMSG matched patterns 'bug' 'key' 'passw' 'user'
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|_    Last commit message: first commit  # Please enter the commit message for your cha...
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-title: foxxo9 Blog
+3306/tcp open  mysql   syn-ack MySQL 5.5.5-10.5.21-MariaDB-0+deb11u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.5.21-MariaDB-0+deb11u1
+|   Thread ID: 40
+|   Capabilities flags: 63486
+|   Some Capabilities: Support41Auth, Speaks41ProtocolOld, FoundRows, ODBCClient, InteractiveClient, IgnoreSigpipes, SupportsTransactions, LongColumnFlag, Speaks41ProtocolNew, IgnoreSpaceBeforeParenthesis, SupportsLoadDataLocal, SupportsCompression, ConnectWithDatabase, DontAllowDatabaseTableColumn, SupportsMultipleStatments, SupportsMultipleResults, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: gFhVW4:fr-&t8Z>edDh_
+|_  Auth Plugin Name: mysql_native_password
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May  3 00:24:47 2024 -- 1 IP address (1 host up) scanned in 33.67 seconds

@@ -1,0 +1,25 @@
+# Nmap 7.94SVN scan initiated Sat Apr 27 10:48:17 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 172.20.2.52
+Nmap scan report for goldnertech.hv (172.20.2.52)
+Host is up, received user-set (0.099s latency).
+Scanned at 2024-04-27 10:48:17 +03 for 62s
+Not shown: 60101 closed tcp ports (conn-refused), 5432 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.4p1 Debian 5+deb11u2 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 8b:4b:62:52:69:d8:6a:2a:f3:00:5f:50:cf:35:f4:78 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQClVE6/eTVhESFWq/2poQ7OUkqrwu2XviyaIBwNs05rssrpfrgfn33YR18c7MPsn6fZSePTg0APZGCDRrE4TsfCOeqwjPOaEqVvfmsC0ixfBIuyVv6ENlFJcy+XnePRsL/GqI1U6D6C/5kxkYRlgA+B4Cp2FVw94k7mFU3aWNRkuVZOqm4btu8gIboXcxiOdCTma3OMblbVXht4AVB53oB8gKHWyMGFwLeb3Uv3hMCFJO1WMdndLwLbnt107dW80vr+/x3Oa7YKbKPxyNxGVClRVk3ib5WiJLPCDM3C1nDqZoECJLHvBuX0TSpOhuowEBokrftQEfnS8EwWVZs2KjTUpK3hPDWTkYxbd5E1/9zeGuLeH5yKEcWM79X1AISCdACEBIMbPs7eL1/qI12dofFeKSURzjxK1rbbrbKjePFeiHDB50V0UxWwEMy3kwiYCp7wHLJrjEnfykLNR0je7ObSrmXfdgbJ9cJzHtqkxRRjnk299HYEpK3vU8NPRZgRAbM=
+|   256 c7:1f:64:af:f5:f7:0d:03:d0:5a:62:f3:e7:68:07:67 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBDLxh4Ugdw+IENzHDSA6ba6+sLUBRjE+ZzzAqoZAZzcwmhyHpEAfby0s7mRHLjvvhltNKaQlWV8moRUzZnIBH3E=
+|   256 62:3b:0e:5b:07:c7:a4:5e:9f:15:7c:2d:cb:17:32:3b (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKJ2LElMe9MVY5N1KAGeyjfc2SfAP/19wTICiSTIv2oy
+80/tcp open  http    syn-ack nostromo 1.9.6
+|_http-title: Coming Soon
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-server-header: nostromo 1.9.6
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 27 10:49:19 2024 -- 1 IP address (1 host up) scanned in 62.39 seconds

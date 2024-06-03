@@ -1,0 +1,465 @@
+###########################################################################################################################################################
+
+
+hostname         #Bilgisayar ismini yazdırır
+
+id               #Kullanıcının kullanıcı kimliği,birincil grup kimliği ve üyesi olduğu grupları gösterir. (id kullanıcı_adi şeklinde de kullanılabilir.)
+
+
+whoami           #Kullanıcı adını gösterir.
+
+cat              #Dosyaları okumamızı sağlar #dosyanın tamanını okur fakat komut satırında izin verilen son aralıkta gösterir.
+
+man komut        #Verilen komutun ayrıntlarını gösterir.
+
+sudo su          #Root kullanısına geçer.
+
+uptime           #Sistemin ne zamandır acık oldugunu gösterir
+
+pwd              #Bulundugun dizini gösterir
+
+ls               #Bulundugumuz dizinde dosya ve klasörleri gösterir (parametlerine bak)
+
+cd               #Dizinler arasında geçiş sağlıyor
+
+locate           #Birkaç karakteri bilinen dosyayı klasörü arar
+
+touch            #Dosya klasor oluşturamızı sağlar
+
+more             #Dosyayı sayfa sayfa okur
+
+less             #Dosyayı satır satır okur
+
+grep             #Dosyada ya da klasörde arama sağlar
+
+mkdir            #Verilen isimle dizin(klasör) oluşturur
+
+touch            #Uzantısıyla birlikte dosya oluşturur
+
+rm               #Dosya silme  işlemi gerçekleştiriyor    #dizin silerken rm -rf  
+
+cp               #Dosyaları kopyalıyor
+
+sudo -i          #Direkt root hesabına geçiş yapar.
+
+sudo visudo      #Yetkileri düzenler
+
+su kullanıcı     #Kullanıcıya geçiş yapar
+
+history          #Terminal geçmişini gösterir.
+
+histoy -c        #Teminal geçmişini temizler
+
+top              #Task manager 
+
+htop             #Gelişmiş task manager
+
+free             #Depolama alanı  gösterir
+
+uptime           #Sistemin kaç kullanıcı tarafından ne kadar süredir açık olduğunu gösterir.
+
+date             #Hafta, ay, gün, saat, saat dilimi ve yılı gösterir.
+
+				
+ps	#Sistemdeki şuan çalışan süreçleri görüntüler
+  	#aux tüm çalışan süreçleri görüntüler
+  	#a tüm süreçleri
+  	# -u belirtilen kullanıcıya ait süreçleri
+  	# -d bu terminale ait süreçleri listeler
+					
+
+more   dosya_adi   #dosya okumaya yarıyor cat in bir versiyonu
+
+cp dosya_dolu yeni_dosya_yeri   #belirtilen dosyayı belirtilen yere kopyalar
+cp -r dizin_Adi yeni_dizin_yeri #belirtilen dizini belirtilen yere kopyalar
+
+
+
+############################################################################################################################################
+.
+chfn  kullanıcı      #kullanıcıya ait bilgilerde güncelleme yapmamızı sağlar
+
+chage -l kullanıcı   #kullanıcı hakkınad bilgi verir
+
+usermod -L kullanıcı #ilgili kullanıcıyı pasif hale getirir birdaha oturum açamaz
+
+usermod -U kulanıcı  #ilgili kullanıcıyı tekrar aktif eder.
+
+su                   #kullanıcılar arasında geçiş yapmamızı sağlar.
+
+killall              #ilgili kullanıcıda süreçleri zorla kapatır.
+
+histoy -c            #teminal geçmişini temizler
+
+grep                 #dosyada yada klasörde arama sağlar
+
+shred -u -z          #dosyayı sistemden geri dönüşümsüz şekilde kalıcı olarak siler.
+
+
+
+gpg -c               # komutuyla dosyayı simetrik olarak şifreler
+
+gpg -d               # komutuytla key varken dosya okunabilir.
+
+cat /etc/passwd      #Burada kullancıların  isimlerini, ıd değerlerini ve ev dizinlerini gösterir.
+                     >Her kullanıcı erişebilir.
+
+cat /etc/shadow      #Burada kullanıcıların şifrelerinin hash değerlerini görebiliriz.
+                     >Sadece root kullanıcıları erişebilir.
+
+cat /etc/sudoers     #Hangi kullanıcılar hangi yetkilere ve izinlere sahip görebiliriz.
+                     #sadece root kullanıcıları erişebilir.
+
+cat /etc/gruop                                          #kullanıcıların hangi grupta olduğunu gösterir. 
+
+sudo addgroup grup_Adi                                  #yeni grup oluşturur.
+sudo delgroup grup_adi                                  #gösterilen grubu kaldırır
+sudo usermod -a -G grup_ismi kullanıcı_ismi             #gösterilen gruba gösterilen kllanıcı ekler
+
+sudo chown yeni_kullanıcı dosya_ad                      #gösterilen dosyanın sahipliğini değiştirir.
+sudo chgrp yeni_grup dosya_adı                          #gösterilen dosyanın sahip olduğu grubu değiştir.
+sudo chwon -R yeni_kullanıcı dosya_adı                  #dizinin içindekiylerde birlikte sahipliği değiştir.
+
+
+###########################################################################################################################################################
+***************************************************** Dosya Yetkileri  ******************************************
+
+
+read    - okuma      #Değeri 4
+write   - yazma      #Değeri 2
+execute - çalıştırma #Değeri 1
+ 
+-rwxrwxrwx = 777            Bir dosya sahipliğinin max değeri 777dir tüm yetkileri barındırır.
+  #Kullanıcı                için 4(read) + 2(write) + 1(execute) = 7
+  #Grup                     için 4(read) + 2(write) + 1(execute) = 7
+  #Diğer kullanıcılar için  için 4(read) + 2(write) + 1(execute) = 7
+
+sudo nano /etc/login.defs     #login.defs dosyasındaki umax değerini 022 den 077 çekilerek yeni oluşturulan kullanıcılar arasındaki dizin erişinini sınırlayabilirz.
+
+
+
+sudo -l(le)                   >#Kullanıcıda hangi yetkiler olduğunu gösterir.
+
+sudo -i                       >#Direk root kullanıcısına geçiş yapar
+
+sudo  useradd  #              >#  kullanıcısını  oluşturur    
+
+sudo passwd    #              >#  kullanıcısının parolasını oluşturur
+
+sudo usermod  -aG sudo  #     ># kullacısını sudo grubuna dahir eder.
+
+sudo userdel  #               >#  kullanıcısını siler.
+
+sudo usermod  # yıl-ay-gün    ># kullanıcının kullanım süresini güncelledi
+
+sudo passwd -e  #             >#  kullanıcısına yönetici tarafından geçişi şifre atandı.
+
+sudo chmod 700 *              >Yeni oluşturulan kullanıcılar arasında dizin yetkisini düzenler
+
+sudo visudo                   >sudoers dosyasını düzenler. Sadece root kullanıcısı erişebilir.
+
+useradd -s /bin/bash -m -d home/kullanıcı__adi -g sudo kullanıcı_Adi
+
+		 -s parametresiyle yeni kullanıcını hangi terminali kullanacgı belirtilir
+		 -m -d parametresiyle kullanıcıya ait dizin oluşturur.
+		 -g parametresiye kullanıcıyı belirtilen gruba dahil eder
+
+userdell -r kullanıcı_Adı   #belirtilen kullanıcıyı tamamiyle siler
+
+
+
+sudo useradd # -m-d /home/# -s /bin/bash -e yıl-ay-gün   ># kullanıcısı oluştururldu, ev dizini , temel kabuk ve kullanım süresi yıl-ay-gün şeklinde tanımlandı 
+
+"#" oluşturulan kullanıcıyı temsil eder.
+
+
+#############################################################################################################################################################
+*************************************************  vi Dosya Editörü ************************************************************************
+
+
+vi dosya_adi   #dosyayi vi dosya editörüyle açılır
+
+Dosya içerisinde işlem yapmak için i 'ye basarak insert  moda geçmemiz lazım
+
+Aşağıdaki kodları çalıştırmak için  esc le kod çalıştırılabilir moda geçmemiz lazım. İçersinde kaydetmek ve çıkmak için  :wq!
+                    kaydet çık      :xq!
+                    kaydetmeden çık  :q!
+                    satır silmek için hızlıca dd ye basılır
+                    satırları numaralandırmak için :set number
+                    berlirli bir line a girmek içn :20 20.satıra gider
+                   
+              
+v visual yle kopyala yapıştır moduna geçiyoruz
+                   y ile istediğimizi kopyalıyoruz.
+                   p ile yapıştırırız.
+                   d ile kesme işlemi yapıyoruz.
+                   / işlemiyle arama yapıyorız
+                  :
+
+         ``     işaretini altgr+virgül le yapıyoruz   
+
+
+
+###########################################################################################################################################################
+***************************************************** Wildcard ************************************************
+
+
+*     #Bir yada birden fazla karakterin yerine geçebileçek bir joker karakterdir
+[]    #Yerine geçebileçek karakterileri küme şeklinde belirtlen bir wildcard oparatörüdür.
+?     #Yalnız bir karakterin yerine geçebilecek bir joker karakteridir.
+
+
+
+###########################################################################################################################################################
+*********************************************** Yönlendirme Karakterleri ***********************************************
+ 
+>    #Verilen verileri dosyaya ekler veya yeni dosya oluşturup ekler. dosyadaki verileri siler
+>>   #Verilen verileri dosyanın sonuna yazar. içeriği tamamen silmez
+|    #Verilen çoklu görevleri aynı anda yapmamızı sağlar.soldan sağa çalışır
+
+	
+alias  #Lstenilene göre çok uzun bir komutu yeniden aklandıralar onu daha hızlı kullanmamızı sağlar
+ örn#   alias c="history -c"  burada artık history -c yerine sadece c yazmamış yeterlidir
+
+ls -al  #dosyaların sahipliklerini ayrıntılı bir şekilde gösterir. Kısayolu ll dir
+
+ls -alt #oluşturulma zamanına göre listeler.
+
+
+
+#############################################################################################################################################################
+************************************************* Dosya ve Dizin işlemleri ***************************************************
+
+zaman='date +%b-%d'   arsiv =/var/backups/yedekler/yedek-$zaman.tar.gz 
+
+
+$    değişkeni başka bir yerde kullanmak için kullanıyoruz.
+örnek*
+degisken=hello
+echo "$degisken"
+
+echo  "test"          #echo yla ekrana çıktı yazdırabilirz.Çift tırnak(")kullanılması önemlidir.
+ 
+
+rm      #dosya silme
+rm -r   #klasör silme
+cp  kopyalanacak_dosya   kopyalanan_dosyanin_yeni_ismi            #birebir dosya kopyalar ve yeniden isimlendirir
+
+cp  kopyalanacak_dosya	 kopyalanacak_dosyanin_yeni_dizini/       #kopyalanacak dosyanin nereye kopyalanacagını belirtiriz
+
+cp /home/byroo1/Desktop/odevler/ogrenci.pdf  /tmp/ogrenci2.pdf    #kopyalanacak dosya tam adresini ve nereye kopyalayaracagız adres yazarak yapabiliriz.
+
+cp -r kopyalacak_klasör_ismiveya_adresi yeni_isim_Veyaadresi      #verilen isimdeki yada adresteki istenilen yere ve adda klasör koplayalar(içindekilerle beraber)
+
+mv taşınacak_dosya nereye_taşınacak                                   #taşınacak dosyayi hedef dosyaya taşır
+
+tar -zcvf arşiv_Adi.tar  hangi_dosya_dosyalar_arşivlenecek            #söylenen dosyaları arşivler
+
+tar -zxvf  açılacak_arşiv.tar  nereyecı kartılacak_Adres              #arşivden dosyayı söylediğidizine cıkartır
+
+
+
+
+
+cat dosya_Adi     #dosyaları okumamızı sağlar
+   -E             # E parametresi satır sonlarını($) işaretiyle belirtir
+   -n             # n parametresi her satırın başında satır numarasını belirtir.
+
+tac dosya_adi       #dosyayı son satırdan başlayarak okur
+
+tail  dosya_adi     #okukacak dosyadan varsayılan olarak son 10 satırı okur
+
+tail -f dosya_adı   #belirtilen dosyayı canlı olarak okur takip eder
+ 
+more dosya_adi      #belirtilen dosyayı terminal penceresine  sığdırarak okur
+
+no dosya_Adi        #belirtilen dosyadaki boş satırlar hariç numaralandırır.
+
+file dosya_Adi      #belirtilen dosya hakkında ayrıntı verir
+
+wc dosya_adi        #belirtilen dosyadaki sırayla satır-kelime-boyut  hakkındaki ayrıntıları gösterir
+
+wc -w dosya_adi     #belirtilen dosyadaki sadece kelime sayısını gösterir
+
+wc  -l dosya_Adi    #belirtilen dosyadaki sadece satır sayısını gösterir
+
+wc  -c  dosya_adi   #belirtilen dosyanın sadece boyutunu gösterir.
+
+
+sort dosya_adi                   #belirtilen dosyadaki verileri k>>>b doğru sıralar
+
+sort -k satırSayisi dosya_adi    #dosyadaki verileri verilen sutuna göre k>>>b doğru sıralar.
+
+sort  -c  dosya_Adi              #dosyanın sıralanıp sıralanmadığını kontrol eder
+
+sort -r dosya_adi                #dosyayi tersten sıralar.
+
+sort -k 2 -r dosya_adi           #dosyayi 2.sutundan tersten sıralarak gösterir.
+      -o   sıralı_dosya_Adi      #istenilen sıralamayı istenilen adla kaydeder.
+        
+sort -R dosya_adi                #dosyayı rasgele sıralayıp gösterir.  
+  
+grep 'aranacak kelime' dosya_adi            #  '' içindeki kelimeyi belirtilen dosyada  arar.
+
+grep -v 'aranacak kelime' dosya_Adi         #verilen dosyada -v parametresi sayesinde verilen kelimenin olmadığı satırları gösterir.
+
+grep -i 'aranacak kelime' dosya_adi         #-i parametlesiyle büyük kücük duyarlılığını kapatır.
+
+grep -i 'aranacak kelime' -l dosya_adlari   # -l parametresiyle verilen kelimenin hangi dosyalar içinde olmadığını gösterir.
+
+grep -i 'aranacak kelime' -c dosya_adi      #verilen kelimenin dosyada kaç kere geçtiğini gösterir.
+
+
+
+#############################################################################################################################################################
+********************************************* Dosya Sıkıştırma İşlemleri **********************************************
+ 
+tar -zcvf yeni_dosya.tar.gz  dosya_isimleri     #belirtilen dosyaları sıkıştır uzantısı "gzip" 
+    -jcvf yeni_dosya.tar.bz2 dosya_isimleri     #belirtilen dosyaları sıkıştırır uzantısı ""bzip2" 
+
+	c #arşiv yapmamızı sağlar
+	v detayları gösterir
+	f filename (yeni_dosya.tar)
+	z gzip ile sıkıştırma yapıyor
+	j bzip2 ile sıkıştırma yapıyor
+	x dosyaları cıkartır.
+
+tar -cf  #dosyaları sıkıştırmadan sadece arşivliyor     #uzatısı "tar" olacak
+
+tar -xf  # arşivli dosyaları dışarı çıkartıyor
+
+tar -zcf #dosyaları sıkıştıralar arşivliyor  # uzantısı "tar.gz" olacak
+
+  
+tar  -zxvf  çıkartılacak_dosya.tar  #belirtilen sıkıştırılmış dosyayi bulunulan klasöre cıkartır
+
+     -xvf   ".tar" dosyasını çıkartır.
+
+     -zxvf  "tar.gzip" dosyasını cıkartır.
+
+     -jxvf  "tar.bzip2" dosyasını cıakrtır  
+	
+      j z birlikte kullanılamaz
+
+
+gzip dosya_Adi    #belirtilen dosyayı gz olarak sıkıştırır.
+    -c dosya_adi yeni_dosya_Adi.gz  #belirtilen dosyayı farklı isimler sıkıştırır.
+    
+gzip*     #bulunulan dizindeki tüm dosyaları sıkıştırır.
+gunzip*   #bulunulan dizindeki sıkıştırılmış dosyaları cıkartır.
+
+gunzip dosya_adi  #belitilen dosyayı dışarı çıkartır.
+
+
+gzip -r dizin_adi   #belirtilen dizndeki tüm dosyaları sıkıştırır.
+gzip -rd dizin_adi  #belitilen dizindeki sıkıştırılmış dosyaları cıkartır.
+
+
+#############################################################################################################################################################
+*****************************************************************  Süreçler ******************************************************************
+
+pkill program_adi         #belirtilen programı process id ini otomoatik kendi tespit ederek kapatır
+
+
+firefox &                 #terminalden bu komutu çalıştırırsak arka planda çalışmaya devam eder ve biz terminali kullanabiliriz fakat terminali kapatınca arkaplana attığımız uygulamada çalışmaya devam eder.
+
+nohup uygulama            #uygulamayı terminalden bağımsız arka planda çalıştırır.
+
+disown -h %id_numarası    #terminalden acılan process in terminalle bağlantısı kesilir.
+
+
+systemctl                             #linuxta sistem üzerindeki servisleri yönetmemizi sağlar
+
+systemctl list-units --type service   #sistem üzerinde  çalışan servisleri listeler
+                                       --state running #sistem üzerinde sadece o an çalışan servisleri listeler
+
+
+sysctl status servis_adi              #istenilen servis hakkında ayrıntıllı bilgi verir.
+
+
+
+
+
+######################################################################################################################################################
+******************************************** Ağ Temelleri *********************************************
+
+
+#route -n     #Modemin arayüz  IP adresini gösterir
+
+hostname -I   #bilgisayarın sadece ip adresini verir
+
+ip a          #ayrıntılı bilgi verir
+ 
+sudo tcpdump -v #tcp protokolü üzerinden geçen ağ trafiğini izler
+iftop           #ağ tarafiğini özet bir şekilde görüntüler
+
+
+
+ifconfig eth0 down     #İnternet bağlantısını  durdurur.
+ifconfig eth0 up       #İnternet bağlantısını başlatır.
+
+netdiscover            #Ağdaki aktif olan araçların IP sini gösteriyor.
+
+reboot now            #Sistemi yeniden başlatır.
+shutdown +now         #Sistemi şimdi kapatır.
+
+sudo systemctl enable ssh   #ssh i aktif eder
+sudo systemctl disable ssh  #ssh i kapatır
+sudo systemctl stop ssh     #ssh durdurur.
+
+nslookup DNS             #dns sorgusu yapar
+nslookup -query=mx DNS   #istenilen dns in main sunucularını gösterir
+nslookup -query=ns DNS   #istenilen dns için isim sunucularını gösteir
+
+
+dpkg -i paket_adi                #apt ye alternatif paket yükleyici -i install parametresiyle kurar
+dpkg - l                         #paketleri listeler
+dpkg  -r paket_adi               #mevcut paketi kaldırır
+apt-cache depends uygulama_adi   #uygulama için gerekli paketleri listeler
+
+
+
+chmod -R  yetkiler #yetkiler alt klasörleri kapsayacak şekilde verilir.
+
+chown kullanıcı:group klasör_Adi #dizinin hep grubunu hem kullanıcısını değiştirir.
+
+
+
+###########################################################################################################################################################
+******************************************************* Güvenlik ⁮duvarı *******************************************************
+
+sudo iptables -L -v                           #IPv4 için daha geniş güvenlik duvarı sorgusu 
+
+#KABUL ET KURALLARI
+
+sudo ip6tables  -L      #IPv46için güvenlik duvarı sorgusu
+
+sudo iptables -A INPUT -m conntrack  --ctstate ESTABLISHED,RELATED  -j ACCEPT  #Bağlantıyı takip et ve kabul et
+
+sudo iptables -A INPUT -p tcp  --dport ssh  -j ACCEPT                          #ssh bağlantısnı kabul eden protokolü ve portu tanımladık.( 22.port)
+
+sudo iptables -A INPUT -p upd  --dport 53  -j ACCEPT                           #dns  servisiyle upd protokolü araçılıyla bağlantı kurdu   (53.port)
+
+sudo iptables -A INPUT -p tcp  --dport 53  -j ACCEPT                           #dns servisiyle tcp protokülü araçılıyla bağlantı kurdu
+
+sudo iptables -I INPUT l -i lo -j ACCEPT                                       #sistemin kendi kendine loopack yapmayacak
+
+sudo iptables -A INPUT -m conntrack -p  icmp -icmp-tpye 3 --ctstate NEW,ESTABLİSHED,RELATED -j ACCEPT    #icmp 3 olan yani ulaşılamaz mesajlara müsade et
+
+sudo iptables -P INPUT -j drop    #temel protokol olarak drop tanımladık
+
+sudosudo /sbin/iptables-save      #tanımladıgımız kuralları kalıcı olarak kaydeder.
+
+sudo iptables -F
+sudo /sbin/iptablese-save
+##-F parametresiyle protokolleri sıfırlıyoruz ve alttaki komutla kaydediyoruz.
+
+
+###########################################################################################################################################################
+******************************************************************* run-level  *********************************************
+
+systemctl get-default                  #şuan hangi run-level i kullanıyoruz onu gösterir
+systemctl isolate multi-user.target    #grafiksel arayüzü sonlandırıp terminal arayüze geçr
+systemctl isolate graphical.target     #grafiksel arayüze geçer
+systemctl isolate rescue.target        #linux kurtarma moduna geçer
+systemctl isolate emergency.target     #linux acil durum modu 

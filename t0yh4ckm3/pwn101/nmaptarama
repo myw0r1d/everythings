@@ -1,0 +1,16 @@
+# Nmap 7.94SVN scan initiated Wed Jan 31 00:07:14 2024 as: nmap -sCV -Pn -vv -oN nmaptarama 10.10.249.232
+Nmap scan report for 10.10.249.232
+Host is up, received user-set (0.12s latency).
+Scanned at 2024-01-31 00:07:15 +03 for 19s
+Not shown: 994 filtered tcp ports (no-response)
+PORT     STATE  SERVICE    REASON       VERSION
+22/tcp   closed ssh        conn-refused
+9001/tcp closed tor-orport conn-refused
+9002/tcp closed dynamid    conn-refused
+9003/tcp closed unknown    conn-refused
+9009/tcp closed pichat     conn-refused
+9010/tcp closed sdr        conn-refused
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 31 00:07:34 2024 -- 1 IP address (1 host up) scanned in 20.03 seconds

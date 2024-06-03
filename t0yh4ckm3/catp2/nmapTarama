@@ -1,0 +1,110 @@
+# Nmap 7.94SVN scan initiated Wed Nov 29 19:39:33 2023 as: nmap -sCV -Pn -vv -oN nmapTarama 10.10.91.219
+Nmap scan report for 10.10.91.219
+Host is up, received user-set (0.092s latency).
+Scanned at 2023-11-29 19:39:33 +03 for 98s
+Not shown: 995 closed tcp ports (conn-refused)
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 7.6p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 33:f0:03:36:26:36:8c:2f:88:95:2c:ac:c3:bc:64:65 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDWn7oP+xezi54hhxJR3FAOcCt9gU+ZfOXquxFX/NC6USigzwXcxw2B4P3Yz6Huhaox1WRRgOSAYPJp9uo1gnA+ttkVdRaIqmcizbsznuU6sXntwiunD/QDNegq5UwJI3PjQu05HhnTNwGlBuiv+V/HW2OZGo0LLMY8ixqphCtAbw5uQZsV28rB2Yy1C7FYjkRzfhGePOfyq8Ga4FSpRnWz1vHYyEzFiF9tyLXNcDEdIWalKA6hrr7msEneSITE/RrGt5tynn6Rq5/3Os0mdbV0ztvqavwcWRR6B1UAJ+zPR/GKJ6s4Zr8ImoAXIZc7lFQ7Oh8DVWYp4cearg90RZUx
+|   256 4f:f3:b3:f2:6e:03:91:b2:7c:c0:53:d5:d4:03:88:46 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFhoBFkSKYS/dRjYASX26cs3gtgKxnLhhnXBas1fJ5i32J7h9+X8XA3GHT2SzP8/CBbs759W5q68jDA9nsTYnzo=
+|   256 13:7c:47:8b:6f:f8:f4:6b:42:9a:f2:d5:3d:34:13:52 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMiQc+7IBNNbs8nZJ4L+ntHTLbWn0Xn5b+QnWuboKE6r
+80/tcp   open  http    syn-ack nginx 1.4.6 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-favicon: Unknown favicon MD5: 60D8216C0FDE4723DCA5FBD03AD44CB7
+| http-git: 
+|   10.10.91.219:80/.git/
+|     Git repository found!
+|     Repository description: Unnamed repository; edit this file 'description' to name the...
+|     Remotes:
+|       https://github.com/electerious/Lychee.git
+|_    Project type: PHP application (guessed from .gitignore)
+|_http-server-header: nginx/1.4.6 (Ubuntu)
+|_http-title: Lychee
+| http-robots.txt: 7 disallowed entries 
+|_/data/ /dist/ /docs/ /php/ /plugins/ /src/ /uploads/
+222/tcp  open  ssh     syn-ack OpenSSH 9.0 (protocol 2.0)
+| ssh-hostkey: 
+|   256 be:cb:06:1f:33:0f:60:06:a0:5a:06:bf:06:53:33:c0 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBB+PtL9v5aeL5ZyAqgRnysYUVe0Ww60OwRp1w4zMWjWtAlcYbgHraHSSi5OhIhiiN1qXxWRDmgkHBteWs7nKZRI=
+|   256 9f:07:98:92:6e:fd:2c:2d:b0:93:fa:fe:e8:95:0c:37 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIHrtEihpl8XdvZJ4zLSvhdBlIeOBcRLyo7P6d7wOECm8
+3000/tcp open  ppp?    syn-ack
+| fingerprint-strings: 
+|   GenericLines, Help, RTSPRequest: 
+|     HTTP/1.1 400 Bad Request
+|     Content-Type: text/plain; charset=utf-8
+|     Connection: close
+|     Request
+|   GetRequest: 
+|     HTTP/1.0 200 OK
+|     Cache-Control: no-store, no-transform
+|     Content-Type: text/html; charset=UTF-8
+|     Set-Cookie: i_like_gitea=1ba59c8106031c5b; Path=/; HttpOnly; SameSite=Lax
+|     Set-Cookie: _csrf=hA1dQNGBA2MA8ZqKrBWR_H4KvMI6MTcwMTI3NTk4Mjg1NDEyNjg1MQ; Path=/; Expires=Thu, 30 Nov 2023 16:39:42 GMT; HttpOnly; SameSite=Lax
+|     Set-Cookie: macaron_flash=; Path=/; Max-Age=0; HttpOnly; SameSite=Lax
+|     X-Frame-Options: SAMEORIGIN
+|     Date: Wed, 29 Nov 2023 16:39:42 GMT
+|     <!DOCTYPE html>
+|     <html lang="en-US" class="theme-">
+|     <head>
+|     <meta charset="utf-8">
+|     <meta name="viewport" content="width=device-width, initial-scale=1">
+|     <title> Gitea: Git with a cup of tea</title>
+|     <link rel="manifest" href="data:application/json;base64,eyJuYW1lIjoiR2l0ZWE6IEdpdCB3aXRoIGEgY3VwIG9mIHRlYSIsInNob3J0X25hbWUiOiJHaXRlYTogR2l0IHdpdGggYSBjdXAgb2YgdGVhIiwic3RhcnRfdXJsIjoiaHR0cDovL2xvY2FsaG9zdDozMDAwLyIsImljb25zIjpbeyJzcmMiOiJodHRwOi
+|   HTTPOptions: 
+|     HTTP/1.0 405 Method Not Allowed
+|     Cache-Control: no-store, no-transform
+|     Set-Cookie: i_like_gitea=78b61f1f92ae3d1d; Path=/; HttpOnly; SameSite=Lax
+|     Set-Cookie: _csrf=k8RwNvbdIOpZp0iawFksgPZs_dM6MTcwMTI3NTk4ODM1OTc0ODgzOA; Path=/; Expires=Thu, 30 Nov 2023 16:39:48 GMT; HttpOnly; SameSite=Lax
+|     Set-Cookie: macaron_flash=; Path=/; Max-Age=0; HttpOnly; SameSite=Lax
+|     X-Frame-Options: SAMEORIGIN
+|     Date: Wed, 29 Nov 2023 16:39:48 GMT
+|_    Content-Length: 0
+8080/tcp open  http    syn-ack SimpleHTTPServer 0.6 (Python 3.6.9)
+|_http-title: Welcome to nginx!
+|_http-server-header: SimpleHTTP/0.6 Python/3.6.9
+| http-methods: 
+|_  Supported Methods: GET HEAD
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port3000-TCP:V=7.94SVN%I=7%D=11/29%Time=6567694F%P=x86_64-pc-linux-gnu%
+SF:r(GenericLines,67,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\
+SF:x20text/plain;\x20charset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20B
+SF:ad\x20Request")%r(GetRequest,2DE8,"HTTP/1\.0\x20200\x20OK\r\nCache-Cont
+SF:rol:\x20no-store,\x20no-transform\r\nContent-Type:\x20text/html;\x20cha
+SF:rset=UTF-8\r\nSet-Cookie:\x20i_like_gitea=1ba59c8106031c5b;\x20Path=/;\
+SF:x20HttpOnly;\x20SameSite=Lax\r\nSet-Cookie:\x20_csrf=hA1dQNGBA2MA8ZqKrB
+SF:WR_H4KvMI6MTcwMTI3NTk4Mjg1NDEyNjg1MQ;\x20Path=/;\x20Expires=Thu,\x2030\
+SF:x20Nov\x202023\x2016:39:42\x20GMT;\x20HttpOnly;\x20SameSite=Lax\r\nSet-
+SF:Cookie:\x20macaron_flash=;\x20Path=/;\x20Max-Age=0;\x20HttpOnly;\x20Sam
+SF:eSite=Lax\r\nX-Frame-Options:\x20SAMEORIGIN\r\nDate:\x20Wed,\x2029\x20N
+SF:ov\x202023\x2016:39:42\x20GMT\r\n\r\n<!DOCTYPE\x20html>\n<html\x20lang=
+SF:\"en-US\"\x20class=\"theme-\">\n<head>\n\t<meta\x20charset=\"utf-8\">\n
+SF:\t<meta\x20name=\"viewport\"\x20content=\"width=device-width,\x20initia
+SF:l-scale=1\">\n\t<title>\x20Gitea:\x20Git\x20with\x20a\x20cup\x20of\x20t
+SF:ea</title>\n\t<link\x20rel=\"manifest\"\x20href=\"data:application/json
+SF:;base64,eyJuYW1lIjoiR2l0ZWE6IEdpdCB3aXRoIGEgY3VwIG9mIHRlYSIsInNob3J0X25
+SF:hbWUiOiJHaXRlYTogR2l0IHdpdGggYSBjdXAgb2YgdGVhIiwic3RhcnRfdXJsIjoiaHR0cD
+SF:ovL2xvY2FsaG9zdDozMDAwLyIsImljb25zIjpbeyJzcmMiOiJodHRwOi")%r(Help,67,"H
+SF:TTP/1\.1\x20400\x20Bad\x20Request\r\nContent-Type:\x20text/plain;\x20ch
+SF:arset=utf-8\r\nConnection:\x20close\r\n\r\n400\x20Bad\x20Request")%r(HT
+SF:TPOptions,1C2,"HTTP/1\.0\x20405\x20Method\x20Not\x20Allowed\r\nCache-Co
+SF:ntrol:\x20no-store,\x20no-transform\r\nSet-Cookie:\x20i_like_gitea=78b6
+SF:1f1f92ae3d1d;\x20Path=/;\x20HttpOnly;\x20SameSite=Lax\r\nSet-Cookie:\x2
+SF:0_csrf=k8RwNvbdIOpZp0iawFksgPZs_dM6MTcwMTI3NTk4ODM1OTc0ODgzOA;\x20Path=
+SF:/;\x20Expires=Thu,\x2030\x20Nov\x202023\x2016:39:48\x20GMT;\x20HttpOnly
+SF:;\x20SameSite=Lax\r\nSet-Cookie:\x20macaron_flash=;\x20Path=/;\x20Max-A
+SF:ge=0;\x20HttpOnly;\x20SameSite=Lax\r\nX-Frame-Options:\x20SAMEORIGIN\r\
+SF:nDate:\x20Wed,\x2029\x20Nov\x202023\x2016:39:48\x20GMT\r\nContent-Lengt
+SF:h:\x200\r\n\r\n")%r(RTSPRequest,67,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nContent-Type:\x20text/plain;\x20charset=utf-8\r\nConnection:\x20clos
+SF:e\r\n\r\n400\x20Bad\x20Request");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 29 19:41:11 2023 -- 1 IP address (1 host up) scanned in 98.04 seconds

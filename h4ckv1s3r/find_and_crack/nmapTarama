@@ -1,0 +1,26 @@
+# Nmap 7.94SVN scan initiated Sat Apr 27 11:32:13 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 172.20.1.165
+Nmap scan report for energysolutions.hv (172.20.1.165)
+Host is up, received user-set (0.086s latency).
+Scanned at 2024-04-27 11:32:14 +03 for 59s
+Not shown: 55866 closed tcp ports (conn-refused), 9667 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+80/tcp   open  http    syn-ack Apache httpd 2.4.56 ((Debian))
+|_http-title:     EnergySolutions Inc. | IT Services Interface  
+|_http-server-header: Apache/2.4.56 (Debian)
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+3306/tcp open  mysql   syn-ack MySQL 5.5.5-10.5.21-MariaDB-0+deb11u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.5.21-MariaDB-0+deb11u1
+|   Thread ID: 58
+|   Capabilities flags: 63486
+|   Some Capabilities: IgnoreSigpipes, Support41Auth, SupportsTransactions, InteractiveClient, LongColumnFlag, FoundRows, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolOld, DontAllowDatabaseTableColumn, SupportsCompression, Speaks41ProtocolNew, ConnectWithDatabase, SupportsLoadDataLocal, ODBCClient, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: {X&RJ\p>$8,r}=W}0u}6
+|_  Auth Plugin Name: mysql_native_password
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 27 11:33:13 2024 -- 1 IP address (1 host up) scanned in 60.05 seconds

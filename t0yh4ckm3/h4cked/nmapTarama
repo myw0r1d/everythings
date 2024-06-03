@@ -1,0 +1,18 @@
+# Nmap 7.94SVN scan initiated Fri Nov 10 19:54:06 2023 as: nmap -sCV -vv -n -Pn -oN nmapTarama 10.10.11.236
+Increasing send delay for 10.10.11.236 from 0 to 5 due to 30 out of 99 dropped probes since last increase.
+Nmap scan report for 10.10.11.236
+Host is up, received user-set (0.13s latency).
+Scanned at 2023-11-10 19:54:06 +03 for 27s
+Not shown: 997 closed tcp ports (conn-refused)
+PORT     STATE    SERVICE REASON      VERSION
+21/tcp   open     ftp     syn-ack     vsftpd 2.0.8 or later
+80/tcp   open     http    syn-ack     Apache httpd 2.4.29 ((Ubuntu))
+|_http-title: Apache2 Ubuntu Default Page: It works
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+2196/tcp filtered unknown no-response
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Nov 10 19:54:33 2023 -- 1 IP address (1 host up) scanned in 26.91 seconds

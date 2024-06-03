@@ -1,0 +1,12 @@
+/** Database username */
+define( 'DB_USER', 'root' );
+
+/** Database password */
+define( 'DB_PASSWORD', 'lamp.sh' );
+
+
+
+
+
+
+bc1qyk79fcp9hd5kreprce89tkh4wrtl8avt4l67qa

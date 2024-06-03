@@ -1,0 +1,57 @@
+# Nmap 7.94SVN scan initiated Fri Apr 19 15:07:08 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 10.10.117.128
+Nmap scan report for 10.10.117.128
+Host is up, received user-set (0.091s latency).
+Scanned at 2024-04-19 15:07:08 +03 for 57s
+Not shown: 50182 closed tcp ports (conn-refused), 15351 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 8.9p1 Ubuntu 3ubuntu0.6 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   256 90:da:48:0e:1a:e9:43:5b:e2:8b:60:e2:3b:c1:2e:e2 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBFqXmZUeuJv9L06uhFjGdUYr62DGWyllWttwOg6NBxqIvfdNzzAA/0KLW+QS59QDTf0/XAVIL3uL7lQzDvTyYF0=
+|   256 10:8b:48:c8:86:18:4c:f4:83:ae:28:bf:ab:83:57:a6 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIKxRc3muYTJOmoi0FoD8ZCnK27xrdLvGcVfrWsFVM9/y
+3306/tcp open  mysql   syn-ack MySQL 8.0.36
+| mysql-info: 
+|   Protocol: 10
+|   Version: 8.0.36
+|   Thread ID: 10
+|   Capabilities flags: 65535
+|   Some Capabilities: SwitchToSSLAfterHandshake, Speaks41ProtocolOld, SupportsCompression, DontAllowDatabaseTableColumn, SupportsTransactions, LongColumnFlag, LongPassword, InteractiveClient, ConnectWithDatabase, SupportsLoadDataLocal, ODBCClient, Support41Auth, FoundRows, Speaks41ProtocolNew, IgnoreSpaceBeforeParenthesis, IgnoreSigpipes, SupportsAuthPlugins, SupportsMultipleResults, SupportsMultipleStatments
+|   Status: Autocommit
+|   Salt: B\x1A\x14iX\x16+B]\x17~\x0B"W)\x15\x14s,\x19
+|_  Auth Plugin Name: mysql_native_password
+| ssl-cert: Subject: commonName=MySQL_Server_8.0.36_Auto_Generated_Server_Certificate
+| Issuer: commonName=MySQL_Server_8.0.36_Auto_Generated_CA_Certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-04-04T09:23:35
+| Not valid after:  2034-04-02T09:23:35
+| MD5:   2a8f:3b9f:c0c6:c5c5:632f:a0a5:47a8:dfe5
+| SHA-1: bb39:d578:b2b8:4f07:5bc8:7f83:9d27:777a:526c:3162
+| -----BEGIN CERTIFICATE-----
+| MIIDBzCCAe+gAwIBAgIBAjANBgkqhkiG9w0BAQsFADA8MTowOAYDVQQDDDFNeVNR
+| TF9TZXJ2ZXJfOC4wLjM2X0F1dG9fR2VuZXJhdGVkX0NBX0NlcnRpZmljYXRlMB4X
+| DTI0MDQwNDA5MjMzNVoXDTM0MDQwMjA5MjMzNVowQDE+MDwGA1UEAww1TXlTUUxf
+| U2VydmVyXzguMC4zNl9BdXRvX0dlbmVyYXRlZF9TZXJ2ZXJfQ2VydGlmaWNhdGUw
+| ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQDNAZLS+YNGNOLSjHpl8BYW
+| I4HguBAk3PPPr15akmeQBlYaF0ueeSMja9TaSUglTfOPJtk7zEQnrn/NlKblM7du
+| +vLMgyM7AfQiUWxpB7y3/6Uc49UqHwaAXiMe1bU4tbKeJblLFul48VbVqnE6EEpQ
+| m0YnFJmrZIWjZiMaXhDJe1Auapt9Pdf3PuKqkU/xNrTBF8r8fA2LRByf1Fw2hzc1
+| HLR3fvafL022V7CUDFjru2q/Y9qh7egaQdk43F7OoKKTK3qJUJ4LHJqEpaTSNDMp
+| V+PxYjzczgM7xZ+cPaQcgUQ121sF4I4yigfyFI8gfUduGXZNHZJwt32nL1oQbkxX
+| AgMBAAGjEDAOMAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBAISAHJPW
+| ML1xOv/TrWPkD3vv2ovtYemLYwi09IuXWoGpfjdhWeSmsQmwsC4/mXulRgYBqqM+
+| h9b0e6bjcnVE2vX9n7lf7aTMq8GkJOeEePjYTmWok65184GPU59a1c491dnEThpd
+| bHkgVleHgu61PZhzQvDas335UzoWRo92CrEfLH/fgG5cLbUEMaG1cKN0rgUbcL/T
+| pupaIo1Y/Dh7Htf7TFWBd/UDos3ANh+3LjgrZbzNhQk4q2BjzBliIoBLiGG+Src8
+| RBR+CID+CTxKuxZ6v+2DBRWBccoD9P0wbcQiAmAgiHPufaEyg1wyMq/HHuCOmFfB
+| UfROOT6EkCZyVzU=
+|_-----END CERTIFICATE-----
+|_ssl-date: TLS randomness does not represent time
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 19 15:08:05 2024 -- 1 IP address (1 host up) scanned in 57.46 seconds

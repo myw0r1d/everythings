@@ -1,0 +1,17 @@
+# Nmap 7.94SVN scan initiated Thu Apr 25 09:56:38 2024 as: nmap -A -Pn -vv -p- --open -oN nmapaTarama 172.20.1.173
+Nmap scan report for 172.20.1.173
+Host is up, received user-set (0.079s latency).
+Scanned at 2024-04-25 09:56:38 +03 for 34s
+Not shown: 63712 closed tcp ports (conn-refused), 1821 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+80/tcp   open  http    syn-ack Apache httpd 2.4.56 ((Debian))
+|_http-server-header: Apache/2.4.56 (Debian)
+|_http-title: Modish Tech
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+3306/tcp open  mysql   syn-ack MySQL (unauthorized)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Apr 25 09:57:12 2024 -- 1 IP address (1 host up) scanned in 34.91 seconds

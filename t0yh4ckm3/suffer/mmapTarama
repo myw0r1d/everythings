@@ -1,0 +1,70 @@
+# Nmap 7.94SVN scan initiated Sat Feb 17 16:02:46 2024 as: nmap -sV -A -vv -Pn --open -p- -oN mmapTarama 10.10.31.26
+adjust_timeouts2: packet supposedly had rtt of -93212 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -93212 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -184370 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -184370 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -195797 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -195797 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -195677 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -195677 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220706 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220706 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -217142 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -217142 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220113 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -220113 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -196345 microseconds.  Ignoring time.
+adjust_timeouts2: packet supposedly had rtt of -196345 microseconds.  Ignoring time.
+Nmap scan report for 10.10.31.26
+Host is up, received user-set (0.087s latency).
+Scanned at 2024-02-17 16:02:47 +03 for 60s
+Not shown: 65533 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 0c:fc:97:7c:b9:39:81:83:7a:e3:2e:1c:0e:77:2b:e9 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDKk/DiKGLuLQ/z24ppcevbUCHRAFq0iC04ZOHauLzqrQNj3S2156r3FO/1dzMRSiAtKjmMbozqC9Ja2TeQHOoWTV+oTWAHbatE0Y0kRFl90zq1YvxJasQsu5hJWTon3wyTnl1aeiKabgWT332DcrS3ei198p1c+NgEJEmPa29ngZx5WkoFOQBEr478HQbPqXQo+3uVNoWzZGUNQOF0frEYiMmpkeQjbIPn6kHwHY+O+7w6he23EYwi2r0nQSOJt2TBwF+Ny9xUFsCegVJ1IgpvL9k4aU1+8qPb2r9N8KyjH0Ljk56rOYXHLoBVuqyiV8fBGWBib8UX5mSyvRfPA9MjVAvixWmhjBNoIFQtpXVwmxMy+V57x4+OE6Y1VNK9+WD2nxjqXV0gQuwmUJ2+8VgW5KPO1UOkEnE/i/u+iSvzwh+IgUJcJIYMW4o0S0Cdgk/MielTzKTE7811t+an+HlIxMTcx/nNehkltkLziXVmnAub+HIxaCGrUuFV6plgGFM=
+|   256 95:bb:c3:da:36:9f:55:c3:17:ea:02:90:dc:f5:57:52 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL2UPx8TsmHYLRGPHuvnUlA8y1/RaWQEn0GDHQL/c1o9hnpGmIvJ/0b6mtRmEbKgYxShaddlj9Hn1HeC6q527oU=
+|   256 93:d0:a0:a6:5b:09:fc:e6:99:55:9a:73:ec:32:ad:f4 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIExO2YWkfzdss13Ix/0VgzFTxzT2EWDTZbRskCgsqvsv
+80/tcp open  http    syn-ack ttl 62 Apache httpd 2.4.38 ((Debian))
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+|_http-favicon: Unknown favicon MD5: CFFCD51EFA49AB1AC1D8AC6E36462235
+| http-robots.txt: 1 disallowed entry 
+|_/backup/chat.txt
+| http-title: 24X7 System+
+|_Requested resource was /login.php
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.38 (Debian)
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=2/17%OT=22%CT=1%CU=42429%PV=Y%DS=2%DC=T%G=Y%TM=65D0
+OS:AEB3%P=x86_64-pc-linux-gnu)SEQ(SP=106%GCD=1%ISR=10C%TI=Z%CI=Z%TS=A)SEQ(S
+OS:P=106%GCD=1%ISR=10C%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M508ST11NW7%O2=M508ST11NW
+OS:7%O3=M508NNT11NW7%O4=M508ST11NW7%O5=M508ST11NW7%O6=M508ST11)WIN(W1=F4B3%
+OS:W2=F4B3%W3=F4B3%W4=F4B3%W5=F4B3%W6=F4B3)ECN(R=Y%DF=Y%T=40%W=F507%O=M508N
+OS:NSNW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=
+OS:Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=A
+OS:R%O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=4
+OS:0%W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=
+OS:G%RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 10.518 days (since Wed Feb  7 03:38:30 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=262 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   87.32 ms 10.9.0.1
+2   86.84 ms 10.10.31.26
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Feb 17 16:03:47 2024 -- 1 IP address (1 host up) scanned in 61.19 seconds

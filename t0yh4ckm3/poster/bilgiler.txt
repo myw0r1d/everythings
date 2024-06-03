@@ -1,0 +1,28 @@
+[+] 10.10.114.188:5432 - Login Successful: postgres:password@template1
+  PostgreSQL 9.5.21 on x86_64-pc-linux-gnu, compiled by gcc (Ubuntu 5.4.0-6ubuntu1~16.04.12) 5.4.0 20160609, 64-bit
+dark : qwerty1234#!hackme
+      $dbhost = "127.0.0.1";
+        $dbuname = "alison";
+        $dbpass = "p4ssw0rdS3cur3!#";
+        $dbname = "mysudopassword";
+
+
+ 
+ 
+ Username   Hash
+ --------   ----
+ darkstart  md58842b99375db43e9fdf238753623a27d
+ poster     md578fb805c7412ae597b399844a54cce0a
+ postgres   md532e12f215ba27cb750c9e093ce4b5127
+ sistemas   md5f7dbc0d5a06653e74da6b1af9290ee2b
+ ti         md57af9ac4c593e9e4f275576e13f935579
+ tryhackme  md503aab1165001c8f8ccae31a8824efddc
+
+/var/www/html/config.php:       $dbpass = "p4ssw0rdS3cur3!#";       
+/var/lib/postgresql/.psql_history:ALTER USER postgres PASSWORD 'password'; ALTER ROLE                                                                                 
+/var/lib/postgresql/.psql_history:CREATE USER tryhackme PASSWORD 'Hacktheplanet!';
+/var/lib/postgresql/.psql_history:CREATE USER sistemas PASSWORD '1234abcd';
+/var/lib/postgresql/.psql_history:CREATE USER ti PASSWORD 'abcd1234';
+/var/lib/postgresql/.psql_history:CREATE USER darkstart PASSWORD 'qwerty';
+/var/lib/postgresql/.psql_history:CREATE USER ssh_user:poster PASSWORD 'batman';
+/var/lib/postgresql/.psql_history:CREATE USER poster PASSWORD 'batman';

@@ -1,0 +1,131 @@
+# Nmap 7.94SVN scan initiated Fri Mar  1 17:55:22 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 192.168.214.133
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 192.168.214.133
+Host is up, received user-set (0.00081s latency).
+Scanned at 2024-03-01 17:55:22 +03 for 171s
+Not shown: 65517 closed tcp ports (conn-refused)
+PORT      STATE SERVICE     REASON  VERSION
+25/tcp    open  ftp         syn-ack vsftpd 3.0.2
+|_smtp-commands: SMTP: EHLO 530 Please login with USER and PASS.\x0D
+80/tcp    open  http        syn-ack Apache httpd 2.4.7 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD POST
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+|_http-title: Kevgir VM
+111/tcp   open  rpcbind     syn-ack 2-4 (RPC #100000)
+| rpcinfo: 
+|   program version    port/proto  service
+|   100003  2,3,4       2049/tcp   nfs
+|   100003  2,3,4       2049/tcp6  nfs
+|   100003  2,3,4       2049/udp   nfs
+|   100003  2,3,4       2049/udp6  nfs
+|   100005  1,2,3      33882/tcp   mountd
+|   100005  1,2,3      37378/tcp6  mountd
+|   100005  1,2,3      48272/udp   mountd
+|   100005  1,2,3      48591/udp6  mountd
+|   100227  2,3         2049/tcp   nfs_acl
+|   100227  2,3         2049/tcp6  nfs_acl
+|   100227  2,3         2049/udp   nfs_acl
+|_  100227  2,3         2049/udp6  nfs_acl
+139/tcp   open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp   open  netbios-ssn syn-ack Samba smbd 4.1.6-Ubuntu (workgroup: WORKGROUP)
+1322/tcp  open  ssh         syn-ack OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   1024 17:32:b4:85:06:20:b6:90:5b:75:1c:6e:fe:0f:f8:e2 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAJa9JVvecLEwcElfdcxBO5fAMA4/zxSujvZeCQUZj1/RJxYsrLP3Fv0FDCi+yI7l30T4Q95gMMPJyYv4bBKZXDRj8G6GA9/T9mB/cSupcg743eZxuMxrF11K7Q6Vwq8NVA9BBhk42iWc1Iji8kkzb9D40OPgY5KOnqiWeWfYWlm3AAAAFQDU9Ax2abHbA1izPputCc6NVk7xhQAAAIBFdsjs4bsHRnKhoKG00i+GAEJk1nqPF3/6RZ8zhfO23HvTiSul587OiweNGUwTyBJ2BsxTkX6162XTMyufRAImuYPqOFqrpEHuxWlhoSW7d7uoRaRRO3V20MGVQkyIKqF/rXPv/Hh4bmSHxNFaZCcMUsYnXKAq9U7FuY0bYj7eowAAAIB4EUbgApsDsLCgY+HMBpXl28V+H+vf4YGCSLmoeoNqwDYBonSOESWchpW0URLY00hcK3+W+AQJcU/CsnwJ93rNqf6ZhIAVexDVLMfEQtQt3LgtxW5T97fg5vSt1JyanQxJKkuCYTIW4JmqjMMOQccL4caamzjSxkEaFkzL9zZLkA==
+|   2048 53:49:03:32:86:0b:15:b8:a5:f1:2b:8e:75:1b:5a:06 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCvzOovXfhncyzaOmspf8M4AIrZqHHnCycUaZk6WKQlvmgOnpG0IHdAYZDvPts9uF9t2DFeslzrZhbJaC1Yhmx2BS4RNa/39buX+B794gJILHFSfi8WgrUs+Sf8EARQQREHeDvAYkdusBTAlGSgMEO3KwM/vwjX3KkG247y/oYWF+sryw5J9lZq8O9Pqs7PbwRODgjOZNlAgRCuzDjBaiAsMkqCzC9SS6cRjjAN4UJvgcXTIjB+rcAnDJiS7yyWmZVd5gTWQxIPybBiUTe4kZUG79j7pDIqMcKl7q9KbLa7EBvhzmBw5MVj5G72PVM2PXBm7W/fO2a0/vUO3SEne3sB
+|   256 3b:03:cd:29:7b:5e:9f:3b:62:79:ed:dc:82:c7:48:8a (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOR/BWXjDcjcLuWthwNc9DVckZKUZtWQidfUBuy8mV3LODizFxd1iVOPrCltFQJcj6zxNdBpL5elXOLO4o3tZqE=
+|   256 11:99:87:52:15:c8:ae:96:64:73:d6:49:8c:d7:d7:9f (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINndYlR/k0D979ZFn3qXp+WJ32bs/RppQVQ401gF01yc
+2049/tcp  open  nfs         syn-ack 2-4 (RPC #100003)
+6379/tcp  open  redis       syn-ack Redis key-value store 3.0.7
+8080/tcp  open  http        syn-ack Apache Tomcat/Coyote JSP engine 1.1
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: Apache Tomcat
+|_http-open-proxy: Proxy might be redirecting requests
+| http-methods: 
+|   Supported Methods: GET HEAD POST PUT DELETE OPTIONS
+|_  Potentially risky methods: PUT DELETE
+8081/tcp  open  http        syn-ack Apache httpd 2.4.7 ((Ubuntu))
+|_http-server-header: Apache/2.4.7 (Ubuntu)
+| http-robots.txt: 14 disallowed entries 
+| /administrator/ /cache/ /components/ /images/ 
+| /includes/ /installation/ /language/ /libraries/ /media/ 
+|_/modules/ /plugins/ /templates/ /tmp/ /xmlrpc/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-generator: Joomla! 1.5 - Open Source Content Management
+|_http-title: Welcome to the Frontpage
+9000/tcp  open  http        syn-ack Jetty winstone-2.9
+|_http-server-header: Jetty(winstone-2.9)
+|_http-favicon: Unknown favicon MD5: 23E8C7BD78E8CD826C5A6073B15068B1
+|_http-title: Dashboard [Jenkins]
+| http-robots.txt: 1 disallowed entry 
+|_/
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+32819/tcp open  nlockmgr    syn-ack 1-4 (RPC #100021)
+33604/tcp open  status      syn-ack 1 (RPC #100024)
+33882/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+36305/tcp open  unknown     syn-ack
+| fingerprint-strings: 
+|   DNSStatusRequestTCP: 
+|     Unrecognized protocol:
+|   DNSVersionBindReqTCP: 
+|     Unrecognized protocol: 
+|     version
+|_    bind
+39237/tcp open  ssh         syn-ack Apache Mina sshd 0.8.0 (protocol 2.0)
+39514/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+47733/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port36305-TCP:V=7.94SVN%I=7%D=3/1%Time=65E1EC80%P=x86_64-pc-linux-gnu%r
+SF:(DNSVersionBindReqTCP,36,"Unrecognized\x20protocol:\x20\0\x06\x01\0\0\x
+SF:01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03\n")%r(DNSStatusRequestT
+SF:CP,24,"Unrecognized\x20protocol:\x20\0\0\x10\0\0\0\0\0\0\0\0\0\n");
+Service Info: Host: CANYOUPWNME; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+| nbstat: NetBIOS name: CANYOUPWNME, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| Names:
+|   CANYOUPWNME<00>      Flags: <unique><active>
+|   CANYOUPWNME<03>      Flags: <unique><active>
+|   CANYOUPWNME<20>      Flags: <unique><active>
+|   WORKGROUP<00>        Flags: <group><active>
+|   WORKGROUP<1e>        Flags: <group><active>
+| Statistics:
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|   00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00:00
+|_  00:00:00:00:00:00:00:00:00:00:00:00:00:00
+| smb2-security-mode: 
+|   3:0:0: 
+|_    Message signing enabled but not required
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 60181/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 38624/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 44066/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 21125/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_clock-skew: mean: -39m59s, deviation: 1h09m16s, median: 0s
+| smb2-time: 
+|   date: 2024-03-01T14:57:42
+|_  start_date: N/A
+| smb-os-discovery: 
+|   OS: Unix (Samba 4.1.6-Ubuntu)
+|   Computer name: canyoupwnme
+|   NetBIOS computer name: CANYOUPWNME\x00
+|   Domain name: 
+|   FQDN: canyoupwnme
+|_  System time: 2024-03-01T16:57:41+02:00
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  1 17:58:13 2024 -- 1 IP address (1 host up) scanned in 170.46 seconds

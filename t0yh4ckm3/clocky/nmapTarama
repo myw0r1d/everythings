@@ -1,0 +1,135 @@
+# Nmap 7.94SVN scan initiated Sun Apr 21 23:12:27 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 10.10.136.78
+Nmap scan report for 10.10.136.78
+Host is up, received user-set (0.098s latency).
+Scanned at 2024-04-21 23:12:28 +03 for 134s
+Not shown: 60057 closed tcp ports (conn-refused), 5474 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE    REASON  VERSION
+22/tcp   open  ssh        syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.9 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 d9:42:e0:c0:d0:a9:8a:c3:82:65:ab:1e:5c:9c:0d:ef (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDXtxBkvAxfbjN/LEvzTuFBgqM7tUh9QnFzAf5VDnVfx2cfhYSLlNM3WN+b1OBJjFnQb+/8S+Qloc24ZvCHlJctfYKfh/Dt9JfSgCQH/sPGUxeYnJbQ/fqw9aqiZZ1zKEKd33q0jl5vfRJx2u6L7s8MPZ5pbFYtJ6DwKc9jws0NqbabYwC3UlMhgVsYA6pwpilMNkad61n8XqIE4GOmuWKi9zcYPRtoV6ALhffG8HwR7OJgFjShPlC1ishKwazBUWrzgsdk+caj7GVjC8QDgReY3zCZ5Q4h/TRAjTeg5ZON6dgDB/94lIrynSMU6HVwTvc/KmPkUjPnFBBy1ofd41+PDJeRidqyyNk1byIo7SVZKvVzPNdfbXVk6PUwlIl6jJHA/TUSpa5H/0iqLoYrAlup15Pm9gltyoxYyqOvokP6GFBtbqUGAebSDk9RkZRqP777FsEVP4FuMho+9S0ylv8C4MWPDN36bSmHG5i17A9bkNObeDizMFLQcEMRdHWFrzk=
+|   256 ff:b6:27:d5:8f:80:2a:87:67:25:ef:93:a0:6b:5b:59 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBL3b5mTMniOjphOsd9Y9FB7sf2Sdhfr3/LSuVgjkPBZjEWdBDO4HaEzKKZyFTYcNYxlYguEa+19iatmpSe0mmdU=
+|   256 e1:2f:4a:f5:6d:f1:c4:bc:89:78:29:72:0c:ec:32:d2 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBllTG5b4CG1OPzkyPgaXHZW3JZN9UbxT94Yp8cMIu9F
+80/tcp   open  http       syn-ack Apache httpd 2.4.41
+|_http-title: 403 Forbidden
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+8000/tcp open  http       syn-ack nginx 1.18.0 (Ubuntu)
+| http-robots.txt: 3 disallowed entries 
+|_/*.sql$ /*.zip$ /*.bak$
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+|_http-title: 403 Forbidden
+8080/tcp open  http-proxy syn-ack Werkzeug/2.2.3 Python/3.8.10
+| http-methods: 
+|_  Supported Methods: OPTIONS GET HEAD
+|_http-server-header: Werkzeug/2.2.3 Python/3.8.10
+|_http-title: Clocky
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/2.2.3 Python/3.8.10
+|     Date: Sun, 21 Apr 2024 20:13:09 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 6206
+|     Connection: close
+|     <head>
+|     <style>
+|     body {
+|     background-color:#fff;
+|     background-position:center;
+|     background-repeat:repeat-y;
+|     font-family: "Lucida Grande","Lucida Sans Unicode",geneva,verdana,sans-serif;
+|     font-size:10px;
+|     color:#777;
+|     #container {
+|     width:500px;
+|     margin:0 auto;
+|     #header {
+|     background-color:#eeeeee;
+|     margin:10px;
+|     padding:30px 10px 30px 10px;
+|     border-top:2px solid #ccc;
+|     #header h1 {
+|     text-align:center;
+|     font-family:Trebuchet MS, Geneva, Arial, Helvetica, sans-serif;
+|     font-size:30px;
+|     color:#333;
+|     margin:0;
+|     font-weight:normal;
+|     #header h1 strong {
+|     color:#A85BA6;
+|     #header h1 a {
+|     color:#333;
+|     text-decoration:none;
+|     #header h2 {
+|     font-size:11px;
+|     font-weight:normal;
+|     text-align:center;
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/2.2.3 Python/3.8.10
+|     Date: Sun, 21 Apr 2024 20:13:09 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Allow: OPTIONS, GET, HEAD
+|     Content-Length: 0
+|     Connection: close
+|   RTSPRequest: 
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8080-TCP:V=7.94SVN%I=7%D=4/21%Time=66257355%P=x86_64-pc-linux-gnu%r
+SF:(GetRequest,18ED,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/2\.2\.3
+SF:\x20Python/3\.8\.10\r\nDate:\x20Sun,\x2021\x20Apr\x202024\x2020:13:09\x
+SF:20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length
+SF::\x206206\r\nConnection:\x20close\r\n\r\n<head>\n<style>\n\nbody\x20{\n
+SF:\x20\x20background-color:#fff;\n\x20\x20\n\x20\x20background-position:c
+SF:enter;\n\x20\x20background-repeat:repeat-y;\n\x20\x20font-family:\x20\"
+SF:Lucida\x20Grande\",\"Lucida\x20Sans\x20Unicode\",geneva,verdana,sans-se
+SF:rif;\n\x20\x20font-size:10px;\n\x20\x20color:#777;\n}\n#container\x20{\
+SF:n\x20\x20width:500px;\n\x20\x20margin:0\x20auto;\n}\n\n#header\x20{\n\x
+SF:20\x20background-color:#eeeeee;\n\x20\x20margin:10px;\n\x20\x20padding:
+SF:30px\x2010px\x2030px\x2010px;\n\x20\x20border-top:2px\x20solid\x20#ccc;
+SF:\n}\n\n#header\x20h1\x20{\n\x20\x20text-align:center;\n\x20\x20font-fam
+SF:ily:Trebuchet\x20MS,\x20Geneva,\x20Arial,\x20Helvetica,\x20sans-serif;\
+SF:n\x20\x20font-size:30px;\n\x20\x20color:#333;\n\x20\x20margin:0;\n\x20\
+SF:x20font-weight:normal;\n}\n#header\x20h1\x20strong\x20{\n\x20\x20color:
+SF:#A85BA6;\n}\n#header\x20h1\x20a\x20{\n\x20\x20color:#333;\n\x20\x20text
+SF:-decoration:none;\n}\n#header\x20h2\x20{\n\x20\x20font-size:11px;\n\x20
+SF:\x20font-weight:normal;\n\x20\x20text-align:center;\n")%r(HTTPOptions,C
+SF:7,"HTTP/1\.1\x20200\x20OK\r\nServer:\x20Werkzeug/2\.2\.3\x20Python/3\.8
+SF:\.10\r\nDate:\x20Sun,\x2021\x20Apr\x202024\x2020:13:09\x20GMT\r\nConten
+SF:t-Type:\x20text/html;\x20charset=utf-8\r\nAllow:\x20OPTIONS,\x20GET,\x2
+SF:0HEAD\r\nContent-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(RTSPR
+SF:equest,1F4,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.
+SF:01//EN\"\n\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.w3\.org/TR/html
+SF:4/strict\.dtd\">\n<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\
+SF:x20\x20\x20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;
+SF:charset=utf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x20respo
+SF:nse</title>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\
+SF:x20\x20\x20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\x20\x20
+SF:\x20\x20\x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20<p>Message:\x20Bad\x20request\x20version\x20\('RTSP/1\.0'\)\.</p>\n\
+SF:x20\x20\x20\x20\x20\x20\x20\x20<p>Error\x20code\x20explanation:\x20HTTP
+SF:Status\.BAD_REQUEST\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupport
+SF:ed\x20method\.</p>\n\x20\x20\x20\x20</body>\n</html>\n");
+Service Info: Host: 127.0.1.1; OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Apr 21 23:14:42 2024 -- 1 IP address (1 host up) scanned in 135.45 seconds

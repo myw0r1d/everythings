@@ -1,0 +1,29 @@
+# Nmap 7.94SVN scan initiated Sun Feb 11 10:53:03 2024 as: nmap -sV -A -Pn -p- --open -vv -oN nmaptarama 10.10.125.76
+Nmap scan report for 10.10.125.76
+Host is up, received user-set (0.087s latency).
+Scanned at 2024-02-11 10:53:04 +03 for 43s
+Not shown: 63328 closed tcp ports (conn-refused), 2205 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.5 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 b0:c5:69:e6:dd:6b:81:0c:da:32:be:41:e3:5b:97:87 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCt6N8QTFPNouL2D0RrOP0gWnq3c+3uxXxxo3WkwE+Z+8KF8ox+bJRYWzbPk1RmEQv1ZFKDBNgbdrddpeP0SiC1y/tOQRb//1vy2ZqNtWyvDtHssObe62/F6yCl8eHC4jcbwLuzpEkAPEPbD/pPq9H5mueKqoIDAH2MAeuSf/XX/FQEhM51Bs+ADizyDeC2SfHa0W/U99ZyHFvqxlIYz5ZT43HVDiKmT9Di/9wclWmpwkpXgY6GtYjhrEez1+686rhVdWx8AJ5GRr5mvsM/VfiikTeNaLhaMVgT1BvfB4lOyeQ57Jiv+2xKd0Bx1fQ1fb2UiUFVRjXUEQVLqa7bOK1jcyuGw5KFXVoYfQcsgvllOxW3fJIMbnPYxxNgYhbYKv58cA13C1k5pgqyXxTep4lHAlFCaA1pcBZfPp2PTQET7cdtkJxmNyWWHfI1IqsyAZ4OQwKX0SxLEGdlviWn8GtZlF1l35LEeYu0YX4Mz847wX+9sf/dBWJNefPJgdqgVCs=
+|   256 6c:65:ad:87:08:7a:3e:4c:7d:ea:3a:30:76:4d:04:16 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAWsc0tSRz6I0J/ap+bL8NzXIAM8Qb/CnghvNICsIfjYrgd8dFCNAcbRDu0G3PC2L81wjcHAdkERcgNr5OzETmE=
+|   256 2d:57:1d:56:f6:56:52:29:ea:aa:da:33:b2:77:2c:9c (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOKiCZ2jVlW9/4CE63CtF8LcLBR+TJpEXonlXaj0LRE+
+80/tcp open  http    syn-ack Apache httpd 2.4.41 ((Ubuntu))
+|_http-server-header: Apache/2.4.41 (Ubuntu)
+|_http-title: Login
+| http-cookie-flags: 
+|   /: 
+|     PHPSESSID: 
+|_      httponly flag not set
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Feb 11 10:53:47 2024 -- 1 IP address (1 host up) scanned in 43.44 seconds

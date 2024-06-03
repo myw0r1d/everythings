@@ -1,0 +1,16 @@
+# Nmap 7.94SVN scan initiated Fri Mar  1 15:16:14 2024 as: nmap -A -Pn -p- --open -vv -oN nmapTarama 192.168.214.132
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 192.168.214.132
+Host is up, received user-set (0.010s latency).
+Scanned at 2024-03-01 15:16:14 +03 for 14s
+Not shown: 65534 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Apache httpd 2.4.29 ((Ubuntu))
+| http-methods: 
+|_  Supported Methods: HEAD GET POST OPTIONS
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+|_http-title: Apache2 Ubuntu Default Page: It works
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  1 15:16:28 2024 -- 1 IP address (1 host up) scanned in 13.55 seconds

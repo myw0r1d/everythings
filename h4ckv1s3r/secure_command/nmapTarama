@@ -1,0 +1,18 @@
+# Nmap 7.94SVN scan initiated Sat Apr 20 22:15:00 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 172.20.2.64
+Nmap scan report for 172.20.2.64
+Host is up, received user-set (0.069s latency).
+Scanned at 2024-04-20 22:15:04 +03 for 31s
+Not shown: 64543 closed tcp ports (conn-refused), 991 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 9.2p1 Debian 2 (protocol 2.0)
+| ssh-hostkey: 
+|   256 3f:1b:07:c7:23:c1:1f:6f:55:45:be:28:90:31:1b:d9 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJHTwZcb+HUfTjaCgUiVjg+ecTvDwz+ja0oLr+99s2kqXbrrRCq9G5shDvC51iHEZWoRNf4ODj9a2D/4uCYoWlM=
+|   256 6e:4b:ac:4b:03:7e:af:06:fb:74:32:26:1a:f1:4d:01 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGMXyoD5qSup4zU23GCce8onwcUn9qGfnCsgf48eHj5i
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Apr 20 22:15:35 2024 -- 1 IP address (1 host up) scanned in 36.04 seconds

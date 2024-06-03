@@ -1,0 +1,127 @@
+# Nmap 7.94SVN scan initiated Fri Mar  8 16:26:18 2024 as: nmap -A -Pn -vv -p- --open -oN nmapTarama 10.10.123.32
+Nmap scan report for 10.10.123.32
+Host is up, received user-set (0.096s latency).
+Scanned at 2024-03-08 16:26:18 +03 for 65s
+Not shown: 62709 closed tcp ports (conn-refused), 2824 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.2 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 5b:2d:9d:60:a7:45:de:7a:99:20:3e:42:94:ce:19:3c (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDEav+HAGw7xuVSR7QKeKvPc2ZpLfgIJ2azj8wt8S3VdC0yPI5cgFTwrdyZ/b9nHwZb2ibA2Ld12zn4zObnoRLU05emZ0qSpyssEN6+xF2E9SSbe9o79UuJX7KoCAc4oKHdL6vme9Gt1NpmL7UVXaK8LG0wMJ0PAi90NPSp6yCqX+Zh3ox5/ozOw6J0fVWJhq+OpMq3uRdh4C4XQF5ZAN+Yf9uGy5er+VOCOt2Gio2Y+4O2VmQa+d16qJXziOV3tCwronfd8C2FXvbGWNjKnEpn7qmf5TFW7DmOs6lbvhNSqNImKHYPKeMJHDj/0MyjXMHrmYSMvQ/jHsdi1e8wUz4tIOkjrVkEy1BF6rJ20e0mdsJOnk4CrGqbNCvPoCCV0Sn4+IeOsDTqmXjzI6oVZZ/mEJM0p+AxC+a8NUU7IRtDOXQH9bl2/g5N0n3UfpGjz+gmQxQMhcziZobRVUY8b+6TneDi4WLD889XWh0kemP8srXb/BR/DUsCvXJvAZ1gDbU=
+|   256 bf:32:78:01:83:af:78:5e:e7:fe:9c:83:4a:7d:aa:6b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBKWImj6zzJJnO+2iTNXciJVkpCVcDC82aeGnvA3GVC4G1J7mwk1TYrRemrCBlwhm+BUzvs0q2qKk/9VCh1+kKlA=
+|   256 12:ab:13:80:e5:ad:73:07:c8:48:d5:ca:7c:7d:e0:af (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAINEIOgTDXXq96o6fNCrn3mQ8JpGFHhx6AtZGEOG4Z+oF
+80/tcp open  http    syn-ack
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| fingerprint-strings: 
+|   GetRequest: 
+|     HTTP/1.1 200 OK
+|     Content-Type: text/html
+|     Date: Fri, 08 Mar 2024 13:27:12 GMT
+|     Connection: close
+|     <html><head>
+|     <title>Horror LLC</title>
+|     <style>
+|     body {
+|     background: linear-gradient(253deg, #4a040d, #3b0b54, #3a343b);
+|     background-size: 300% 300%;
+|     -webkit-animation: Background 10s ease infinite;
+|     -moz-animation: Background 10s ease infinite;
+|     animation: Background 10s ease infinite;
+|     @-webkit-keyframes Background {
+|     background-position: 0% 50%
+|     background-position: 100% 50%
+|     100% {
+|     background-position: 0% 50%
+|     @-moz-keyframes Background {
+|     background-position: 0% 50%
+|     background-position: 100% 50%
+|     100% {
+|     background-position: 0% 50%
+|     @keyframes Background {
+|     background-position: 0% 50%
+|     background-posi
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Content-Type: text/html
+|     Date: Fri, 08 Mar 2024 13:27:13 GMT
+|     Connection: close
+|     <html><head>
+|     <title>Horror LLC</title>
+|     <style>
+|     body {
+|     background: linear-gradient(253deg, #4a040d, #3b0b54, #3a343b);
+|     background-size: 300% 300%;
+|     -webkit-animation: Background 10s ease infinite;
+|     -moz-animation: Background 10s ease infinite;
+|     animation: Background 10s ease infinite;
+|     @-webkit-keyframes Background {
+|     background-position: 0% 50%
+|     background-position: 100% 50%
+|     100% {
+|     background-position: 0% 50%
+|     @-moz-keyframes Background {
+|     background-position: 0% 50%
+|     background-position: 100% 50%
+|     100% {
+|     background-position: 0% 50%
+|     @keyframes Background {
+|     background-position: 0% 50%
+|_    background-posi
+|_http-favicon: Unknown favicon MD5: 8FCEA7DE73B9ED47DE799DB3AE6363A8
+|_http-title: Horror LLC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.94SVN%I=7%D=3/8%Time=65EB122E%P=x86_64-pc-linux-gnu%r(Ge
+SF:tRequest,E4B,"HTTP/1\.1\x20200\x20OK\r\nContent-Type:\x20text/html\r\nD
+SF:ate:\x20Fri,\x2008\x20Mar\x202024\x2013:27:12\x20GMT\r\nConnection:\x20
+SF:close\r\n\r\n<html><head>\n<title>Horror\x20LLC</title>\n<style>\n\x20\
+SF:x20body\x20{\n\x20\x20\x20\x20background:\x20linear-gradient\(253deg,\x
+SF:20#4a040d,\x20#3b0b54,\x20#3a343b\);\n\x20\x20\x20\x20background-size:\
+SF:x20300%\x20300%;\n\x20\x20\x20\x20-webkit-animation:\x20Background\x201
+SF:0s\x20ease\x20infinite;\n\x20\x20\x20\x20-moz-animation:\x20Background\
+SF:x2010s\x20ease\x20infinite;\n\x20\x20\x20\x20animation:\x20Background\x
+SF:2010s\x20ease\x20infinite;\n\x20\x20}\n\x20\x20\n\x20\x20@-webkit-keyfr
+SF:ames\x20Background\x20{\n\x20\x20\x20\x200%\x20{\n\x20\x20\x20\x20\x20\
+SF:x20background-position:\x200%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x20\x
+SF:2050%\x20{\n\x20\x20\x20\x20\x20\x20background-position:\x20100%\x2050%
+SF:\n\x20\x20\x20\x20}\n\x20\x20\x20\x20100%\x20{\n\x20\x20\x20\x20\x20\x2
+SF:0background-position:\x200%\x2050%\n\x20\x20\x20\x20}\n\x20\x20}\n\x20\
+SF:x20\n\x20\x20@-moz-keyframes\x20Background\x20{\n\x20\x20\x20\x200%\x20
+SF:{\n\x20\x20\x20\x20\x20\x20background-position:\x200%\x2050%\n\x20\x20\
+SF:x20\x20}\n\x20\x20\x20\x2050%\x20{\n\x20\x20\x20\x20\x20\x20background-
+SF:position:\x20100%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x20\x20100%\x20{\
+SF:n\x20\x20\x20\x20\x20\x20background-position:\x200%\x2050%\n\x20\x20\x2
+SF:0\x20}\n\x20\x20}\n\x20\x20\n\x20\x20@keyframes\x20Background\x20{\n\x2
+SF:0\x20\x20\x200%\x20{\n\x20\x20\x20\x20\x20\x20background-position:\x200
+SF:%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x20\x2050%\x20{\n\x20\x20\x20\x20
+SF:\x20\x20background-posi")%r(HTTPOptions,E4B,"HTTP/1\.1\x20200\x20OK\r\n
+SF:Content-Type:\x20text/html\r\nDate:\x20Fri,\x2008\x20Mar\x202024\x2013:
+SF:27:13\x20GMT\r\nConnection:\x20close\r\n\r\n<html><head>\n<title>Horror
+SF:\x20LLC</title>\n<style>\n\x20\x20body\x20{\n\x20\x20\x20\x20background
+SF::\x20linear-gradient\(253deg,\x20#4a040d,\x20#3b0b54,\x20#3a343b\);\n\x
+SF:20\x20\x20\x20background-size:\x20300%\x20300%;\n\x20\x20\x20\x20-webki
+SF:t-animation:\x20Background\x2010s\x20ease\x20infinite;\n\x20\x20\x20\x2
+SF:0-moz-animation:\x20Background\x2010s\x20ease\x20infinite;\n\x20\x20\x2
+SF:0\x20animation:\x20Background\x2010s\x20ease\x20infinite;\n\x20\x20}\n\
+SF:x20\x20\n\x20\x20@-webkit-keyframes\x20Background\x20{\n\x20\x20\x20\x2
+SF:00%\x20{\n\x20\x20\x20\x20\x20\x20background-position:\x200%\x2050%\n\x
+SF:20\x20\x20\x20}\n\x20\x20\x20\x2050%\x20{\n\x20\x20\x20\x20\x20\x20back
+SF:ground-position:\x20100%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x20\x20100
+SF:%\x20{\n\x20\x20\x20\x20\x20\x20background-position:\x200%\x2050%\n\x20
+SF:\x20\x20\x20}\n\x20\x20}\n\x20\x20\n\x20\x20@-moz-keyframes\x20Backgrou
+SF:nd\x20{\n\x20\x20\x20\x200%\x20{\n\x20\x20\x20\x20\x20\x20background-po
+SF:sition:\x200%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x20\x2050%\x20{\n\x20
+SF:\x20\x20\x20\x20\x20background-position:\x20100%\x2050%\n\x20\x20\x20\x
+SF:20}\n\x20\x20\x20\x20100%\x20{\n\x20\x20\x20\x20\x20\x20background-posi
+SF:tion:\x200%\x2050%\n\x20\x20\x20\x20}\n\x20\x20}\n\x20\x20\n\x20\x20@ke
+SF:yframes\x20Background\x20{\n\x20\x20\x20\x200%\x20{\n\x20\x20\x20\x20\x
+SF:20\x20background-position:\x200%\x2050%\n\x20\x20\x20\x20}\n\x20\x20\x2
+SF:0\x2050%\x20{\n\x20\x20\x20\x20\x20\x20background-posi");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  8 16:27:23 2024 -- 1 IP address (1 host up) scanned in 65.46 seconds

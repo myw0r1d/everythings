@@ -1,0 +1,99 @@
+# Nmap 7.94SVN scan initiated Sat Dec  2 20:23:18 2023 as: nmap -sCV -Pn -vv --open -oN nmapTarama 10.10.196.194
+Nmap scan report for 10.10.196.194
+Host is up, received user-set (0.081s latency).
+Scanned at 2023-12-02 20:23:18 +03 for 96s
+Not shown: 999 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+80/tcp open  http    syn-ack Werkzeug/2.2.2 Python/3.8.10
+| http-title: Site doesn't have a title (text/html; charset=utf-8).
+|_Requested resource was /login
+|_http-server-header: Werkzeug/2.2.2 Python/3.8.10
+| http-methods: 
+|_  Supported Methods: HEAD GET OPTIONS
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 NOT FOUND
+|     Server: Werkzeug/2.2.2 Python/3.8.10
+|     Date: Sat, 02 Dec 2023 17:23:31 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 207
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>404 Not Found</title>
+|     <h1>Not Found</h1>
+|     <p>The requested URL was not found on the server. If you entered the URL manually please check your spelling and try again.</p>
+|   GetRequest: 
+|     HTTP/1.1 302 FOUND
+|     Server: Werkzeug/2.2.2 Python/3.8.10
+|     Date: Sat, 02 Dec 2023 17:23:25 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Content-Length: 199
+|     Location: /login
+|     Connection: close
+|     <!doctype html>
+|     <html lang=en>
+|     <title>Redirecting...</title>
+|     <h1>Redirecting...</h1>
+|     <p>You should be redirected automatically to the target URL: <a href="/login">/login</a>. If not, click the link.
+|   HTTPOptions: 
+|     HTTP/1.1 200 OK
+|     Server: Werkzeug/2.2.2 Python/3.8.10
+|     Date: Sat, 02 Dec 2023 17:23:25 GMT
+|     Content-Type: text/html; charset=utf-8
+|     Allow: HEAD, GET, OPTIONS
+|     Content-Length: 0
+|     Connection: close
+|   RTSPRequest: 
+|     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+|     "http://www.w3.org/TR/html4/strict.dtd">
+|     <html>
+|     <head>
+|     <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+|     <title>Error response</title>
+|     </head>
+|     <body>
+|     <h1>Error response</h1>
+|     <p>Error code: 400</p>
+|     <p>Message: Bad request version ('RTSP/1.0').</p>
+|     <p>Error code explanation: HTTPStatus.BAD_REQUEST - Bad request syntax or unsupported method.</p>
+|     </body>
+|_    </html>
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port80-TCP:V=7.94SVN%I=7%D=12/2%Time=656B680E%P=x86_64-pc-linux-gnu%r(G
+SF:etRequest,18A,"HTTP/1\.1\x20302\x20FOUND\r\nServer:\x20Werkzeug/2\.2\.2
+SF:\x20Python/3\.8\.10\r\nDate:\x20Sat,\x2002\x20Dec\x202023\x2017:23:25\x
+SF:20GMT\r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length
+SF::\x20199\r\nLocation:\x20/login\r\nConnection:\x20close\r\n\r\n<!doctyp
+SF:e\x20html>\n<html\x20lang=en>\n<title>Redirecting\.\.\.</title>\n<h1>Re
+SF:directing\.\.\.</h1>\n<p>You\x20should\x20be\x20redirected\x20automatic
+SF:ally\x20to\x20the\x20target\x20URL:\x20<a\x20href=\"/login\">/login</a>
+SF:\.\x20If\x20not,\x20click\x20the\x20link\.\n")%r(HTTPOptions,C7,"HTTP/1
+SF:\.1\x20200\x20OK\r\nServer:\x20Werkzeug/2\.2\.2\x20Python/3\.8\.10\r\nD
+SF:ate:\x20Sat,\x2002\x20Dec\x202023\x2017:23:25\x20GMT\r\nContent-Type:\x
+SF:20text/html;\x20charset=utf-8\r\nAllow:\x20HEAD,\x20GET,\x20OPTIONS\r\n
+SF:Content-Length:\x200\r\nConnection:\x20close\r\n\r\n")%r(RTSPRequest,1F
+SF:4,"<!DOCTYPE\x20HTML\x20PUBLIC\x20\"-//W3C//DTD\x20HTML\x204\.01//EN\"\
+SF:n\x20\x20\x20\x20\x20\x20\x20\x20\"http://www\.w3\.org/TR/html4/strict\
+SF:.dtd\">\n<html>\n\x20\x20\x20\x20<head>\n\x20\x20\x20\x20\x20\x20\x20\x
+SF:20<meta\x20http-equiv=\"Content-Type\"\x20content=\"text/html;charset=u
+SF:tf-8\">\n\x20\x20\x20\x20\x20\x20\x20\x20<title>Error\x20response</titl
+SF:e>\n\x20\x20\x20\x20</head>\n\x20\x20\x20\x20<body>\n\x20\x20\x20\x20\x
+SF:20\x20\x20\x20<h1>Error\x20response</h1>\n\x20\x20\x20\x20\x20\x20\x20\
+SF:x20<p>Error\x20code:\x20400</p>\n\x20\x20\x20\x20\x20\x20\x20\x20<p>Mes
+SF:sage:\x20Bad\x20request\x20version\x20\('RTSP/1\.0'\)\.</p>\n\x20\x20\x
+SF:20\x20\x20\x20\x20\x20<p>Error\x20code\x20explanation:\x20HTTPStatus\.B
+SF:AD_REQUEST\x20-\x20Bad\x20request\x20syntax\x20or\x20unsupported\x20met
+SF:hod\.</p>\n\x20\x20\x20\x20</body>\n</html>\n")%r(FourOhFourRequest,184
+SF:,"HTTP/1\.1\x20404\x20NOT\x20FOUND\r\nServer:\x20Werkzeug/2\.2\.2\x20Py
+SF:thon/3\.8\.10\r\nDate:\x20Sat,\x2002\x20Dec\x202023\x2017:23:31\x20GMT\
+SF:r\nContent-Type:\x20text/html;\x20charset=utf-8\r\nContent-Length:\x202
+SF:07\r\nConnection:\x20close\r\n\r\n<!doctype\x20html>\n<html\x20lang=en>
+SF:\n<title>404\x20Not\x20Found</title>\n<h1>Not\x20Found</h1>\n<p>The\x20
+SF:requested\x20URL\x20was\x20not\x20found\x20on\x20the\x20server\.\x20If\
+SF:x20you\x20entered\x20the\x20URL\x20manually\x20please\x20check\x20your\
+SF:x20spelling\x20and\x20try\x20again\.</p>\n");
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Dec  2 20:24:54 2023 -- 1 IP address (1 host up) scanned in 96.26 seconds

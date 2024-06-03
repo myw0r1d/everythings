@@ -1,0 +1,24 @@
+# Nmap 7.94SVN scan initiated Fri Apr 26 13:10:04 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 172.20.1.164
+Nmap scan report for 172.20.1.164
+Host is up, received user-set (0.067s latency).
+Scanned at 2024-04-26 13:10:05 +03 for 234s
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 0c:6c:35:1f:fe:53:de:2d:ef:0c:e1:a5:6c:64:07:6d (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDNzxPC9eqrLQkcItLrDV7eNabyZVARL+A125VcrA1Q8+msBGrtwGBIdbcFXYNjKBVIorQTUFhoKUQ2aM+Z0Qc6Pg7g5af1qTeI/bvaWwACcPqVuyQQUUt76nBXkVGFYU5FZrapx/fMa0a9xaaBF+zjcsSI0q72i2kO21Idmo9F9FS4Zo5L8UxfuhthaPRPMw7IzvE+vbQ6CeT9G7hxk6fq8oZ2v8SLjWyOPx0CaK6/kPhwjnDX2RYMQ1R1jI45sc/7kF2Z/IGroAlqlfOKm3S9SjPRI+CIhlkZyq8WS2dn1xOagfg7iYL+cb5eYObY/D+jQ9fPSLR5ctc0CoKEMi3xvrq2oiX6K7dT4bJ+0IM/NxJDI3Rvw4xHcPp13vGxC8TwiO0FqNXHN39GW3jrcIJPVf1TkOlsFTttBsmtcdhQkX23dHVcvrf2SG5X3D7z6Y0EkI/uCkTQoo6qzcaWD62NXba73s/Cc/RDNkt8pGSirj4hVhqOoQou0aoZKCnig6U=
+|   256 ec:23:0e:f9:7d:54:e8:50:16:77:12:5c:0e:4f:4b:a0 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBBUIP4xdLTmdbD9FqqxNVr4OUT4wwAXWPbPjhlUxddJcfgI4Vd6xK72GvJyi+zv18HuxbZUtqLMXXJfhcPHoSas=
+|   256 f2:cb:29:15:12:ae:8a:6d:e6:34:f6:86:3c:2b:fb:4b (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO+uU+XIhbSxJm+AhZg3DRfBr9MaaEx+RTMvHiowOyOT
+9001/tcp open  http    syn-ack Medusa httpd 1.12 (Supervisor process manager)
+| http-methods: 
+|_  Supported Methods: GET HEAD
+|_http-server-header: Medusa/1.12
+|_http-title: Supervisor Status
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr 26 13:13:59 2024 -- 1 IP address (1 host up) scanned in 235.07 seconds

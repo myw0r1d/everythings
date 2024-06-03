@@ -1,0 +1,151 @@
+# Nmap 7.94SVN scan initiated Fri Dec 29 17:39:10 2023 as: nmap -sCV -Pn -n -p80,135,139,443,445,3306,3389,5985,47001,49664,49665,49666,49667,49668,49669,4967,49677 -oN nmapTarama -vv 10.10.65.220
+Nmap scan report for 10.10.65.220
+Host is up, received user-set (0.10s latency).
+Scanned at 2023-12-29 17:39:11 +03 for 66s
+
+PORT      STATE  SERVICE       REASON       VERSION
+80/tcp    open   http          syn-ack      Apache httpd 2.4.56 (OpenSSL/1.1.1t PHP/8.0.28)
+|_http-title: Index of /
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| 3.5K  2022-06-15 16:07  applications.html
+| 177   2022-06-15 16:07  bitnami.css
+| -     2023-04-06 09:24  dashboard/
+| 30K   2015-07-16 15:32  favicon.ico
+| -     2023-06-27 09:26  gift/
+| -     2023-06-27 09:04  img/
+| 751   2022-06-15 16:07  img/module_table_bottom.png
+| 337   2022-06-15 16:07  img/module_table_top.png
+| -     2023-06-28 14:39  xampp/
+|_
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+135/tcp   open   msrpc         syn-ack      Microsoft Windows RPC
+139/tcp   open   netbios-ssn   syn-ack      Microsoft Windows netbios-ssn
+443/tcp   open   ssl/http      syn-ack      Apache httpd 2.4.56 (OpenSSL/1.1.1t PHP/8.0.28)
+|_ssl-date: TLS randomness does not represent time
+| http-ls: Volume /
+| SIZE  TIME              FILENAME
+| 3.5K  2022-06-15 16:07  applications.html
+| 177   2022-06-15 16:07  bitnami.css
+| -     2023-04-06 09:24  dashboard/
+| 30K   2015-07-16 15:32  favicon.ico
+| -     2023-06-27 09:26  gift/
+| -     2023-06-27 09:04  img/
+| 751   2022-06-15 16:07  img/module_table_bottom.png
+| 337   2022-06-15 16:07  img/module_table_top.png
+| -     2023-06-28 14:39  xampp/
+|_
+|_http-title: Index of /
+| http-methods: 
+|   Supported Methods: GET POST OPTIONS HEAD TRACE
+|_  Potentially risky methods: TRACE
+|_http-favicon: Unknown favicon MD5: 6EB4A43CB64C97F76562AF703893C8FD
+|_http-server-header: Apache/2.4.56 (Win64) OpenSSL/1.1.1t PHP/8.0.28
+| tls-alpn: 
+|_  http/1.1
+| ssl-cert: Subject: commonName=localhost
+| Issuer: commonName=localhost
+| Public Key type: rsa
+| Public Key bits: 1024
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2009-11-10T23:48:47
+| Not valid after:  2019-11-08T23:48:47
+| MD5:   a0a4:4cc9:9e84:b26f:9e63:9f9e:d229:dee0
+| SHA-1: b023:8c54:7a90:5bfa:119c:4e8b:acca:eacf:3649:1ff6
+| -----BEGIN CERTIFICATE-----
+| MIIBnzCCAQgCCQC1x1LJh4G1AzANBgkqhkiG9w0BAQUFADAUMRIwEAYDVQQDEwls
+| b2NhbGhvc3QwHhcNMDkxMTEwMjM0ODQ3WhcNMTkxMTA4MjM0ODQ3WjAUMRIwEAYD
+| VQQDEwlsb2NhbGhvc3QwgZ8wDQYJKoZIhvcNAQEBBQADgY0AMIGJAoGBAMEl0yfj
+| 7K0Ng2pt51+adRAj4pCdoGOVjx1BmljVnGOMW3OGkHnMw9ajibh1vB6UfHxu463o
+| J1wLxgxq+Q8y/rPEehAjBCspKNSq+bMvZhD4p8HNYMRrKFfjZzv3ns1IItw46kgT
+| gDpAl1cMRzVGPXFimu5TnWMOZ3ooyaQ0/xntAgMBAAEwDQYJKoZIhvcNAQEFBQAD
+| gYEAavHzSWz5umhfb/MnBMa5DL2VNzS+9whmmpsDGEG+uR0kM1W2GQIdVHHJTyFd
+| aHXzgVJBQcWTwhp84nvHSiQTDBSaT6cQNQpvag/TaED/SEQpm0VqDFwpfFYuufBL
+| vVNbLkKxbK2XwUvu0RxoLdBMC/89HqrZ0ppiONuQ+X2MtxE=
+|_-----END CERTIFICATE-----
+445/tcp   open   microsoft-ds? syn-ack
+3306/tcp  open   mysql         syn-ack      MySQL 5.5.5-10.4.28-MariaDB
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.4.28-MariaDB
+|   Thread ID: 13
+|   Capabilities flags: 63486
+|   Some Capabilities: Support41Auth, Speaks41ProtocolOld, SupportsTransactions, SupportsCompression, ConnectWithDatabase, InteractiveClient, SupportsLoadDataLocal, ODBCClient, DontAllowDatabaseTableColumn, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolNew, IgnoreSigpipes, LongColumnFlag, FoundRows, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: }>Y&QDCa>Q_gj^vV.~Ul
+|_  Auth Plugin Name: mysql_native_password
+3389/tcp  open   ms-wbt-server syn-ack      Microsoft Terminal Services
+| ssl-cert: Subject: commonName=gift
+| Issuer: commonName=gift
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-12-28T13:51:28
+| Not valid after:  2024-06-28T13:51:28
+| MD5:   284c:1f06:4e0e:ce0a:2238:6d27:2374:7283
+| SHA-1: 2cb7:c90d:ce3a:e85b:a04c:55cf:c116:ae7d:ef26:0168
+| -----BEGIN CERTIFICATE-----
+| MIICzDCCAbSgAwIBAgIQOfDr6esgqYhP5u8zm/uwgDANBgkqhkiG9w0BAQsFADAP
+| MQ0wCwYDVQQDEwRnaWZ0MB4XDTIzMTIyODEzNTEyOFoXDTI0MDYyODEzNTEyOFow
+| DzENMAsGA1UEAxMEZ2lmdDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEB
+| ALDgrKTb/mlKSQAD4VbufdmYXdox3FzC48LuGLqzQSQmbq6aQkpzbX66VbUxCC5I
+| B2LcUfOah/h+8j+Oye+1sn4y1asP2SL/pwv5qvBO7ij30K/Et2C/X2GM27B/ghlL
+| kAbrKRAa2EbVjuqoimCu3lS3dpus6igG4qJUucbTah+Uv3qKDQsqf96EdjN01MMe
+| G0zc9wLGN6o0ynMGvyRb2iEJZlsjViakueu7cmtWbebozJA8ocTlt6rmakGwPKMt
+| O/nfK4QdftGGCATkJjQWCN9OFhAMEhk8IfUc7tu8KQLaeER1Y3kk9rIFbUCn2sLw
+| 3/wN9LZEH2PFRehHdms+JL0CAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEw
+| CwYDVR0PBAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQADal+kX9GisT00R2VjRUOK
+| qPfbow4zOwenDsBEBSrka+n2DmH53H4SL/JTPNLM2deYFnMTbeW57csF9Skbm1IG
+| Veffw02xRWYeNzJhcIbIEmRSujMgnsXVZ1/X6xmE3QhZiMHhGs6GE4VuREMpTl4v
+| o2mSKFjaHNL54gRMA0ax/kYUuBOpPhHtlc7Oz26M0hp/FyVHwPI9pMl09aNpEy08
+| vWM6CcXNQepOEFRC7bfHWqsPU8i3C0S7xu6/YJ9dFnoe3bkqic7DdThPDI5I5DCK
+| 0v0Zb9MGJifQle5TFq6ZG3rYwPuzxhPmXmNALf2lsJKp7q/uL+rz+xx/45Cs9tLs
+|_-----END CERTIFICATE-----
+|_ssl-date: 2023-12-29T14:40:16+00:00; 0s from scanner time.
+| rdp-ntlm-info: 
+|   Target_Name: GIFT
+|   NetBIOS_Domain_Name: GIFT
+|   NetBIOS_Computer_Name: GIFT
+|   DNS_Domain_Name: gift
+|   DNS_Computer_Name: gift
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-12-29T14:40:07+00:00
+4967/tcp  closed unknown       conn-refused
+5985/tcp  open   http          syn-ack      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+47001/tcp open   http          syn-ack      Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Not Found
+|_http-server-header: Microsoft-HTTPAPI/2.0
+49664/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49665/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49666/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49667/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49668/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49669/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+49677/tcp open   msrpc         syn-ack      Microsoft Windows RPC
+Service Info: Hosts: localhost, www.example.com; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 25159/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 50423/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 12276/udp): CLEAN (Timeout)
+|   Check 4 (port 18814/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled but not required
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| smb2-time: 
+|   date: 2023-12-29T14:40:11
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Dec 29 17:40:18 2023 -- 1 IP address (1 host up) scanned in 67.15 seconds

@@ -1,0 +1,6 @@
+redis-cli -h ip 
+keys *
+
+
+
+	"{\"userID\":\"e9818efa-612f-43eb-9358-dd2a057572b5\",\"username\":\"admin\",\"isAdmin\":true,\"isPremium\":true}"

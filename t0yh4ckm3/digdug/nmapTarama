@@ -1,0 +1,20 @@
+# Nmap 7.94SVN scan initiated Fri Apr  5 01:59:30 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 10.10.20.59
+Nmap scan report for 10.10.20.59
+Host is up, received user-set (0.092s latency).
+Scanned at 2024-04-05 01:59:30 +03 for 39s
+Not shown: 63180 closed tcp ports (conn-refused), 2354 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 53:bd:f1:6c:d3:0e:04:40:ca:c7:74:8a:9d:1b:29:52 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCgysSA3X5dxfbc/PEAT4/sSodECbtYYAHQDuTtRR7qkiFkWO9kjuIclYZEkgbcjajYw//F+lLIxx1VHL6oiW1urvJyWt9yfPFnxI6GYMDnFA2fH2mhft4n8VE2M6ysijpgYpyY4TQbacdnEH6iUbOgpbTSKtaI/V72SqbwCPHOgXx6Q2lgcl4a1sghmMj24c3IMv8hf3vd8UlSO5qmXVdnvbtgIjP70UoAOAiFjWJLy+bCS6Ean/AVoe0RzaTUxlDbTKA1EJ6825clOVAzZs3C7CS8c0mBWzCl6pNKDoCnVHyY0/GS74qCNf8LILyTtKdwJ8lG8/i5TNV6o5z9SoufnLqFoxcCU1wSMBRdbthC07AANBI9YSbs2JezYalR9TaE+s7xNgRmjnxlspNCOWe6IsY+rhrikh+5Q0El6EiBNl9WKFcv8ddJ3Orjl5iRrbrzDOc+eOC0L2BN32AiqxQ26aujIf5JUKK5r7L29KLV5jJiYQ1hW/EuPqEn/CAVmR8=
+|   256 d5:fc:7a:95:99:1c:57:34:5d:76:8d:b0:78:de:e5:1f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBM79tkKZKcw7b01ekq0RvccEk88f7rXwjVoUQuvO1T/KZefP7BZfqC9B6C6+f25ySDyHYJnAappGn3KPkOAyNaI=
+|   256 e1:31:09:ad:a7:4d:d5:8d:a1:46:6d:b3:6b:23:f7:f6 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJNfuCi/Or2jUG3xPbOSKJMQXPi6mG1T9GWkjNEi1SIc
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Apr  5 02:00:09 2024 -- 1 IP address (1 host up) scanned in 39.38 seconds

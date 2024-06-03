@@ -1,0 +1,24 @@
+# Nmap 7.94SVN scan initiated Wed Nov 29 18:31:11 2023 as: nmap -sCV -vv -Pn -oN nmapTarama 10.10.21.84
+Nmap scan report for 10.10.21.84
+Host is up, received user-set (0.093s latency).
+Scanned at 2023-11-29 18:31:12 +03 for 17s
+Not shown: 998 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 2e:54:89:ae:f7:91:4e:33:6e:10:89:53:9c:f5:92:db (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC50UpdKIHJamSUyj4Za61Azer4DxKI8tqdlNZmilqcTdetRzG47f4U/EhXB863TJcwXG7ZGmtrHXUUC0DJzuCR418ATKPX6iANv41Pb4bd0487cFxGOeff4rStLZKDno5HClR2yvuJeNETHh5IXUJG9lAWsu97JpVl8ItJLI6sA1fTVQTYww20QNH+O4Jgn1B4vEELHd0/Zjp3kVS/8t0ZUwN/KfeQabrI9l5Pg+yM3zDDk/NOmBWb5Ve6xOxJaFJkh88KnYU7S7I+tYU4pPkpCuQXSxjjfLiTYOGJgImtcsYoDfnSF8iCzlnxFOaQrgewJLyXbDd+grgtCjsQY4E860ZqTvffzOUnuKw5Hqn+z3yAuZivC1ow5KriX1WdjM9cCEg+Pm2UZVoMOKUFoV0qFr+iT2synCuxjWWK65oYh9sTnfGqmgpJswXyTtlJzcfofUsKVGMp4l/xUrwd4MHMRkULIH6tYL9QY1TP6DivhUPAzEeNue1WyLiBHWxWfQs=
+|   256 dd:2c:ca:fc:b7:65:14:d4:88:a3:6e:55:71:65:f7:2f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJbRA2hNqF4KYTbWzD9ebh/5mvyEiV7zEGHMyBTkGqJWa7Z2lSFSryir1u43gcwVqktmX+ScwKJJ4UYOe/9XXXc=
+|   256 2b:c2:d8:1b:f4:7b:e5:78:53:56:01:9a:83:f3:79:81 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGqeXkr2DmLgeJAcX4e6WkMn9xwnqsk+QGa89zPnNePw
+80/tcp open  http    syn-ack Apache httpd 2.4.54 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Lesson Learned?
+|_http-server-header: Apache/2.4.54 (Debian)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov 29 18:31:29 2023 -- 1 IP address (1 host up) scanned in 17.84 seconds

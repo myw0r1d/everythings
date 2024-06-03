@@ -1,0 +1,9 @@
+admin : Scam2021
+
+
+
+scamsite
+/** MySQL database password */
+define( 'DB_PASSWORD', 'ImAScammerLOL!123!' );
+
+ 

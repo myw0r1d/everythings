@@ -1,0 +1,18 @@
+[+] Enumerating users using SID S-1-22-1 and logon username '', password ''                    
+                                                                                               
+S-1-22-1-1000 Unix User\sys-internal (Local User)                                              
+
+[+] Enumerating users using SID S-1-5-32 and logon username '', password ''                                                                                          
+                                                                                                                                                                     
+S-1-5-32-544 BUILTIN\Administrators (Local Group)                                                                                                                    
+S-1-5-32-545 BUILTIN\Users (Local Group)
+S-1-5-32-546 BUILTIN\Guests (Local Group)
+S-1-5-32-547 BUILTIN\Power Users (Local Group)
+S-1-5-32-548 BUILTIN\Account Operators (Local Group)
+S-1-5-32-549 BUILTIN\Server Operators (Local Group)
+S-1-5-32-550 BUILTIN\Print Operators (Local Group)
+
+[+] Enumerating users using SID S-1-5-21-1569020563-4280465252-527208056 and logon username '', password ''                                                          
+                                                                                                                                                                     
+S-1-5-21-1569020563-4280465252-527208056-501 VULNNET-INTERNAL\nobody (Local User)                                                                                    
+S-1-5-21-1569020563-4280465252-527208056-513 VULNNET-INTERNAL\None (Domain Group)

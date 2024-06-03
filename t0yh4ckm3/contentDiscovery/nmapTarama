@@ -1,0 +1,27 @@
+# Nmap 7.94SVN scan initiated Thu Mar 21 19:28:22 2024 as: nmap -A -Pn -p- --open -vv -oN nmapTarama 10.10.185.134
+Nmap scan report for 10.10.185.134
+Host is up, received user-set (0.090s latency).
+Scanned at 2024-03-21 19:28:22 +03 for 90s
+Not shown: 47915 closed tcp ports (conn-refused), 17618 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.1 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 68:e1:79:de:17:dd:27:7a:78:ad:c4:d0:7f:5f:c2:bf (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDW4D54+CFJzNeBvZ/pLil6+Bz5ikf0uYZN2m3Uq1mXyGXOBYWE0zidgj4Xb/bvEFarm9eXYQ+yudSUNM0LOxzMvd/Uyv6MjXavmhNMqcK91zTJvZHdB7Npfc5oRto8mNhOxiJyLl0oXq+Srd0ydPy8U43lw3Rm/WrOJ9f9xnopb4jNWwok6Km/LldyR+Q8Rm1LcBZQwHLK8gXQMuD/cEowMJhAndBvQXdwH54z7ha5SnN5PAcAjbd1jZapyejtGLQKVq/eSmGsYJweKX7ZDyivhRJ6zgs8YRU3l5y7vz/3onn6zVvIlcqfuujU/ULpGd5knSHNihgiKZ5ZrmcRtp482R4/uhh59QxT64AZKmtcNNz05eo70yrqkrKNhMfecDS1+t32mryzKx3sy6B1XFw5q6A7vsFrUtV7PRZ+PE92g7Lsm7WeHamQseKF/AVopT3zfxN9fPyIFEdmJIogQoaLsnTt6tI9jUWt3xl58MeXOqW97AEfyw+SZ2XRGWB2Rg8=
+|   256 88:3e:86:96:0c:a1:1f:6e:98:50:51:9c:ed:cd:c7:9f (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHrSDJ/z8jBYMGpKeJ8++NgwHGabkgZFZHTCML1pycAS7uXPh2B5I49H8qmIv2Z8/4ftEdpm9y5qO/d7vw0PPRo=
+|   256 48:d8:d3:c6:74:f2:9a:c8:29:0e:91:44:55:25:50:78 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIJ4boM+jPB5/pokeQQ8GxqvwpSGb+WeSak50mjCLYhDG
+80/tcp open  http    syn-ack nginx 1.18.0 (Ubuntu)
+|_http-title: Acme IT Support - Home
+| http-methods: 
+|_  Supported Methods: GET HEAD POST
+| http-robots.txt: 1 disallowed entry 
+|_/staff-portal
+|_http-server-header: nginx/1.18.0 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu Mar 21 19:29:52 2024 -- 1 IP address (1 host up) scanned in 90.54 seconds

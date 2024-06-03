@@ -1,0 +1,25 @@
+# Nmap 7.94SVN scan initiated Tue Apr 23 12:26:00 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 172.20.3.128
+Nmap scan report for alexriveraexplorer.hv (172.20.3.128)
+Host is up, received user-set (0.068s latency).
+Scanned at 2024-04-23 12:26:00 +03 for 36s
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 8.4p1 Debian 5+deb11u3 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 5a:bc:c1:64:1b:a8:93:67:8c:a5:3a:c9:5e:28:94:50 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC8+OZ04quGY1CdN8DBzqxRgwDh+tc4hA2Ve6AyCAdcFjDT8bSXcj7yLb8daOV4ObPZY3/yF/kcU5M9ZIRFR4GNZP42YJzV49005ardMT8qDj4jzdbacNHZyc/lfEb6fAVModIuQzHoGAuipRch+MlHv1SjFppIgcr04qDkSk7ef55XAvH7IMP1fFCP6Qf2wHYJN+ziRsUdEDmN73CH6Ph9vdw4S9CxFXtEi7v21ww2R/UILm/nfBa1A8e2/u/+qYEDb+yAnfBCW2n+/CJCWNLl7IE8wJKnbJCmA7PJAmNSlTDOadSfW11VhHxv/knC6ecqaGXUSrnzVMdE27gvmVD6nHuhi/MnTmiXxEhHHXY3KhHmvWhFA3fZHjhi2dBittU5YxTLd1sGs2xrrTBiQm+6dxK3D2CchiY/zrUjrXXIwbshDRyUrZTsrnVLiTmjG22aENio2DY5p/niAciSCWoX6kzdx/tipUIVw/pEFN06J1bYQZpY00hmdiAaKxXn1EM=
+|   256 71:07:65:ed:45:e7:b6:a5:18:c4:89:be:bc:fe:fb:01 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBAW7MjHfG1X8X5yHTAH/YlwKed5yUEaSJPr11o0rZU0hHZfHEQKutSsb2E20Pu5nLHocwSqB+hWc1eGFTZU8WqU=
+|   256 1f:7f:9d:f3:96:52:6f:b8:90:7e:dc:8e:b2:d6:2c:1d (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGS00BKo8iFwLMpAlHtx8b9VMDn5bFOKZVhxAavm/FjM
+80/tcp open  http    syn-ack Apache httpd 2.4.56 ((Debian))
+|_http-title: Home - Alex Rivera
+|_http-server-header: Apache/2.4.56 (Debian)
+|_http-favicon: Unknown favicon MD5: 3ADA42C09FEF23B6D795C786CBA950BF
+| http-methods: 
+|_  Supported Methods: GET POST OPTIONS HEAD
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 23 12:26:36 2024 -- 1 IP address (1 host up) scanned in 36.57 seconds

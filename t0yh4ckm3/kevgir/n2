@@ -1,0 +1,35 @@
+# Nmap 7.94SVN scan initiated Fri Mar  1 18:06:21 2024 as: nmap -sV -p- -vv --open -oN n2 192.168.214.133
+Warning: Hit PCRE_ERROR_MATCHLIMIT when probing for service http with the regex '^HTTP/1\.1 \d\d\d (?:[^\r\n]*\r\n(?!\r\n))*?.*\r\nServer: Virata-EmWeb/R([\d_]+)\r\nContent-Type: text/html; ?charset=UTF-8\r\nExpires: .*<title>HP (Color |)LaserJet ([\w._ -]+)&nbsp;&nbsp;&nbsp;'
+Nmap scan report for 192.168.214.133
+Host is up, received syn-ack (0.0011s latency).
+Scanned at 2024-03-01 18:06:21 +03 for 146s
+Not shown: 65517 closed tcp ports (conn-refused)
+PORT      STATE SERVICE     REASON  VERSION
+25/tcp    open  ftp         syn-ack vsftpd 3.0.2
+80/tcp    open  http        syn-ack Apache httpd 2.4.7 ((Ubuntu))
+111/tcp   open  rpcbind     syn-ack 2-4 (RPC #100000)
+139/tcp   open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+445/tcp   open  netbios-ssn syn-ack Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+1322/tcp  open  ssh         syn-ack OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+2049/tcp  open  nfs         syn-ack 2-4 (RPC #100003)
+6379/tcp  open  redis       syn-ack Redis key-value store 3.0.7
+8080/tcp  open  http        syn-ack Apache Tomcat/Coyote JSP engine 1.1
+8081/tcp  open  http        syn-ack Apache httpd 2.4.7 ((Ubuntu))
+9000/tcp  open  http        syn-ack Jetty winstone-2.9
+32819/tcp open  nlockmgr    syn-ack 1-4 (RPC #100021)
+33604/tcp open  status      syn-ack 1 (RPC #100024)
+33882/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+36305/tcp open  unknown     syn-ack
+39237/tcp open  ssh         syn-ack Apache Mina sshd 0.8.0 (protocol 2.0)
+39514/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+47733/tcp open  mountd      syn-ack 1-3 (RPC #100005)
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port36305-TCP:V=7.94SVN%I=7%D=3/1%Time=65E1EF12%P=x86_64-pc-linux-gnu%r
+SF:(DNSVersionBindReqTCP,36,"Unrecognized\x20protocol:\x20\0\x06\x01\0\0\x
+SF:01\0\0\0\0\0\0\x07version\x04bind\0\0\x10\0\x03\n")%r(DNSStatusRequestT
+SF:CP,24,"Unrecognized\x20protocol:\x20\0\0\x10\0\0\0\0\0\0\0\0\0\n");
+Service Info: Host: CANYOUPWNME; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Mar  1 18:08:47 2024 -- 1 IP address (1 host up) scanned in 145.52 seconds

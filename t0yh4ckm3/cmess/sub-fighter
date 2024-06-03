@@ -1,0 +1,19 @@
+Target: http://cmess.thm/
+Total requests: 5000
+==================================================================
+ID    Response   Lines      Word         Chars          Request    
+==================================================================
+00019:  C=200     30 L	     104 W	    934 Ch	  "dev - dev"
+02700:  C=400     12 L	      53 W	    422 Ch	  "m. - m."
+02795:  C=400     12 L	      53 W	    422 Ch	  "ns2.cl.bellsouth.net. - ns2.cl.bellsouth.net."
+02885:  C=400     12 L	      53 W	    422 Ch	  "ns2.viviotech.net. - ns2.viviotech.net."
+02883:  C=400     12 L	      53 W	    422 Ch	  "ns1.viviotech.net. - ns1.viviotech.net."
+03050:  C=400     12 L	      53 W	    422 Ch	  "ns3.cl.bellsouth.net. - ns3.cl.bellsouth.net."
+04083:  C=400     12 L	      53 W	    422 Ch	  "quatro.oweb.com. - quatro.oweb.com."
+04082:  C=400     12 L	      53 W	    422 Ch	  "jordan.fortwayne.com. - jordan.fortwayne.com."
+04081:  C=400     12 L	      53 W	    422 Ch	  "ferrari.fortwayne.com. - ferrari.fortwayne.com."
+
+Total time: 0
+Processed Requests: 5000
+Filtered Requests: 4991
+Requests/sec.: 0

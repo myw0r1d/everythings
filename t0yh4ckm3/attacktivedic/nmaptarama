@@ -1,0 +1,82 @@
+# Nmap 7.94 scan initiated Wed Nov  1 22:21:14 2023 as: nmap -sCV -n -Pn --open -vv -oN nmaptarama 10.10.7.129
+Nmap scan report for 10.10.7.129
+Host is up, received user-set (0.090s latency).
+Scanned at 2023-11-01 22:21:14 +03 for 25s
+Not shown: 987 closed tcp ports (conn-refused)
+PORT     STATE SERVICE       REASON  VERSION
+53/tcp   open  domain        syn-ack Simple DNS Plus
+80/tcp   open  http          syn-ack Microsoft IIS httpd 10.0
+| http-methods: 
+|   Supported Methods: OPTIONS TRACE GET HEAD POST
+|_  Potentially risky methods: TRACE
+|_http-server-header: Microsoft-IIS/10.0
+|_http-title: IIS Windows Server
+88/tcp   open  kerberos-sec  syn-ack Microsoft Windows Kerberos (server time: 2023-11-01 19:21:22Z)
+135/tcp  open  msrpc         syn-ack Microsoft Windows RPC
+139/tcp  open  netbios-ssn   syn-ack Microsoft Windows netbios-ssn
+389/tcp  open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+445/tcp  open  microsoft-ds? syn-ack
+464/tcp  open  kpasswd5?     syn-ack
+593/tcp  open  ncacn_http    syn-ack Microsoft Windows RPC over HTTP 1.0
+636/tcp  open  tcpwrapped    syn-ack
+3268/tcp open  ldap          syn-ack Microsoft Windows Active Directory LDAP (Domain: spookysec.local0., Site: Default-First-Site-Name)
+3269/tcp open  tcpwrapped    syn-ack
+3389/tcp open  ms-wbt-server syn-ack Microsoft Terminal Services
+| ssl-cert: Subject: commonName=AttacktiveDirectory.spookysec.local
+| Issuer: commonName=AttacktiveDirectory.spookysec.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2023-10-31T19:10:11
+| Not valid after:  2024-05-01T19:10:11
+| MD5:   e6bf:f236:19f7:991d:745a:3abf:53d5:75b0
+| SHA-1: 03ba:17bc:2cfc:e66e:3412:2c9a:51d8:c694:405c:0c0d
+| -----BEGIN CERTIFICATE-----
+| MIIDCjCCAfKgAwIBAgIQd/SpV8vCFaVJEyn6rxPFeTANBgkqhkiG9w0BAQsFADAu
+| MSwwKgYDVQQDEyNBdHRhY2t0aXZlRGlyZWN0b3J5LnNwb29reXNlYy5sb2NhbDAe
+| Fw0yMzEwMzExOTEwMTFaFw0yNDA1MDExOTEwMTFaMC4xLDAqBgNVBAMTI0F0dGFj
+| a3RpdmVEaXJlY3Rvcnkuc3Bvb2t5c2VjLmxvY2FsMIIBIjANBgkqhkiG9w0BAQEF
+| AAOCAQ8AMIIBCgKCAQEAwuvVZVneZ/Do0pe90nyLuehP5gzWYGTev/d6ZEHc9Z/V
+| 5CT1XCxBTsQQyju53K4h9uWEiDyuvh0syijmTcOaACKYH4/25o36FbThfWnys8aW
+| hVA98GzgYaMCX2Uqx8FBQr0LsJ70xfz8raItIAXEznn2H1u3AJ3UytJaeKJ5EchB
+| N7mzHbazCrjm6wBXEx/Heb7YME2YCKwQOQ5s0DmPisdT7rZi8Naw2B7hezCxJUhF
+| mx1OBYXACTfA576GWQWkOJBTmV7zM/ieDg8nMNwYej4l5W1cWqNrB+q2VToRVzKz
+| HNhS82o3yB9M9/vnWd8DJfiR8PJxVvFK4nnv88OXLQIDAQABoyQwIjATBgNVHSUE
+| DDAKBggrBgEFBQcDATALBgNVHQ8EBAMCBDAwDQYJKoZIhvcNAQELBQADggEBAFU5
+| vNjfMoLtewQvJIM/N2NL+k9rG3t5vPN2LdenqRnwwGPdlhAjo+eRcXIzFpMx4jJp
+| 7ygeF7/Y2iOuGSMAgRk7yG28P/r5XETPanUGInjKW19DUSKK6xCCBjgfsjuV+Ue2
+| uO9dGX2y1Zqfxm3ELCD3ld/iPDjMujVhWeDDf1ScH8C3ZzTh1xq3Wy0MJVA0Hx+I
+| azLD+VYYtZaZ5dM/kpHqs+8o1GKmdCaSA9MyZ949oav8Dv/Woju59GnhARIlsj06
+| 3OYHJ6PcDytJwh5iKrUHnYA0NPoHCgKvxDUFMm9bARxx9YtGhUHuiz1B5sSS2dU3
+| mNH0vOVdEz+A0Pa8Cak=
+|_-----END CERTIFICATE-----
+| rdp-ntlm-info: 
+|   Target_Name: THM-AD
+|   NetBIOS_Domain_Name: THM-AD
+|   NetBIOS_Computer_Name: ATTACKTIVEDIREC
+|   DNS_Domain_Name: spookysec.local
+|   DNS_Computer_Name: AttacktiveDirectory.spookysec.local
+|   Product_Version: 10.0.17763
+|_  System_Time: 2023-11-01T19:21:28+00:00
+|_ssl-date: 2023-11-01T19:21:36+00:00; 0s from scanner time.
+Service Info: Host: ATTACKTIVEDIREC; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 51185/tcp): CLEAN (Couldn't connect)
+|   Check 2 (port 53216/tcp): CLEAN (Couldn't connect)
+|   Check 3 (port 51321/udp): CLEAN (Timeout)
+|   Check 4 (port 24047/udp): CLEAN (Failed to receive data)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+|_clock-skew: mean: 0s, deviation: 0s, median: 0s
+| smb2-time: 
+|   date: 2023-11-01T19:21:32
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Nov  1 22:21:39 2023 -- 1 IP address (1 host up) scanned in 24.87 seconds

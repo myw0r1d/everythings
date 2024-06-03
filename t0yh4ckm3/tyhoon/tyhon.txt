@@ -1,0 +1,36 @@
+# Nmap 7.94SVN scan initiated Tue Feb 27 17:13:59 2024 as: nmap -sV -p- -vv -oN tyhon.txt 192.168.214.130
+Nmap scan report for 192.168.214.130
+Host is up, received arp-response (0.00096s latency).
+Scanned at 2024-02-27 17:13:59 +03 for 17s
+Not shown: 65511 closed tcp ports (reset)
+PORT      STATE SERVICE     REASON         VERSION
+21/tcp    open  ftp         syn-ack ttl 64 vsftpd 3.0.2
+22/tcp    open  ssh         syn-ack ttl 64 OpenSSH 6.6.1p1 Ubuntu 2ubuntu2 (Ubuntu Linux; protocol 2.0)
+25/tcp    open  smtp        syn-ack ttl 64 Postfix smtpd
+53/tcp    open  domain      syn-ack ttl 64 ISC BIND 9.9.5-3 (Ubuntu Linux)
+80/tcp    open  http        syn-ack ttl 64 Apache httpd 2.4.7 ((Ubuntu))
+110/tcp   open  pop3        syn-ack ttl 64 Dovecot pop3d
+111/tcp   open  rpcbind     syn-ack ttl 64 2-4 (RPC #100000)
+139/tcp   open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+143/tcp   open  imap        syn-ack ttl 64 Dovecot imapd (Ubuntu)
+445/tcp   open  netbios-ssn syn-ack ttl 64 Samba smbd 3.X - 4.X (workgroup: WORKGROUP)
+631/tcp   open  ipp         syn-ack ttl 64 CUPS 1.7
+993/tcp   open  ssl/imap    syn-ack ttl 64 Dovecot imapd (Ubuntu)
+995/tcp   open  ssl/pop3    syn-ack ttl 64 Dovecot pop3d
+2049/tcp  open  nfs         syn-ack ttl 64 2-4 (RPC #100003)
+3306/tcp  open  mysql       syn-ack ttl 64 MySQL (unauthorized)
+5432/tcp  open  postgresql  syn-ack ttl 64 PostgreSQL DB 9.3.3 - 9.3.5
+6379/tcp  open  redis       syn-ack ttl 64 Redis key-value store 4.0.11
+8080/tcp  open  http        syn-ack ttl 64 Apache Tomcat/Coyote JSP engine 1.1
+27017/tcp open  mongodb     syn-ack ttl 64 MongoDB 3.0.15
+42532/tcp open  mountd      syn-ack ttl 64 1-3 (RPC #100005)
+46618/tcp open  nlockmgr    syn-ack ttl 64 1-4 (RPC #100021)
+51649/tcp open  mountd      syn-ack ttl 64 1-3 (RPC #100005)
+56941/tcp open  status      syn-ack ttl 64 1 (RPC #100024)
+59474/tcp open  mountd      syn-ack ttl 64 1-3 (RPC #100005)
+MAC Address: 00:0C:29:AF:96:31 (VMware)
+Service Info: Hosts:  typhoon, TYPHOON; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Feb 27 17:14:16 2024 -- 1 IP address (1 host up) scanned in 17.33 seconds

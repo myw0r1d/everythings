@@ -1,0 +1,10 @@
+
+
+define( 'DB_USER', 'elyana' );
+
+define( 'DB_PASSWORD', 'H@ckme@123' );
+
+
+
+user: elyana
+password: E@syR18ght

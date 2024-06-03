@@ -1,0 +1,56 @@
+# Nmap 7.94SVN scan initiated Wed Feb 21 01:06:33 2024 as: nmap -sV -A -Pn -vv --open -p- -oN nmaptarama 10.10.206.166
+Nmap scan report for 10.10.206.166
+Host is up, received user-set (0.16s latency).
+Scanned at 2024-02-21 01:06:34 +03 for 376s
+Not shown: 51752 closed tcp ports (conn-refused), 13781 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT      STATE SERVICE REASON  VERSION
+22/tcp    open  ssh     syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 7d:dc:eb:90:e4:af:33:d9:9f:0b:21:9a:fc:d5:77:f2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDLgmREvZByFxoWZEVRzGogcBi04sMOoMHUcJ8P2t9mi8q1V+lRvZczumOJ9RliQ1khNRHsIgnJ7/Yp4iCz9UFRLYsIlQ2PAgODBjNyhIWepELlSatGLZqviC6qnxEASC2OrwFvHmYNklZIjbc4+Yli2bn8I2PjntRKoMQHjehoWip/V955dYwa7KysnPPMsmXlrx9dhHJ0yheqYIOxwlN2xRC7ZtQMfY28mn0ifRhMnM9RRgC5CDAJh3QeJYM90gBdIq466x4p6yWQzjK/t0i5zIKFBJBLp85DaT3WkWBn3ueHFoedeeAsXeO16BNX6SomLNWsslp5a3E1YQiOBX3LNEm64Rr8ekPxtrXhTzcBUMGJYzc7QaE2/N9yCnkvL0vCApO+XFmo+lr9bAt8qGixpqk1awPqIhxOTUWIr4lAShsu7b+mwQlGeYO7aEeaO3R7ZFaZwGfp2vF/yYwReT+mVimFbs67yiVcMCNhVgvI5vLFrh+OyvufUK2tnCe4xbs=
+|   256 83:a7:4a:61:ef:93:a3:57:1a:57:38:5c:48:2a:eb:16 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBEuffg4vybQqbP0RmSCYjd6nillwqgiGF1OAIPUsBCewLy6eiVYsnzAF3Z2TAHKjA8GqTlhRu05KWfdys7J+MQc=
+|   256 30:bf:ef:94:08:86:07:00:f7:fc:df:e8:ed:fe:07:af (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAILHnXOBOqSHpnx9JPguwJAsiurhjCuLjkOIfNSp9f9ai
+31337/tcp open  Elite?  syn-ack
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, FourOhFourRequest, GenericLines, GetRequest, HTTPOptions, Help, Kerberos, LANDesk-RC, LDAPBindReq, LDAPSearchReq, LPDString, NULL, RPCCheck, RTSPRequest, SIPOptions, SMBProgNeg, SSLSessionReq, TLSSessionReq, TerminalServer, TerminalServerCookie, X11Probe: 
+|     In case I forget - user:pass
+|_    ubuntu:Dafdas!!/str0ng
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port31337-TCP:V=7.94SVN%I=7%D=2/21%Time=65D523D0%P=x86_64-pc-linux-gnu%
+SF:r(NULL,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!
+SF:/str0ng\n\n")%r(GetRequest,35,"In\x20case\x20I\x20forget\x20-\x20user:p
+SF:ass\nubuntu:Dafdas!!/str0ng\n\n")%r(SIPOptions,35,"In\x20case\x20I\x20f
+SF:orget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(GenericLines,35
+SF:,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n
+SF:\n")%r(HTTPOptions,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubu
+SF:ntu:Dafdas!!/str0ng\n\n")%r(RTSPRequest,35,"In\x20case\x20I\x20forget\x
+SF:20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(RPCCheck,35,"In\x20cas
+SF:e\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(DNSV
+SF:ersionBindReqTCP,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubunt
+SF:u:Dafdas!!/str0ng\n\n")%r(DNSStatusRequestTCP,35,"In\x20case\x20I\x20fo
+SF:rget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(Help,35,"In\x20c
+SF:ase\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(SS
+SF:LSessionReq,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Daf
+SF:das!!/str0ng\n\n")%r(TerminalServerCookie,35,"In\x20case\x20I\x20forget
+SF:\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(TLSSessionReq,35,"In
+SF:\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")
+SF:%r(Kerberos,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Daf
+SF:das!!/str0ng\n\n")%r(SMBProgNeg,35,"In\x20case\x20I\x20forget\x20-\x20u
+SF:ser:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(X11Probe,35,"In\x20case\x20I\x
+SF:20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(FourOhFourRe
+SF:quest,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/
+SF:str0ng\n\n")%r(LPDString,35,"In\x20case\x20I\x20forget\x20-\x20user:pas
+SF:s\nubuntu:Dafdas!!/str0ng\n\n")%r(LDAPSearchReq,35,"In\x20case\x20I\x20
+SF:forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n")%r(LDAPBindReq,35
+SF:,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n
+SF:\n")%r(LANDesk-RC,35,"In\x20case\x20I\x20forget\x20-\x20user:pass\nubun
+SF:tu:Dafdas!!/str0ng\n\n")%r(TerminalServer,35,"In\x20case\x20I\x20forget
+SF:\x20-\x20user:pass\nubuntu:Dafdas!!/str0ng\n\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Feb 21 01:12:50 2024 -- 1 IP address (1 host up) scanned in 376.25 seconds

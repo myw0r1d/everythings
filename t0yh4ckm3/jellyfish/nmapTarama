@@ -1,0 +1,145 @@
+# Nmap 7.94SVN scan initiated Mon Feb  5 01:13:39 2024 as: nmap -sCV -vv -Pn -n -p- -oN nmapTarama 34.244.1.145
+Increasing send delay for 34.244.1.145 from 0 to 5 due to 14 out of 45 dropped probes since last increase.
+Increasing send delay for 34.244.1.145 from 5 to 10 due to 11 out of 11 dropped probes since last increase.
+Nmap scan report for 34.244.1.145
+Host is up, received user-set (0.085s latency).
+Scanned at 2024-02-05 01:13:39 +03 for 1504s
+Not shown: 65530 filtered tcp ports (no-response)
+PORT     STATE SERVICE  REASON  VERSION
+21/tcp   open  ftp      syn-ack vsftpd 3.0.3
+22/tcp   open  ssh      syn-ack OpenSSH 5.9p1 Debian 5ubuntu1.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 46:b2:81:be:e0:bc:a7:86:39:39:82:5b:bf:e5:65:58 (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQC3op12UwFIehC/VLx5tzBbmCUO/IzJlyueCj1/qP7tq3DcrBu9iQbC1gYemElU2FhqHH2KQr9MFrWRJgU4dH0iQOFld1WU9BNjfr6VcLOI+flLQstwWf1mJXEOdDjA98Cx+blYWG62qwXLiW+aq2jLfIZkVjJlp7OueNeocxE0P7ynTqJIadMfeNqNZ1Jc+s7aCBSg0NRSh0FsABAG+BSFhybnKXtApc+RG0QQ3vFpnU0k0PVZvg/qU/Eb6Oimm67d8hjclPbPpQoyvsdyOQG7yVS9eIglTr00ddw2Jn8wrapOa4TcBJGu9cgSgITHR8+htJ1LLj3EtsmJ0pErEv0B
+80/tcp   open  http     syn-ack Apache httpd 2.4.29
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-title: Did not follow redirect to https://robyns-petshop.thm/
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+443/tcp  open  ssl/http syn-ack Apache httpd 2.4.29 ((Ubuntu))
+| ssl-cert: Subject: commonName=robyns-petshop.thm/organizationName=Robyns Petshop/stateOrProvinceName=South West/countryName=GB/emailAddress=robyn@robyns-petshop.thm/localityName=Bristol
+| Subject Alternative Name: DNS:robyns-petshop.thm, DNS:monitorr.robyns-petshop.thm, DNS:beta.robyns-petshop.thm, DNS:dev.robyns-petshop.thm
+| Issuer: commonName=robyns-petshop.thm/organizationName=Robyns Petshop/stateOrProvinceName=South West/countryName=GB/emailAddress=robyn@robyns-petshop.thm/localityName=Bristol
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-02-04T21:55:11
+| Not valid after:  2025-02-03T21:55:11
+| MD5:   34fc:8250:9254:8659:4259:9c51:38ae:6c51
+| SHA-1: 24fa:4a94:a679:2adc:2193:9be3:fe2c:288c:79bd:29b0
+| -----BEGIN CERTIFICATE-----
+| MIIEPzCCAyegAwIBAgIUBcOJKZhoJh+ol1QNC7q3j5uQpRAwDQYJKoZIhvcNAQEL
+| BQAwgZMxCzAJBgNVBAYTAkdCMRMwEQYDVQQIDApTb3V0aCBXZXN0MRAwDgYDVQQH
+| DAdCcmlzdG9sMRcwFQYDVQQKDA5Sb2J5bnMgUGV0c2hvcDEbMBkGA1UEAwwScm9i
+| eW5zLXBldHNob3AudGhtMScwJQYJKoZIhvcNAQkBFhhyb2J5bkByb2J5bnMtcGV0
+| c2hvcC50aG0wHhcNMjQwMjA0MjE1NTExWhcNMjUwMjAzMjE1NTExWjCBkzELMAkG
+| A1UEBhMCR0IxEzARBgNVBAgMClNvdXRoIFdlc3QxEDAOBgNVBAcMB0JyaXN0b2wx
+| FzAVBgNVBAoMDlJvYnlucyBQZXRzaG9wMRswGQYDVQQDDBJyb2J5bnMtcGV0c2hv
+| cC50aG0xJzAlBgkqhkiG9w0BCQEWGHJvYnluQHJvYnlucy1wZXRzaG9wLnRobTCC
+| ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBALlYbaQNn7NgnIcSz9Kzu2HI
+| YqqhYfyh5U52CKvRnqbjk4CQkJxQHXxIwVQlwSS4ml+36vHKa/zewoRaOiqUWG3v
+| 3FzYXXPdW69ioChUrobfTW0QFgB8Gm5J6izX5J+cat3623m+j9p1ieMVFz5kvft0
+| dfopeS6e21tmK9LjoHvJDkdN9kJ8MT3esDCEdFejXO9PVk4uMMIxGAH0sb3EzpD1
+| DQMTsJTlzuNtDalqfROVXvqbVWX0bqa+LhDhsKznBQsMIup0oa1XDXqmOZvgf6oN
+| 8QeVE2JNW1dsJPJpwx2yYU3em+9Pxvb9g8bnHHkEv/7vjlciUOSf36gJGvWRNakC
+| AwEAAaOBiDCBhTAJBgNVHRMEAjAAMAsGA1UdDwQEAwIF4DBrBgNVHREEZDBighJy
+| b2J5bnMtcGV0c2hvcC50aG2CG21vbml0b3JyLnJvYnlucy1wZXRzaG9wLnRobYIX
+| YmV0YS5yb2J5bnMtcGV0c2hvcC50aG2CFmRldi5yb2J5bnMtcGV0c2hvcC50aG0w
+| DQYJKoZIhvcNAQELBQADggEBAKstCbUa2fps8Cl8fhxk2/z+2EuDgRREBdrUqjip
+| 2nvPeWOsgHVUGU0FHwm+n4Ujt0P5P5J/zp+VLtxWrIglH3LjwS4JvyBeS4laFwci
+| W5p/6fT+j/slhvdFfdbQeSif2Taf26aYks4ISOqXRqAqN+cU9Y2nb1ogaQuPBvGH
+| 5Tt2jbWjUCPtMRVhpBjJX8A180nxokVPHj9QXyBJoq8CTuPDrs70WuU5hBy8AILY
+| AS2krGtshm/uguLhxSkLWwBI3mC/ufrLCFTBq4IMhtS6B2JeI3VRl3ZAhFBAW3hU
+| a85Hjke/CHuywtfwEvZUY4NmzEg2sNbt9GxLxHcUVs3GAtA=
+|_-----END CERTIFICATE-----
+|_http-title: Robyn&#039;s Pet Shop
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| tls-alpn: 
+|_  http/1.1
+|_ssl-date: TLS randomness does not represent time
+|_http-server-header: Apache/2.4.29 (Ubuntu)
+8096/tcp open  unknown  syn-ack
+| fingerprint-strings: 
+|   FourOhFourRequest: 
+|     HTTP/1.1 404 Not Found
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:37 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|     X-Response-Time-ms: 213
+|   GenericLines: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:10 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   GetRequest, HTTPOptions: 
+|     HTTP/1.1 302 Found
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:10 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|     Location: /web/index.html
+|   Help, SSLSessionReq, TerminalServerCookie: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:26 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   Kerberos, TLSSessionReq: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:27 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   LPDString: 
+|     HTTP/1.1 400 Bad Request
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:37 GMT
+|     Server: Kestrel
+|     Content-Length: 0
+|   RTSPRequest: 
+|     HTTP/1.1 505 HTTP Version Not Supported
+|     Connection: close
+|     Date: Sun, 04 Feb 2024 22:37:11 GMT
+|     Server: Kestrel
+|_    Content-Length: 0
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8096-TCP:V=7.94SVN%I=7%D=2/5%Time=65C01197%P=x86_64-pc-linux-gnu%r(
+SF:GenericLines,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20c
+SF:lose\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:10\x20GMT\r\nServer
+SF::\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(GetRequest,8D,"HTTP/1\
+SF:.1\x20302\x20Found\r\nConnection:\x20close\r\nDate:\x20Sun,\x2004\x20Fe
+SF:b\x202024\x2022:37:10\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x
+SF:200\r\nLocation:\x20/web/index\.html\r\n\r\n")%r(HTTPOptions,8D,"HTTP/1
+SF:\.1\x20302\x20Found\r\nConnection:\x20close\r\nDate:\x20Sun,\x2004\x20F
+SF:eb\x202024\x2022:37:10\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\
+SF:x200\r\nLocation:\x20/web/index\.html\r\n\r\n")%r(RTSPRequest,87,"HTTP/
+SF:1\.1\x20505\x20HTTP\x20Version\x20Not\x20Supported\r\nConnection:\x20cl
+SF:ose\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:11\x20GMT\r\nServer:
+SF:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(Help,78,"HTTP/1\.1\x204
+SF:00\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x20Sun,\x2004\x20
+SF:Feb\x202024\x2022:37:26\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:
+SF:\x200\r\n\r\n")%r(SSLSessionReq,78,"HTTP/1\.1\x20400\x20Bad\x20Request\
+SF:r\nConnection:\x20close\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:
+SF:26\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(Ter
+SF:minalServerCookie,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:
+SF:\x20close\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:26\x20GMT\r\nS
+SF:erver:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n")%r(TLSSessionReq,78,
+SF:"HTTP/1\.1\x20400\x20Bad\x20Request\r\nConnection:\x20close\r\nDate:\x2
+SF:0Sun,\x2004\x20Feb\x202024\x2022:37:27\x20GMT\r\nServer:\x20Kestrel\r\n
+SF:Content-Length:\x200\r\n\r\n")%r(Kerberos,78,"HTTP/1\.1\x20400\x20Bad\x
+SF:20Request\r\nConnection:\x20close\r\nDate:\x20Sun,\x2004\x20Feb\x202024
+SF:\x2022:37:27\x20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r
+SF:\n")%r(FourOhFourRequest,8F,"HTTP/1\.1\x20404\x20Not\x20Found\r\nConnec
+SF:tion:\x20close\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:37\x20GMT
+SF:\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\nX-Response-Time-ms:\x
+SF:20213\r\n\r\n")%r(LPDString,78,"HTTP/1\.1\x20400\x20Bad\x20Request\r\nC
+SF:onnection:\x20close\r\nDate:\x20Sun,\x2004\x20Feb\x202024\x2022:37:37\x
+SF:20GMT\r\nServer:\x20Kestrel\r\nContent-Length:\x200\r\n\r\n");
+Service Info: Host: robyns-petshop.thm; OSs: Unix, Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Mon Feb  5 01:38:43 2024 -- 1 IP address (1 host up) scanned in 1504.06 seconds

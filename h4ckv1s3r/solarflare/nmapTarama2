@@ -1,0 +1,16 @@
+# Nmap 7.94SVN scan initiated Tue Apr 30 11:04:39 2024 as: nmap -T4 -sV -p- -vv -oN nmapTarama2 Pn 172.20.4.52
+Failed to resolve "Pn".
+Increasing send delay for 172.20.4.52 from 5 to 10 due to 13 out of 32 dropped probes since last increase.
+Warning: 172.20.4.52 giving up on port because retransmission cap hit (6).
+Nmap scan report for reports.solarflare.hv (172.20.4.52)
+Host is up, received syn-ack (0.063s latency).
+Scanned at 2024-04-30 11:04:54 +03 for 1691s
+Not shown: 64059 closed tcp ports (conn-refused), 1473 filtered tcp ports (no-response)
+PORT      STATE SERVICE   REASON  VERSION
+80/tcp    open  http      syn-ack Apache httpd 2.4.56 ((Debian))
+3306/tcp  open  mysql     syn-ack MySQL 5.5.5-10.5.21-MariaDB-0+deb11u1
+11211/tcp open  memcached syn-ack Memcached 1.6.9 (uptime 4022 seconds)
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Apr 30 11:33:05 2024 -- 1 IP address (1 host up) scanned in 1706.32 seconds

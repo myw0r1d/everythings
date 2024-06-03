@@ -1,0 +1,65 @@
+# Nmap 7.94SVN scan initiated Sat Mar  2 18:24:31 2024 as: nmap -A -Pn -p- -vv --open -oN nmapTarama 10.10.48.6
+Nmap scan report for 10.10.48.6
+Host is up, received user-set (0.085s latency).
+Scanned at 2024-03-02 18:24:31 +03 for 88s
+Not shown: 49279 closed tcp ports (conn-refused), 16253 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.10 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 f0:65:b8:42:b7:c3:ba:8e:fe:e4:3c:cd:57:f1:29:2e (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDcR2YGlO+RE25XRqWOY3iSi0YN74QA7E8aywAFyZ/wr3/YQ0jEDjuubawCZ9LtNF0midFnnvvwrkNkgB1BpIm+5aPDDFvSYD27N8N2ttRtlqpNn9f/19sy8tg+wqgMER+peUep4MwbyQlqXF47qLLAX8nHakWw9x2+jQfdFzzjT2zPdTSCQj2NJpvKdDydQ2tgyuLLs5G34tRMLY50fhuSGT2UQy5UIExU93QBc1tJF1SG+6dJDFH1sF+H2W46ia6+F+ahBRJW3U4KFrVKdiPJY9WRwplgxWSXUUAC8MZCc2cu5SRw/RIyhOo8UrXvTdK3FW8daHwP4jJmG7SttTBl
+|   256 42:1e:1b:8f:19:38:99:2e:36:70:cf:0e:b6:31:92:14 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBF38YSGKHd8ih4VMad2mCdquKkSrnV9HcQInJk5Fjid6dfvdZ9KfhhltpAc7JfUdLCxeQJgAJjw85FyVbW4/Yyw=
+|   256 8e:89:43:de:5d:9b:99:66:c4:2a:93:17:f3:0e:e1:f4 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIOctHMK4vQg3/HTOb2aPZuDEfPfw1CZa7KEB2FgIrvcj
+80/tcp   open  http    syn-ack Apache httpd 2.4.18 ((Ubuntu))
+|_http-generator: WordPress 5.6.2
+|_http-title: Tryhackme &#8211; Just another WordPress site
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.18 (Ubuntu)
+3306/tcp open  mysql   syn-ack MySQL 5.7.33-0ubuntu0.16.04.1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.7.33-0ubuntu0.16.04.1
+|   Thread ID: 18
+|   Capabilities flags: 65535
+|   Some Capabilities: SupportsLoadDataLocal, IgnoreSigpipes, Speaks41ProtocolOld, ConnectWithDatabase, SupportsCompression, FoundRows, SupportsTransactions, Support41Auth, ODBCClient, SwitchToSSLAfterHandshake, InteractiveClient, Speaks41ProtocolNew, LongColumnFlag, DontAllowDatabaseTableColumn, LongPassword, IgnoreSpaceBeforeParenthesis, SupportsMultipleResults, SupportsMultipleStatments, SupportsAuthPlugins
+|   Status: Autocommit
+|   Salt: :\x06\x12\x0FmJuO\x17d@`L\x05F)Bl\x01{
+|_  Auth Plugin Name: mysql_native_password
+|_ssl-date: TLS randomness does not represent time
+| ssl-cert: Subject: commonName=MySQL_Server_5.7.33_Auto_Generated_Server_Certificate
+| Issuer: commonName=MySQL_Server_5.7.33_Auto_Generated_CA_Certificate
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2021-05-26T21:23:31
+| Not valid after:  2031-05-24T21:23:31
+| MD5:   11ba:f643:0f68:ea0d:7b7f:c7d5:7822:edbf
+| SHA-1: d85c:8df5:d53c:ea63:666b:25d5:66d0:3c14:07be:3feb
+| -----BEGIN CERTIFICATE-----
+| MIIDBzCCAe+gAwIBAgIBAjANBgkqhkiG9w0BAQsFADA8MTowOAYDVQQDDDFNeVNR
+| TF9TZXJ2ZXJfNS43LjMzX0F1dG9fR2VuZXJhdGVkX0NBX0NlcnRpZmljYXRlMB4X
+| DTIxMDUyNjIxMjMzMVoXDTMxMDUyNDIxMjMzMVowQDE+MDwGA1UEAww1TXlTUUxf
+| U2VydmVyXzUuNy4zM19BdXRvX0dlbmVyYXRlZF9TZXJ2ZXJfQ2VydGlmaWNhdGUw
+| ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQC7g4pUauY914tl4RkcpQec
+| GKvuJKIlaCZhxV5OaKQ0iflswSNIR2k2e9eN2zo06wgCfaRqQqD/wpaz2/me622h
+| hO+fdFeL9CBycNAuUJC/I9YzKSH2kv4/DVo5Ej/nb9poNDgeHf4+VvGiDNuVU6HD
+| +5cZEHw/47NP+51+03rK6sEG3Wc+sKkTnMaNr+hiiL75YyJmDY83z/gErufDWWkd
+| 47RJ3N2Km4CvnT3FwyVCE4Bc9ixA1fcZVkK4UFqn4a+B59k3rU6gorUxzZVnh5Iq
+| 2JiyULtU7TxcfZ03ONx16E1mrw7D/Py+JgBF3hVa0nlo9Y9kRCiwoF1AkWmMS5Z7
+| AgMBAAGjEDAOMAwGA1UdEwEB/wQCMAAwDQYJKoZIhvcNAQELBQADggEBANMjsaix
+| wkIH3E5m27aYby+4HItU5I0qTDALbQktZcWZOG+HGhdLOtCnPiGwuEPQ7or4HMi3
+| I9/Y4E5Cwqeb0CgWh/Nt+6N/VDqNSaGfH1G8oX3oXhUBJ+G8CIyDGvNVme2o5IwY
+| FFjRn0UbhHfQl5U76xOAeXdRgT6u2xQw5gvm6oVYZERSpOLGPvfCwRLyRcGaBjs/
+| ATGgR39CcZmOV0TPmxWmvpca5TaL5m3kaCSlpwxyqZxYxjGQiWhU4geAQ8STImQQ
+| dZimtduyhdZ600BremRZIzWNdfSNPnTbIiJyhQt/AziBgARrCtn67gTmv6IwY4w4
+| IDu2bCdtm64gNoU=
+|_-----END CERTIFICATE-----
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar  2 18:25:59 2024 -- 1 IP address (1 host up) scanned in 88.80 seconds

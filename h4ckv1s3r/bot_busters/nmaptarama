@@ -1,0 +1,48 @@
+# Nmap 7.94SVN scan initiated Fri May 24 22:17:18 2024 as: nmap -A -Pn --open -vv -oN nmaptarama 172.20.1.48
+Nmap scan report for blackbot.hv (172.20.1.48)
+Host is up, received user-set (0.060s latency).
+Scanned at 2024-05-24 22:17:19 +03 for 21s
+Not shown: 998 closed tcp ports (reset)
+PORT   STATE SERVICE REASON         VERSION
+22/tcp open  ssh     syn-ack ttl 63 OpenSSH 8.4p1 Debian 5+deb11u1 (protocol 2.0)
+| ssh-hostkey: 
+|   3072 9b:06:14:bb:07:6e:8e:a6:44:a5:e4:3f:8b:10:c4:f3 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDTeJERHNHrOuKBOp1cxiXCSzFVP3QssvevgKt/tnTAe9Frr3cZq94Q4U8A4Nib4DgZTJPiGGSTbZuLE3ltD0DY+vi4ySZtig2qrZ6BQE67Cn5NOAK+dH0cNqU3C+vsrMrcoVkLVMNRCrmTIDSut6Ej/8vUK7zCF4dXiq/GYi8ojlgqolzCBb3vCvwpqU2u7fjdrIlHZq2Ns6pDFVngv7DIKtbjOWgwiyPr6+xGPv2mk6RlABCYfPdOZma1EmvfJK83Uc6xwQsdgIX6R2LahEbhoVdG7M2QILH35SzbxHweamuVbJsbp0/8KTXgs7FCn3hdOEFsi2VM0LXy8sUF5Rxfv+IAPSbz2fb8DU6Wh0UznwB1R6fSZcQ/f3DtSflBRaXFjbbsLmkl9IJEf/lJTxaNfpAz934n9IVvG107gZt64QTL9cX1ASlxgm3435WkSkmDUxu3IdVtVSZ6Al0wHOmdzkwV5EBzsmmpCnyIXZVSuRGXQ3Me3PZwNfrAQgxztoc=
+|   256 59:dc:c1:cc:da:04:83:fa:10:7d:97:49:48:0d:03:6a (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBHX/N+Ucf4U4/fImGm/N1V/jSWG7HQ6n4tuprw+DeiP0brOkhBbHTHgAa6lBQc5B/frIdgQQr9q2Tit+y3w8ziU=
+|   256 c3:23:40:a0:9b:22:71:19:87:4e:4d:7e:50:bf:21:24 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMAHGjdw01MC79ZeaBYWRWs+ePfYV9H6Yg6oUTBO7oEy
+80/tcp open  http    syn-ack ttl 63 nginx 1.18.0
+| http-title: Login - BlackBot
+|_Requested resource was /login
+|_http-favicon: Unknown favicon MD5: E57BB3C8AE54921DC289F3F186CBFDF1
+|_http-server-header: nginx/1.18.0
+| http-methods: 
+|_  Supported Methods: GET
+No exact OS matches for host (If you know what OS is running on it, see https://nmap.org/submit/ ).
+TCP/IP fingerprint:
+OS:SCAN(V=7.94SVN%E=4%D=5/24%OT=22%CT=1%CU=34355%PV=Y%DS=2%DC=T%G=Y%TM=6650
+OS:E7D4%P=x86_64-pc-linux-gnu)SEQ(SP=FF%GCD=1%ISR=10D%TI=Z%CI=Z%TS=A)SEQ(SP
+OS:=FF%GCD=1%ISR=10D%TI=Z%CI=Z%II=I%TS=A)OPS(O1=M509ST11NW7%O2=M509ST11NW7%
+OS:O3=M509NNT11NW7%O4=M509ST11NW7%O5=M509ST11NW7%O6=M509ST11)WIN(W1=FE88%W2
+OS:=FE88%W3=FE88%W4=FE88%W5=FE88%W6=FE88)ECN(R=Y%DF=Y%T=40%W=FAF0%O=M509NNS
+OS:NW7%CC=Y%Q=)T1(R=Y%DF=Y%T=40%S=O%A=S+%F=AS%RD=0%Q=)T2(R=N)T3(R=N)T4(R=Y%
+OS:DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T5(R=Y%DF=Y%T=40%W=0%S=Z%A=S+%F=AR%
+OS:O=%RD=0%Q=)T6(R=Y%DF=Y%T=40%W=0%S=A%A=Z%F=R%O=%RD=0%Q=)T7(R=Y%DF=Y%T=40%
+OS:W=0%S=Z%A=S+%F=AR%O=%RD=0%Q=)U1(R=Y%DF=N%T=40%IPL=164%UN=0%RIPL=G%RID=G%
+OS:RIPCK=G%RUCK=G%RUD=G)IE(R=Y%DFI=N%T=40%CD=S)
+
+Uptime guess: 16.116 days (since Wed May  8 19:30:24 2024)
+Network Distance: 2 hops
+TCP Sequence Prediction: Difficulty=255 (Good luck!)
+IP ID Sequence Generation: All zeros
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+TRACEROUTE (using port 22/tcp)
+HOP RTT      ADDRESS
+1   59.61 ms 10.8.0.1
+2   62.34 ms blackbot.hv (172.20.1.48)
+
+Read data files from: /usr/bin/../share/nmap
+OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri May 24 22:17:40 2024 -- 1 IP address (1 host up) scanned in 22.81 seconds

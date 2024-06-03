@@ -1,0 +1,94 @@
+# Nmap 7.94SVN scan initiated Sat Mar 23 12:16:19 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 10.10.107.236
+Nmap scan report for 10.10.107.236
+Host is up, received user-set (0.099s latency).
+Scanned at 2024-03-23 12:16:20 +03 for 525s
+Not shown: 65527 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE        REASON  VERSION
+80/tcp   open  http           syn-ack Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-title: Site doesn't have a title.
+|_http-server-header: Microsoft-IIS/10.0
+135/tcp  open  msrpc?         syn-ack
+139/tcp  open  netbios-ssn    syn-ack Microsoft Windows netbios-ssn
+443/tcp  open  https?         syn-ack
+| ssl-cert: Subject: commonName=WIN-12OUO7A66M7
+| Subject Alternative Name: DNS:WIN-12OUO7A66M7, DNS:WIN-12OUO7A66M7.thm.local
+| Issuer: commonName=WIN-12OUO7A66M7
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha1WithRSAEncryption
+| Not valid before: 2023-01-25T21:34:02
+| Not valid after:  2028-01-25T21:34:02
+| MD5:   84e0:805f:3667:c38f:d820:4e7c:1da0:4215
+| SHA-1: 0845:8fd9:d9bf:c4c6:48db:1f82:d3e7:324e:a924:52d7
+| -----BEGIN CERTIFICATE-----
+| MIIDKjCCAhKgAwIBAgIQTm2IqMBJs7RKv49wp456pzANBgkqhkiG9w0BAQUFADAa
+| MRgwFgYDVQQDEw9XSU4tMTJPVU83QTY2TTcwHhcNMjMwMTI1MjEzNDAyWhcNMjgw
+| MTI1MjEzNDAyWjAaMRgwFgYDVQQDEw9XSU4tMTJPVU83QTY2TTcwggEiMA0GCSqG
+| SIb3DQEBAQUAA4IBDwAwggEKAoIBAQDS7xdfJC7zHZQtxk7LNxq1DQaaapFZsRId
+| 66AbvRCYdvTISToxEDYEprkrIU0YIbB9DzvOYQ23X3F3Y7ylUXRsd0yq3lVX86gD
+| KtWAChKB9ph0VERYqOXoM5Aaej15todacRmqVgX8lbkK37qVPLz9g7n8VfgrJii9
+| zl1Mm8i17s1KERY9aIyxrYecU1dBCX+R4foMHETB7i0yTtG0H+6MAykoTJSJcX+C
+| Mx5QTASgGQXpgRSzUy5SSkJlLasyZ+WVnji6ShZWC3/dHUED0cO+AFna2NFQIASa
+| fWGXXGnhaCLXctm9dDUnq2eg/+AfkJQNbn5eKIGsBYXDG7tfAqFNAgMBAAGjbDBq
+| MA4GA1UdDwEB/wQEAwIFoDA1BgNVHREELjAsgg9XSU4tMTJPVU83QTY2TTeCGVdJ
+| Ti0xMk9VTzdBNjZNNy50aG0ubG9jYWwwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYD
+| VR0TAQH/BAIwADANBgkqhkiG9w0BAQUFAAOCAQEAPV5SA6om07FjNj3mlpTBJMxI
+| 8aOECGirP6f7w5pFqYZ/8TP3ZL2o9Iy2ZzgipcvO0t71IAxHswFv2NN551wNkfie
+| ZlcZSzsep/ym+EVRADLeyuDTt5T3aRq4n6EO4DQN0iyczisChAieFFi7FNXJerft
+| uAQlqIrqvmpvMlMoin/TLv1Wg4QRXvUk5J4gI8q0DNQt7/bk8DUaHrumq7AP5jym
+| wUf2+fSq4nPyB/kW39ftUKiJU/bzmEf4gMozeXTQhzkpFRTgSO+9sRTmiTsk6UMz
+| l3WZLZr4/d/H5dnN0b/3k7CcuoFlmZjSKhnIcPQfXBEUIf5dE7pS7BaqVMooYQ==
+|_-----END CERTIFICATE-----
+445/tcp  open  microsoft-ds?  syn-ack
+593/tcp  open  ncacn_http     syn-ack Microsoft Windows RPC over HTTP 1.0
+3389/tcp open  ms-wbt-server? syn-ack
+| ssl-cert: Subject: commonName=WIN-12OUO7A66M7.thm.local
+| Issuer: commonName=WIN-12OUO7A66M7.thm.local
+| Public Key type: rsa
+| Public Key bits: 2048
+| Signature Algorithm: sha256WithRSAEncryption
+| Not valid before: 2024-03-22T09:14:58
+| Not valid after:  2024-09-21T09:14:58
+| MD5:   d045:60bf:4eae:00dd:a2bb:57d1:8592:d61b
+| SHA-1: ccb0:3147:56a1:086d:d9f0:bdf4:3881:913d:b717:e2bb
+| -----BEGIN CERTIFICATE-----
+| MIIC9jCCAd6gAwIBAgIQZH3lkmF1I7tKuo8xsUe6KzANBgkqhkiG9w0BAQsFADAk
+| MSIwIAYDVQQDExlXSU4tMTJPVU83QTY2TTcudGhtLmxvY2FsMB4XDTI0MDMyMjA5
+| MTQ1OFoXDTI0MDkyMTA5MTQ1OFowJDEiMCAGA1UEAxMZV0lOLTEyT1VPN0E2Nk03
+| LnRobS5sb2NhbDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK8kAafE
+| /obWW/urbxfno07hj57u4kbsR9363kEf0YqPlk/mbXYsxmPxzEnpthx2bKFO5ItS
+| +dDnZhq0X43ua/UGGua5gLzhbMsjIkLGES0GbKg3NalfjtY+kRk4hdTXsj6gMgED
+| kIY+S1o2C2qUXgstXBkLXA8n2JdIzPxUdvG3bqZQNFBk7qaWVXim22gN5/flIY6u
+| 7du+fctRa4EFfgOcRnF+7JTE4/HRtXj7ryf7+574GjUFI1VZbLcwGxEHbV/Lf20t
+| 4ALKX0HGdjCpjx0cQ+k+yJCALVUWjWpo7U1SGIBxTPMn81MxDMHRW1yOWHeEwlve
+| PfP6sZUwGPjqFSkCAwEAAaMkMCIwEwYDVR0lBAwwCgYIKwYBBQUHAwEwCwYDVR0P
+| BAQDAgQwMA0GCSqGSIb3DQEBCwUAA4IBAQCCGRz8GbMN57njOqM/K/ZdWZHEq4sm
+| avhh1B3IQrAJKa4+cEZt/vcR/s4zh7uBiLrHHgV+7jZv+1LMgAUQ1uFBG31II+Zw
+| ZD17BosqaL/YLaabE3ATwjp7pe02+spkVtQ865G2JOX9hT8VVv59a7cJXBTC/1vc
+| yXZgaGIokPWrZ8LZ0OcpfOFQ0lwNxeX9Zp37A3YrrSdtckKalCEo8k2EFvhdDWjb
+| FwN0b3QrQL4oofeV9uxVBkdJGF75BNk0M9z0WBFgBK//gK3BcylZmoNHKDCCco68
+| e+0A5/+RAoqLiwXKhxhm3NTdAiphXdttU4rkpltg7QKJ2zKjOKwMgePC
+|_-----END CERTIFICATE-----
+6410/tcp open  msrpc          syn-ack Microsoft Windows RPC
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: 1s
+| p2p-conficker: 
+|   Checking for Conficker.C or higher...
+|   Check 1 (port 10585/tcp): CLEAN (Timeout)
+|   Check 2 (port 34396/tcp): CLEAN (Timeout)
+|   Check 3 (port 20488/udp): CLEAN (Timeout)
+|   Check 4 (port 61314/udp): CLEAN (Timeout)
+|_  0/4 checks are positive: Host is CLEAN or ports are blocked
+| smb2-security-mode: 
+|   3:1:1: 
+|_    Message signing enabled and required
+| smb2-time: 
+|   date: 2024-03-23T09:24:34
+|_  start_date: N/A
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Mar 23 12:25:05 2024 -- 1 IP address (1 host up) scanned in 525.55 seconds

@@ -1,0 +1,26 @@
+# Nmap 7.94SVN scan initiated Thu May  2 11:19:10 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 172.20.4.20
+Nmap scan report for reports.solarflare.hv (172.20.4.20)
+Host is up, received user-set (0.075s latency).
+Scanned at 2024-05-02 11:19:10 +03 for 53s
+Not shown: 54371 closed tcp ports (conn-refused), 11162 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+80/tcp   open  http    syn-ack Apache httpd 2.4.56 ((Debian))
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-server-header: Apache/2.4.56 (Debian)
+|_http-title: Login
+3306/tcp open  mysql   syn-ack MySQL 5.5.5-10.5.21-MariaDB-0+deb11u1
+| mysql-info: 
+|   Protocol: 10
+|   Version: 5.5.5-10.5.21-MariaDB-0+deb11u1
+|   Thread ID: 33
+|   Capabilities flags: 63486
+|   Some Capabilities: SupportsTransactions, Support41Auth, FoundRows, SupportsCompression, ConnectWithDatabase, LongColumnFlag, Speaks41ProtocolOld, ODBCClient, IgnoreSigpipes, IgnoreSpaceBeforeParenthesis, Speaks41ProtocolNew, DontAllowDatabaseTableColumn, InteractiveClient, SupportsLoadDataLocal, SupportsMultipleStatments, SupportsAuthPlugins, SupportsMultipleResults
+|   Status: Autocommit
+|   Salt: 78T|8?sGFkgD^+Y_PU;f
+|_  Auth Plugin Name: mysql_native_password
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Thu May  2 11:20:03 2024 -- 1 IP address (1 host up) scanned in 53.82 seconds

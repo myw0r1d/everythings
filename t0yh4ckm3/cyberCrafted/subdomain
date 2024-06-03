@@ -1,0 +1,28 @@
+ffuf  -w /usr/share/wordlists/seclists/Discovery/DNS/namelist.txt  -H "Host:FUZZ.cybercrafted.thm"  -u   http://cybercrafted.thm/   -fs  0
+
+        /'___\  /'___\           /'___\       
+       /\ \__/ /\ \__/  __  __  /\ \__/       
+       \ \ ,__\\ \ ,__\/\ \/\ \ \ \ ,__\      
+        \ \ \_/ \ \ \_/\ \ \_\ \ \ \ \_/      
+         \ \_\   \ \_\  \ \____/  \ \_\       
+          \/_/    \/_/   \/___/    \/_/       
+
+       v2.1.0-dev
+________________________________________________
+
+ :: Method           : GET
+ :: URL              : http://cybercrafted.thm/
+ :: Wordlist         : FUZZ: /usr/share/wordlists/seclists/Discovery/DNS/namelist.txt
+ :: Header           : Host: FUZZ.cybercrafted.thm
+ :: Follow redirects : false
+ :: Calibration      : false
+ :: Timeout          : 10
+ :: Threads          : 40
+ :: Matcher          : Response status: 200-299,301,302,307,401,403,405,500
+ :: Filter           : Response size: 0
+________________________________________________
+
+admin                   [Status: 200, Size: 937, Words: 218, Lines: 31, Duration: 144ms]
+store                   [Status: 403, Size: 287, Words: 20, Lines: 10, Duration: 123ms]
+www                     [Status: 200, Size: 832, Words: 236, Lines: 35, Duration: 116ms]
+:: Progress: [151265/151265] :: Job [1/1] :: 335 req/sec :: Duration: [0:08:41] :: Errors: 0 ::

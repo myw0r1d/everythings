@@ -1,0 +1,25 @@
+# Nmap 7.94SVN scan initiated Sun Mar 17 15:52:22 2024 as: nmap -A -Pn -p- --open -vvv -oN nmapTarama 10.10.51.26
+Nmap scan report for 10.10.51.26
+Host is up, received user-set (0.092s latency).
+Scanned at 2024-03-17 15:52:22 +03 for 151s
+Not shown: 46155 closed tcp ports (conn-refused), 19378 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT   STATE SERVICE REASON  VERSION
+22/tcp open  ssh     syn-ack OpenSSH 7.2p2 Ubuntu 4ubuntu2.8 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   2048 72:38:fa:fc:a4:70:d8:40:74:d0:48:b7:27:6a:31:e2 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDB63KJvZKb5UNNbFojwkr+FV+e0D+xFTd/9R2LqNrbwd79lo7YfGV/NpUe3ohGCxm3ODe+IxNWM/gyoWKSDpfRQCDWkLXyXiL8b4jILQWAUyByggI1XVtXMzYIHCbQpijQCDvkla2/0JHD9kNI70nfPHF0dk+yD/uwkoQ4LRWfVZFJcpW8sWhcuJawOHIYWRupmtwbiF3DVSw+XQdx5AZYZ7NvPtNlOeA3np+7i2SA3BdJFKxIEsV2F+BKhg9tehqQ13I1XZeqFzVyJ9JUQJta9SEadgsRBfHT1OaTnnxZwIHw9htT33SPUAZHWSU4iEgbgCPll2Z/Wstr1lNmo0e5
+|   256 22:46:a9:53:5e:3f:47:c2:d0:4d:02:36:9c:b6:f7:2b (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBOvpUpFRtQMBBxmu77u69Ez0ujsm/a1315Juz0L/WMQuol/aPH2jQ5I3KA3bkeR1D1IgCwZP1x4FVTZuxelbmII=
+|   256 5d:2d:ad:0c:5e:c0:0e:87:d1:3e:48:8e:d4:a7:ad:00 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIO2f+PIeQxZ8lt1ZzecDrJIsXXRrXrb7oP/T01peov4z
+80/tcp open  http    syn-ack Node.js Express framework
+| http-title: Hydra Challenge
+|_Requested resource was /login
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Mar 17 15:54:53 2024 -- 1 IP address (1 host up) scanned in 151.48 seconds

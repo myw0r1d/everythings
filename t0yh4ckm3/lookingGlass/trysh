@@ -1,0 +1,47 @@
+#! /bin/bash
+IP=10.10.195.175
+PORT=13000   #Change port
+RESULT=0
+lower=0
+higher=0
+higherdigit=0
+lowerdigit=0
+
+echo "Give me an ip: "
+read IP
+echo "Initializing..."
+sleep  1 
+
+while [ $(echo "$RESULT" | grep "0") ]
+do 
+        # StrictHostKeyChecking=no ?> used to send always yes && LogLevel=QUIET ?> remove connection's message
+        nmap=$(ssh -o StrictHostKeyChecking=no -o LogLevel=QUIET -tt $IP -p $PORT)
+        if [ $(echo $nmap | grep "Lower") ]; then
+                if [ "$higherdigit" -eq 1 ] && [ "$lowerdigit" -eq 1 ]
+                then 
+                        export PORT=$((PORT+1))
+                elif [ "$higher" -eq 1 ] && [ "$lower" -eq 1 ] ; then
+                        export PORT=$((PORT+10))
+                        lowerdigit=1
+                else
+                        export PORT=$((PORT+100))
+                        lower=1
+                fi
+                echo -e "Message = Lower --- Trying Port ?> $PORT"
+        fi
+
+        if [ $(echo $nmap | grep "Higher") ]; then
+                if [ "$higherdigit" -eq 1 ] && [ "$lowerdigit" -eq 1 ]
+                then 
+                        export PORT=$((PORT-1))
+                elif [ "$higher" -eq 1 ] && [ "$lower" -eq 1 ] ; then
+                        export PORT=$((PORT-10))
+                        higherdigit=1
+                else
+                        export PORT=$((PORT-100))
+                        higher=1
+                fi
+                echo -e "Message = Higher -- Trying Port ?> $PORT"
+        fi
+done
+

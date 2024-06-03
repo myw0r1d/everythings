@@ -1,0 +1,30 @@
+# Nmap 7.94SVN scan initiated Wed Dec 13 01:37:08 2023 as: nmap -sCV -Pn -vv --open -oN nmapTarama 10.10.88.163
+Nmap scan report for 10.10.88.163
+Host is up, received user-set (0.093s latency).
+Scanned at 2023-12-13 01:37:09 +03 for 17s
+Not shown: 953 closed tcp ports (conn-refused), 45 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE REASON  VERSION
+22/tcp   open  ssh     syn-ack OpenSSH 8.9p1 Ubuntu 3ubuntu0.3 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 ee:1e:9b:03:0d:dc:70:4c:a9:3e:27:a6:80:3c:0c:7f (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCombd42RKbitlRpfotBwwtwt5AT997c6jqQEkL/vb/JksRRq9Q2dSHdSIwPzGjIEEwsqrGOfSUdSnGCrRr8kXcnFjq3ncH5CLR2oQDWDGOaGP0sFj1U446mOLqyn4aWcve3x1Rwh4D2rxeQESJmfHQnAB91ZgU9aOZNa5Sp1O9Jd5UqtwGoTp4N8HKAgf2fz0Gz4FfjZmID19LOJEEpqoQZhSJrcVPEOsC4XFlx12KY88IsGjXu3XQ2rj4H2fZUJNWWSI68128Uk+Xukr+9SzmcYH5hIi35iIACSqb8iLvqNshmgz6mkhi4zEpIEZzo9bh0U9TZrZ3NMyWYpZ12T8zL/Mm6hSSLdduqtzDE9pTHhafR+ic4ZdKVSzA/mOaNcEt7dHK6rHoaf9R6QdgFOFhLnr5glvOGb3P6u9Zv9Kgh2lV3+tM0vTDwtj364Xrbc3fuRJgjMALE4UIXbG5fNV3su1Kerfi97R3RxpEBDF82uyZZE1cj76sTf77jeiFXlU=
+|   256 4f:40:47:06:94:00:d4:47:2c:2f:5c:3a:b1:0f:91:65 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBCSJUuGjmKKTh94mBvJJHqnjNYjzBGTRFOWj8awsL0TceLPWivsGEDYpNVr5SwCSkz5TyCxQE0lErFG7wnZVlOk=
+|   256 b3:83:06:14:e0:0b:ab:7b:66:7e:dc:25:df:1a:09:88 (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIBo89rMpB8fMJNINsl0enl/tfS5JdK8p0qbpD2u6F86J
+8080/tcp open  http    syn-ack Jetty 10.0.15
+|_http-title: Dashboard [Jenkins]
+| http-robots.txt: 1 disallowed entry 
+|_/
+|_http-server-header: Jetty(10.0.15)
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+| http-open-proxy: Potentially OPEN proxy.
+|_Methods supported:CONNECTION
+|_http-favicon: Unknown favicon MD5: 23E8C7BD78E8CD826C5A6073B15068B1
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Dec 13 01:37:26 2023 -- 1 IP address (1 host up) scanned in 17.99 seconds

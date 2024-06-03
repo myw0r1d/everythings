@@ -1,0 +1,17 @@
+# Nmap 7.94SVN scan initiated Wed Jan 17 20:34:17 2024 as: nmap -sCV -p- -Pn -n -oN nmapTarama 10.10.218.3
+Nmap scan report for 10.10.218.3
+Host is up (0.067s latency).
+Not shown: 65533 closed tcp ports (conn-refused)
+PORT   STATE SERVICE VERSION
+22/tcp open  ssh     OpenSSH 8.2p1 Ubuntu 4ubuntu0.4 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 83:6f:7e:18:2a:82:61:be:f1:b2:e7:5f:c0:9a:10:bf (RSA)
+|   256 fc:5f:fb:ff:08:66:01:c9:11:aa:cd:13:19:5c:26:2f (ECDSA)
+|_  256 80:d1:bf:f4:c4:d0:32:89:9c:8a:be:d3:6b:c2:de:8f (ED25519)
+80/tcp open  http    Apache httpd 2.4.48 ((Ubuntu))
+|_http-title: CyberHeros : Index
+|_http-server-header: Apache/2.4.48 (Ubuntu)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Jan 17 20:36:09 2024 -- 1 IP address (1 host up) scanned in 111.18 seconds

@@ -1,0 +1,24 @@
+00385007         (backups.zip/backups/note.txt)     
+
+[21][ftp] host: 10.10.26.26   login: ftpuser   password: love4ever
+
+id_rsa : bluelove
+1 password hash cracked, 0 left
+
+
+VEhNe2E1ZjgyYTAwZTJmZWVlMzQ2NTI0OWI4NTViZTcxYzAxfQ==   
+
+THM{a5f82a00e2feee3465249b855be71c01}
+
+
+aHR0cHM6Ly9pLnl0aW1nLmNvbS92aS9LLTk2Sm1DMkFrRS9tYXhyZXNkZWZhdWx0LmpwZw==
+https://i.ytimg.com/vi/K-96JmC2AkE/maxresdefault.jpg
+
+
+condor : pasificbell1981
+
+
+
+THM{congratulationsyoumadeithashme}
+echo "congratulationsyoumadeithashme" | md5sum
+b9102b0c0d4dbef535a527958d304ddb

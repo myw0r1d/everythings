@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Fri Mar 15 23:40:55 2024 as: nmap -A -Pn -vv --open -p- -oN nmapTarama 10.10.198.1
