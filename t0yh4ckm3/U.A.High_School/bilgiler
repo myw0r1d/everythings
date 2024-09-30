@@ -1,0 +1,7 @@
+www-data@myheroacademia:/var/www/Hidden_Content$ cat passphrase.txt
+cat passphrase.txt
+QWxsbWlnaHRGb3JFdmVyISEhCg==
+www-data@myheroacademia:/var/www/Hidden_Content$  cat passphrase.txt | base64 -d
+<www/Hidden_Content$  cat passphrase.txt | base64 -d
+AllmightForEver!!!
+www-data@myheroacademia:/var/www/Hidden_Content$ 

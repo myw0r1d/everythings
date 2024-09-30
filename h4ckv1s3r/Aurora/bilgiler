@@ -1,0 +1,20 @@
+cat customers.csv
+Customer Name, Email, Phone, Purchased Star Name, Dollar Amount
+Serenya Kline,serenya.kline@mail.hv,555-234-5678,Astronova,550
+Lysandra Moss,lysandra.moss@mail.hv,555-345-6789,Celestia Magna,1150
+Thalina Fletcher,thalina.fletcher@mail.hv,555-456-7890,Orionis Delta,2900
+Aveline Coleman,aveline.coleman@mail.hv,555-567-8901,Vega Polaris,2050
+Elara Whitfield,elara.whitfield@mail.hv,555-123-4567,Zaria,2200
+Mariselle Byrd,mariselle.byrd@mail.hv,555-890-1234,Andromeda Echo,2350
+John Hughes,john.hughes@mail.hv,555-678-9012,Nebulon Zenith,2650
+Celestra Kane,celestra.kane@mail.hv,555-789-0123,Starfire Aether,2600
+Evanthe Blair,evanthe.blair@mail.hv,555-901-2345,Zenith Solis,2250
+Nymeria Stevenson,nymeria.stevenson@mail.hv,555-012-3456,Lunara,1250
+Calista Reeves,calista.reeves@mail.hv,555-678-3456,Stellarion,2350
+Daryana Brooks,daryana.brooks@mail.hv,555-234-6789,Nova Lux,1600
+Faelina Torres,faelina.torres@mail.hv,555-789-5678,Aurora Borealis,2350
+Isolde Curtis,isolde.curtis@mail.hv,555-890-6789,Galaxia Prime,2350
+Jolanta Matthews,jolanta.matthews@mail.hv,555-901-7890,Sirius Aether,600
+Kalyssa Parker,kalyssa.parker@mail.hv,555-012-8901,Cosmos Alpha,2200
+Leocadia Foster,leocadia.foster@mail.hv,555-345-9012,Luminara,2800
+Mirabella Young,mirabella.young@mail.hv,555-456-0123,Eclipse Prime,2400

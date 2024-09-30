@@ -1,0 +1,1 @@
+# Nmap 7.94SVN scan initiated Thu Aug  8 10:21:26 2024 as: nmap -Pn -p- -n -vv -oN nmaptarama 172.20.9.197

