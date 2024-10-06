@@ -1,0 +1,58 @@
+# Nmap 7.94SVN scan initiated Sun Oct  6 05:12:59 2024 as: nmap -A -Pn -vv --open -oN nmapTarama 10.10.15.120
+Nmap scan report for 10.10.15.120
+Host is up, received user-set (0.092s latency).
+Scanned at 2024-10-06 05:12:59 EDT for 180s
+Not shown: 916 closed tcp ports (conn-refused), 82 filtered tcp ports (no-response)
+Some closed ports may be reported as filtered due to --defeat-rst-ratelimit
+PORT     STATE SERVICE  REASON  VERSION
+22/tcp   open  ssh      syn-ack OpenSSH 8.2p1 Ubuntu 4ubuntu0.7 (Ubuntu Linux; protocol 2.0)
+| ssh-hostkey: 
+|   3072 44:5f:26:67:4b:4a:91:9b:59:7a:95:59:c8:4c:2e:04 (RSA)
+| ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDMc4hLykriw3nBOsKHJK1Y6eauB8OllfLLlztbB4tu4c9cO8qyOXSfZaCcb92uq/Y3u02PPHWq2yXOLPler1AFGVhuSfIpokEnT2jgQzKL63uJMZtoFzL3RW8DAzunrHhi/nQqo8sw7wDCiIN9s4PDrAXmP6YXQ5ekK30om9kd5jHG6xJ+/gIThU4ODr/pHAqr28bSpuHQdgphSjmeShDMg8wu8Kk/B0bL2oEvVxaNNWYWc1qHzdgjV5HPtq6z3MEsLYzSiwxcjDJ+EnL564tJqej6R69mjII1uHStkrmewzpiYTBRdgi9A3Yb+x8NxervECFhUR2MoR1zD+0UJbRA2v1LQaGg9oYnYXNq3Lc5c4aXz638wAUtLtw2SwTvPxDrlCmDVtUhQFDhyFOu9bSmPY0oGH5To8niazWcTsCZlx2tpQLhF/gS3jP/fVw+H6Eyz/yge3RYeyTv3ehV6vXHAGuQLvkqhT6QS21PLzvM7bCqmo1YIqHfT2DLi7jZxdk=
+|   256 0a:4b:b9:b1:77:d2:48:79:fc:2f:8a:3d:64:3a:ad:94 (ECDSA)
+| ecdsa-sha2-nistp256 AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBJNL/iO8JI5DrcvPDFlmqtX/lzemir7W+WegC7hpoYpkPES6q+0/p4B2CgDD0Xr1AgUmLkUhe2+mIJ9odtlWW30=
+|   256 d3:3b:97:ea:54:bc:41:4d:03:39:f6:8f:ad:b6:a0:fb (ED25519)
+|_ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIFG/Wi4PUTjReEdk2K4aFMi8WzesipJ0bp0iI0FM8AfE
+8000/tcp open  http-alt syn-ack SimpleHTTP/0.6 Python/3.11.2
+|_http-server-header: SimpleHTTP/0.6 Python/3.11.2
+| http-methods: 
+|_  Supported Methods: GET HEAD POST OPTIONS
+|_http-favicon: Unknown favicon MD5: FBD3DB4BEF1D598ED90E26610F23A63F
+|_http-title: Site doesn't have a title (text/html; charset=utf-8).
+| fingerprint-strings: 
+|   DNSStatusRequestTCP, DNSVersionBindReqTCP, JavaRMI, LANDesk-RC, NotesRPC, Socks4, X11Probe, afp, giop: 
+|     source code string cannot contain null bytes
+|   FourOhFourRequest, LPDString, SIPOptions: 
+|     invalid syntax (<string>, line 1)
+|   GetRequest: 
+|     name 'GET' is not defined
+|   HTTPOptions, RTSPRequest: 
+|     name 'OPTIONS' is not defined
+|   Help: 
+|_    name 'HELP' is not defined
+|_http-open-proxy: Proxy might be redirecting requests
+1 service unrecognized despite returning data. If you know the service/version, please submit the following fingerprint at https://nmap.org/cgi-bin/submit.cgi?new-service :
+SF-Port8000-TCP:V=7.94SVN%I=7%D=10/6%Time=670254A9%P=x86_64-pc-linux-gnu%r
+SF:(GenericLines,1,"\n")%r(GetRequest,1A,"name\x20'GET'\x20is\x20not\x20de
+SF:fined\n")%r(X11Probe,2D,"source\x20code\x20string\x20cannot\x20contain\
+SF:x20null\x20bytes\n")%r(FourOhFourRequest,22,"invalid\x20syntax\x20\(<st
+SF:ring>,\x20line\x201\)\n")%r(Socks4,2D,"source\x20code\x20string\x20cann
+SF:ot\x20contain\x20null\x20bytes\n")%r(HTTPOptions,1E,"name\x20'OPTIONS'\
+SF:x20is\x20not\x20defined\n")%r(RTSPRequest,1E,"name\x20'OPTIONS'\x20is\x
+SF:20not\x20defined\n")%r(DNSVersionBindReqTCP,2D,"source\x20code\x20strin
+SF:g\x20cannot\x20contain\x20null\x20bytes\n")%r(DNSStatusRequestTCP,2D,"s
+SF:ource\x20code\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(Hel
+SF:p,1B,"name\x20'HELP'\x20is\x20not\x20defined\n")%r(LPDString,22,"invali
+SF:d\x20syntax\x20\(<string>,\x20line\x201\)\n")%r(SIPOptions,22,"invalid\
+SF:x20syntax\x20\(<string>,\x20line\x201\)\n")%r(LANDesk-RC,2D,"source\x20
+SF:code\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(NotesRPC,2D,
+SF:"source\x20code\x20string\x20cannot\x20contain\x20null\x20bytes\n")%r(J
+SF:avaRMI,2D,"source\x20code\x20string\x20cannot\x20contain\x20null\x20byt
+SF:es\n")%r(afp,2D,"source\x20code\x20string\x20cannot\x20contain\x20null\
+SF:x20bytes\n")%r(giop,2D,"source\x20code\x20string\x20cannot\x20contain\x
+SF:20null\x20bytes\n");
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Oct  6 05:15:59 2024 -- 1 IP address (1 host up) scanned in 180.22 seconds
